@@ -1,4 +1,4 @@
-package com.example.suiiz
+package com.suiiz
 
 import android.app.Application
 

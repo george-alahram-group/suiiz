@@ -1,8 +1,8 @@
-package com.example.suiiz.ui
+package com.suiiz.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.suiiz.R
+import com.suiiz.R
 
 class MainActivity : AppCompatActivity() {
 

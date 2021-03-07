@@ -1,11 +1,11 @@
-package com.example.suiiz.ui.fragments
+package com.suiiz.ui.fragments
 
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.suiiz.R
+import com.suiiz.R
 import kotlinx.android.synthetic.main.fragment_choose_language.*
 
 class ChooseLanguageFragment() : Fragment(R.layout.fragment_choose_language) {

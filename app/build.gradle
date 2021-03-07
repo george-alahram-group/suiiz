@@ -11,7 +11,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.example.suiiz"
+        applicationId "com.suiiz"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -80,5 +80,8 @@ dependencies {
 
     // Chip Navigation
     implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.4'
+
+    // Google Login
+    implementation 'com.google.android.gms:play-services-auth-ktx:19.0.0'
 
 }

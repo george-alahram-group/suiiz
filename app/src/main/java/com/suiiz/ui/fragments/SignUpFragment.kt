@@ -1,4 +1,4 @@
-package com.example.suiiz.ui.fragments
+package com.suiiz.ui.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -8,9 +8,8 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.suiiz.R
-import com.example.suiiz.util.Countries
-import kotlinx.android.synthetic.main.fragment_choose_language.*
+import com.suiiz.R
+import com.suiiz.util.Countries
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 import kotlinx.android.synthetic.main.fragment_sign_up.spCountry
 

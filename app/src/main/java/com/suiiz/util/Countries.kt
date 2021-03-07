@@ -1,4 +1,4 @@
-package com.example.suiiz.util
+package com.suiiz.util
 
 class Countries {
 
