@@ -67,17 +67,17 @@
             app:layout_goneMarginBottom="16dp">
 
             <LinearLayout
-                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="45dp"
                     android:background="@drawable/inputs_normal_bacground_left"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_person"
-                    app:tint="@color/secondaryTextColor"
-                    android:contentDescription="@string/app_name" />
+                    app:tint="@color/secondaryTextColor" />
 
                 <!-- TODO : change background to dark to match the theme -->
                 <EditText
@@ -96,53 +96,57 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="45dp"
                     android:background="@drawable/inputs_differ_background_left"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_location"
-                    app:tint="@color/secondaryTextColor"
-                    android:contentDescription="@string/app_name" />
+                    app:tint="@color/secondaryTextColor" />
 
                 <!-- TODO : change background to dark to match the theme -->
                 <Spinner
                     android:id="@+id/spCountry"
+                    style="@style/spinner"
                     android:layout_width="0dp"
                     android:layout_height="45dp"
                     android:layout_weight="12"
+                    android:autofillHints="@string/country"
                     android:background="@drawable/inputs_normal_background_right"
+                    android:contextClickable="true"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
                     android:textColor="@color/secondaryTextColor" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:gravity="center_horizontal|center_vertical"
-                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal|center_vertical">
 
                 <TextView
                     android:id="@+id/tvCountryCode"
                     android:layout_width="60dp"
                     android:layout_height="45dp"
-                    android:text="+02"
+                    android:background="@drawable/inputs_differ_background_left"
                     android:gravity="center_vertical|center_horizontal"
+                    android:text="+02"
                     android:textAlignment="gravity"
-                    android:textColor="@color/secondaryTextColor"
-                    android:background="@drawable/inputs_differ_background_left" />
+                    android:textColor="@color/secondaryTextColor" />
 
                 <EditText
                     android:id="@+id/etPhone"
                     android:layout_width="0dp"
                     android:layout_height="45dp"
                     android:layout_weight="12"
+                    android:autofillHints="@array/countries"
                     android:background="@drawable/inputs_normal_background_right"
                     android:hint="@string/country_code"
-                    android:autofillHints="@array/countries"
                     android:importantForAutofill="yes"
                     android:inputType="textPersonName"
                     android:textColor="@color/secondaryTextColor"
@@ -151,17 +155,17 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="45dp"
                     android:background="@drawable/inputs_normal_bacground_left"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_email"
-                    app:tint="@color/secondaryTextColor"
-                    android:contentDescription="@string/app_name" />
+                    app:tint="@color/secondaryTextColor" />
 
                 <EditText
                     android:id="@+id/etEmail"
@@ -177,29 +181,29 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="45dp"
                     android:background="@drawable/inputs_normal_bacground_left"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_lock"
-                    app:tint="@color/secondaryTextColor"
-                    android:contentDescription="@string/app_name" />
+                    app:tint="@color/secondaryTextColor" />
 
                 <EditText
                     android:id="@+id/etPassword"
                     android:layout_width="0dp"
                     android:layout_height="45dp"
                     android:layout_weight="12"
-                    android:drawableEnd="@drawable/ic_show"
-                    android:drawableTint="@color/secondaryTextColor"
-                    android:drawablePadding="16dp"
-                    android:background="@drawable/inputs_normal_background_right"
-                    android:hint="@string/password"
                     android:autofillHints="@array/countries"
+                    android:background="@drawable/inputs_normal_background_right"
+                    android:drawableEnd="@drawable/ic_show"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/secondaryTextColor"
+                    android:hint="@string/password"
                     android:importantForAutofill="yes"
                     android:inputType="textPassword"
                     android:textColor="@color/secondaryTextColor"
@@ -216,19 +220,19 @@
                     android:layout_width="60dp"
                     android:layout_height="45dp"
                     android:background="@drawable/inputs_normal_bacground_left"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/ic_lock"
-                    app:tint="@color/secondaryTextColor"
-                    android:contentDescription="@string/app_name" />
+                    app:tint="@color/secondaryTextColor" />
 
                 <EditText
                     android:id="@+id/etPassWordConfirm"
                     android:layout_width="0dp"
                     android:layout_height="45dp"
                     android:layout_weight="12"
-                    android:drawableEnd="@drawable/ic_show"
-                    android:drawableTint="@color/secondaryTextColor"
-                    android:drawablePadding="16dp"
                     android:background="@drawable/inputs_normal_background_right"
+                    android:drawableEnd="@drawable/ic_show"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/secondaryTextColor"
                     android:hint="@string/confirm_password"
                     android:inputType="textPersonName"
                     android:textColor="@color/secondaryTextColor"
@@ -279,60 +283,63 @@
             app:layout_constraintTop_toBottomOf="@+id/materialTextView">
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="16dp"
-                app:cardElevation="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="8dp">
+
                 <ImageView
                     android:id="@+id/fabFacebook"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_margin="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:src="@drawable/ic_facebook"
-                    android:contentDescription="@string/app_name" />
+                    android:layout_margin="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="true"
+                    android:src="@drawable/ic_facebook" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="16dp"
-                app:cardElevation="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="8dp">
+
                 <ImageView
                     android:id="@+id/fabInstagram"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_margin="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:src="@drawable/ic_instagram"
-                    android:contentDescription="@string/app_name" />
+                    android:layout_margin="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="true"
+                    android:src="@drawable/ic_instagram" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="16dp"
-                app:cardElevation="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                android:layout_margin="16dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="8dp">
+
                 <ImageView
                     android:id="@+id/fabGoogle"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_margin="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:src="@drawable/ic_google"
-                    android:contentDescription="@string/app_name" />
+                    android:layout_margin="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="true"
+                    android:src="@drawable/ic_google" />
             </androidx.cardview.widget.CardView>
 
             <!-- OLD FAB WITH OUT  ICON TINT TRANSPARENCY -->

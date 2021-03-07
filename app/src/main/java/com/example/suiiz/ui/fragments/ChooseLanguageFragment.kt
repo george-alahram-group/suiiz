@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.suiiz.R
 import kotlinx.android.synthetic.main.fragment_choose_language.*
-import java.util.Arrays.asList
 
 class ChooseLanguageFragment() : Fragment(R.layout.fragment_choose_language) {
 
@@ -25,6 +24,10 @@ class ChooseLanguageFragment() : Fragment(R.layout.fragment_choose_language) {
             findNavController().navigate(R.id.action_chooseLanguageFragment_to_loginFragment)
         }
 
+        spCountry.setPopupBackgroundResource(R.color.primaryColor)
+
     }
+
+
 
 }

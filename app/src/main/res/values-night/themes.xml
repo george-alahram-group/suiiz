@@ -22,4 +22,11 @@
         <item name="android:navigationBarColor">@color/background_color</item>
     </style>
 
+    <!--  ****************************************** Spinner  -->
+    <style name="spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:dropDownAnchor">@id/center</item>
+    </style>
+
 </resources>

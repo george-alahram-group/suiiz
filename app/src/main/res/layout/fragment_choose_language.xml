@@ -102,10 +102,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="32dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textField"
             app:layout_constraintStart_toStartOf="@+id/textField"
@@ -116,9 +116,9 @@
                 android:layout_width="60dp"
                 android:layout_height="45dp"
                 android:background="@drawable/inputs_differ_background_left"
+                android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_location"
-                app:tint="@color/secondaryTextColor"
-                android:contentDescription="@string/app_name" />
+                app:tint="@color/secondaryTextColor" />
 
             <!-- TODO : change background to dark to match the theme -->
             <Spinner
@@ -126,12 +126,11 @@
                 android:layout_width="0dp"
                 android:layout_height="45dp"
                 android:layout_weight="12"
-                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:autofillHints="@string/country"
                 android:background="@drawable/inputs_normal_background_right"
                 android:contextClickable="true"
-                android:textColor="@color/secondaryTextColor"
-                android:autofillHints="@string/country"
-                android:entries="@array/countries"/>
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:textColor="@color/secondaryTextColor" />
 
             <!--<EditText
                 android:id="@+id/etEmail"

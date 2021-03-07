@@ -10,17 +10,22 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.suiiz.R
 import com.example.suiiz.util.Countries
+import kotlinx.android.synthetic.main.fragment_choose_language.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
+import kotlinx.android.synthetic.main.fragment_sign_up.spCountry
 
 class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = ArrayAdapter(requireContext(),R.layout.spinner_item,Countries.country)
+        val arr = resources.getStringArray(R.array.countries)
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner_item, arr)
         spCountry.adapter = adapter
 
-        getCountryCode(spCountry,tvCountryCode)
+        spCountry.setPopupBackgroundResource(R.color.primaryColor)
+
+        getCountryCode(spCountry, tvCountryCode)
 
         tvSignIn.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
@@ -31,11 +36,17 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         }
     }
 
-    fun getCountryCode(sp: Spinner,tv:TextView) {
+    fun getCountryCode(sp: Spinner, tv: TextView) {
         sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                tv.text = Countries.code[position+1]
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                tv.text = Countries.code[position + 1]
             }
+
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
     }
