@@ -1,0 +1,90 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Suiiz" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryLightColor</item>
+
+        <!-- Status bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/foreground_color</item>
+
+        <!-- Customize your theme here -->
+        <item name="spinnerStyle">@style/spinner</item>
+    </style>
+
+    <!-- ****************************************** Splash_Screen -->
+    <style name="splash_screen_theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:statusBarColor">@color/background_color</item>
+        <item name="android:navigationBarColor">@color/background_color</item>
+    </style>
+
+    <!--  ****************************************** Spinner  -->
+    <style name="spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:dropDownAnchor">@id/center</item>
+
+    </style>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+    <style name="MyBorderlessButton">
+        <!-- Set background drawable and text size of the buttons here -->
+        <item name="android:background">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="MyButtonBar">
+        <!-- Define a background for the button bar and a divider between the buttons here -->
+        <item name="android:background">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="MyAlertDialogTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+
+    <style name="MyAlertTextAppearance">
+        <!-- Set text size and color of title and message here -->
+    </style>
+
+    <style name="MyAlertDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTitleStyle">@style/MyAlertDialogTitle</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:textAppearanceMedium">@style/MyAlertTextAppearance</item>
+        <!-- If you don't want your own button bar style use
+                @android:style/Holo.Light.ButtonBar.AlertDialog
+                and
+                ?android:attr/borderlessButtonStyle
+             instead of @style/MyButtonBar and @style/MyBorderlessButton -->
+        <item name="android:buttonBarStyle">@style/MyButtonBar</item>
+        <item name="android:buttonBarButtonStyle">@style/MyBorderlessButton</item>
+    </style>
+
+    <style name="MyAlertDialogStyle">
+        <!-- Define background colors of title, message, buttons, etc. here -->
+        <!--<item name="android:fullDark">...</item>
+        <item name="android:topDark">...</item>
+        <item name="android:centerDark">...</item>
+        <item name="android:bottomDark">...</item>
+        <item name="android:fullBright">...</item>
+        <item name="android:topBright">...</item>
+        <item name="android:centerBright">...</item>
+        <item name="android:bottomBright">...</item>
+        <item name="android:bottomMedium">...</item>
+        <item name="android:centerMedium">...</item>-->
+    </style>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+</resources>
