@@ -14,9 +14,9 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="64dp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_64sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_logo"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,11 +30,11 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/_32sdp"
             android:text="@string/welcome_back"
             android:textAllCaps="true"
             android:textColor="@color/primaryTextColor"
-            android:textSize="18sp"
+            android:textSize="@dimen/_12sdp"
             app:layout_constraintEnd_toEndOf="@+id/tv2"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="@+id/tv2"
@@ -47,7 +47,7 @@
             android:text="@string/log_in_to_your_account_of_suiz"
             android:textAllCaps="true"
             android:textColor="@android:color/darker_gray"
-            android:textSize="12sp"
+            android:textSize="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/textField"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="@+id/textField"
@@ -57,35 +57,35 @@
             android:id="@+id/textField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_margin="@dimen/_32sdp"
+            android:layout_marginTop="@dimen/_32sdp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv2"
-            app:layout_goneMarginBottom="16dp">
+            app:layout_goneMarginBottom="@dimen/_16sdp">
 
             <LinearLayout
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="@dimen/_16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_35sdp"
                     android:background="@drawable/inputs_differ_background_left"
                     android:src="@drawable/ic_email"
-                    app:tint="@color/secondaryTextColor"
+                    app:tint="@color/iconsColor"
                     android:contentDescription="@string/app_name" />
 
                 <EditText
                     android:id="@+id/etEmail"
                     android:layout_width="0dp"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/_35sdp"
                     android:layout_weight="12"
                     android:background="@drawable/inputs_normal_background_right"
-                    android:drawablePadding="16dp"
+                    android:drawablePadding="@dimen/_16sdp"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/secondaryTextColor"
@@ -98,20 +98,20 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="45dp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_35sdp"
                     android:background="@drawable/inputs_differ_background_left"
                     android:src="@drawable/ic_lock"
-                    app:tint="@color/secondaryTextColor"
+                    app:tint="@color/iconsColor"
                     android:contentDescription="@string/app_name" />
 
                 <EditText
                     android:id="@+id/etPassWord"
                     android:layout_width="0dp"
-                    android:layout_height="45dp"
+                    android:layout_height="@dimen/_35sdp"
                     android:layout_weight="12"
                     android:background="@drawable/inputs_normal_background_right"
-                    android:drawablePadding="16dp"
+                    android:drawablePadding="@dimen/_16sdp"
                     android:hint="@string/password"
                     android:inputType="textPassword"
                     android:textColor="@color/secondaryTextColor"
@@ -179,9 +179,9 @@
             android:id="@+id/btnLogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:paddingStart="@dimen/_32sdp"
+            android:paddingEnd="@dimen/_32sdp"
             android:text="@string/log_in"
             android:textColor="@color/secondaryTextColor"
             app:backgroundTint="@color/primaryColor"
@@ -195,11 +195,11 @@
             android:id="@+id/materialTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/_32sdp"
             android:text="@string/log_in_to_your_account_of_suiz"
             android:textAllCaps="true"
             android:textColor="@android:color/darker_gray"
-            android:textSize="12sp"
+            android:textSize="@dimen/_10sdp"
             app:layout_constraintEnd_toEndOf="@+id/btnLogIn"
             app:layout_constraintStart_toStartOf="@+id/btnLogIn"
             app:layout_constraintTop_toBottomOf="@+id/btnLogIn" />
@@ -208,24 +208,24 @@
             android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:clipToPadding="false"
             app:layout_constraintEnd_toEndOf="@+id/materialTextView"
             app:layout_constraintStart_toStartOf="@+id/materialTextView"
             app:layout_constraintTop_toBottomOf="@+id/materialTextView">
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="16dp"
-                app:cardElevation="8dp"
+                android:layout_margin="@dimen/_16sdp"
+                app:cardElevation="@dimen/_8sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                app:cardCornerRadius="@dimen/_50sdp">
                 <ImageView
                     android:id="@+id/fabFacebook"
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_margin="8dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
@@ -234,17 +234,17 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="16dp"
-                app:cardElevation="8dp"
+                android:layout_margin="@dimen/_16sdp"
+                app:cardElevation="@dimen/_8sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                app:cardCornerRadius="@dimen/_50sdp">
                 <ImageView
                     android:id="@+id/fabInstagram"
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_margin="8dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
@@ -253,17 +253,17 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="16dp"
-                app:cardElevation="8dp"
+                android:layout_margin="@dimen/_16sdp"
+                app:cardElevation="@dimen/_8sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="50dp">
+                app:cardCornerRadius="@dimen/_50sdp">
                 <ImageView
                     android:id="@+id/fabGoogle"
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:layout_margin="8dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|center_vertical"
@@ -276,7 +276,7 @@
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:clipToPadding="false"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -285,11 +285,11 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="@dimen/_16sdp"
                 android:text="@string/don_t_have_an_account"
                 android:textAllCaps="true"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp" />
+                android:textSize="@dimen/_10sdp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvSignUp"
@@ -301,7 +301,7 @@
                 android:text="@string/sign_up"
                 android:textAllCaps="true"
                 android:textColor="@color/primaryColor"
-                android:textSize="12sp" />
+                android:textSize="@dimen/_10sdp" />
 
         </LinearLayout>
 
@@ -309,15 +309,15 @@
             android:id="@+id/tvSkip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="64dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_64sdp"
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"
             android:text="@string/skip"
             android:textAllCaps="true"
             android:textColor="@color/primaryColor"
-            android:textSize="12sp"
+            android:textSize="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
             app:layout_constraintStart_toStartOf="@+id/linearLayout2"

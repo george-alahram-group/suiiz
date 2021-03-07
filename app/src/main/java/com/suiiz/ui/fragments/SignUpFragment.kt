@@ -22,20 +22,17 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         val adapter = ArrayAdapter(requireContext(), R.layout.spinner_item, arr)
         spCountry.adapter = adapter
 
-        spCountry.setPopupBackgroundResource(R.color.primaryColor)
-
         getCountryCode(spCountry, tvCountryCode)
 
-        tvSignIn.setOnClickListener {
-            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
-        }
-
-        tvSkip.setOnClickListener {
-            /*findNavController().navigate(TODO("navigate to Home"))*/
+        spCountry.setPopupBackgroundResource(R.color.primaryColor)
+        view.apply {
+            tvSignIn.setOnClickListener { findNavController().navigate(R.id.action_signUpFragment_to_loginFragment) }
+            tvSkip.setOnClickListener { findNavController().navigate(R.id.action_signUpFragment_to_mainFragment)}
+            btnCreate.setOnClickListener { findNavController().navigate(R.id.action_signUpFragment_to_mainFragment)}
         }
     }
 
-    fun getCountryCode(sp: Spinner, tv: TextView) {
+    private fun getCountryCode(sp: Spinner, tv: TextView) {
         sp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
