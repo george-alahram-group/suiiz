@@ -89,7 +89,7 @@
                     android:hint="@string/full_name"
                     android:inputType="textPersonName"
                     android:textColor="@color/secondaryTextColor"
-                    android:textColorHint="#BFFFFFFF"
+                    android:textColorHint="@color/iconsColor"
                     tools:ignore="TextFields" />
 
             </LinearLayout>
@@ -149,7 +149,7 @@
                     android:importantForAutofill="yes"
                     android:inputType="textPersonName"
                     android:textColor="@color/secondaryTextColor"
-                    android:textColorHint="#BFFFFFFF"
+                    android:textColorHint="@color/iconsColor"
                     tools:ignore="TextFields" />
             </LinearLayout>
 
@@ -175,7 +175,7 @@
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/secondaryTextColor"
-                    android:textColorHint="#BFFFFFFF"
+                    android:textColorHint="@color/iconsColor"
                     tools:ignore="TextFields" />
             </LinearLayout>
 
@@ -206,7 +206,7 @@
                     android:importantForAutofill="yes"
                     android:inputType="textPassword"
                     android:textColor="@color/secondaryTextColor"
-                    android:textColorHint="#BFFFFFFF"
+                    android:textColorHint="@color/iconsColor"
                     tools:ignore="TextFields" />
             </LinearLayout>
 
@@ -235,7 +235,7 @@
                     android:hint="@string/confirm_password"
                     android:inputType="textPersonName"
                     android:textColor="@color/secondaryTextColor"
-                    android:textColorHint="#BFFFFFFF"
+                    android:textColorHint="@color/iconsColor"
                     tools:ignore="TextFields" />
             </LinearLayout>
 

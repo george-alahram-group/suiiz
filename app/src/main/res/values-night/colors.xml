@@ -7,11 +7,13 @@
 
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="cards_bg_color">#3E3E3E</color>
 
     <color name="foreground_color">#000</color>
     <color name="background_color">#1a1a1a</color>
 
     <color name="iconsColor">#BF000000</color>
+    <color name="elevationColor">#50ffffff</color>
 
     <color name="facebook_color">#1877F2</color>
 
