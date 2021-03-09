@@ -9,11 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.suiiz.R
 import com.suiiz.model.Section
-import kotlinx.android.synthetic.main.fragment_login.view.*
+import com.suiiz.util.DumyData
 import kotlinx.android.synthetic.main.home_rv_item.view.*
-import kotlinx.android.synthetic.main.top_app_bar.view.tvTitle
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     inner class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -44,7 +43,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
         val currentItem = differ.currentList[position]
 
         holder.itemView.apply {
-            // Glide.with(this).load(currentItem.image).into(imageView)
+            Glide.with(this).load(currentItem.image).into(ivSectionImg)
             tvTitle.text = currentItem.title
             tvDescription.text = currentItem.description
         }

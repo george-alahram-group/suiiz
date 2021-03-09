@@ -6,44 +6,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:layout_width="match_parent"
         app:cardElevation="@dimen/_5sdp"
-        android:clipToPadding="true"
+        android:clipToPadding="false"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_25sdp">
+        app:cardCornerRadius="@dimen/_15sdp">
 
         <LinearLayout
-            android:background="@color/primaryTextColor"
-            android:padding="1dip"
+            android:background="@drawable/home_rv_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:background="@color/cards_bg_color"
                 android:layout_width="match_parent"
                 android:padding="@dimen/_16sdp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
+                    android:id="@+id/ivSectionImg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minWidth="@dimen/_45sdp"
-                    android:minHeight="@dimen/_45sdp"
+                    android:minWidth="@dimen/_35sdp"
+                    android:minHeight="@dimen/_35sdp"
                     android:scaleType="fitCenter"
-                    android:scaleX="1.5"
-                    android:scaleY="1.5"
-                    android:tint="@color/primaryTextColor"
+                    android:scaleX="1"
+                    android:scaleY="1"
                     tools:src="@drawable/ic_person"
-                    android:contentDescription="@string/app_name" />
+                    android:contentDescription="@string/app_name"
+                    app:tint="@color/primaryTextColor" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:layout_marginStart="@dimen/_15sdp">
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp" >
 
                     <TextView
                         android:id="@+id/tvTitle"
@@ -52,9 +58,9 @@
                         android:layout_marginBottom="@dimen/_3sdp"
                         android:layout_weight="1"
                         android:lines="1"
-                        android:text="title"
+                        tools:text="title"
                         android:textColor="@color/primaryTextColor"
-                        android:textSize="@dimen/_15sdp"
+                        android:textSize="@dimen/_13sdp"
                         android:textStyle="bold"
                         tools:ignore="NestedWeights" />
 
@@ -64,7 +70,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:lines="1"
-                        android:text="Descriptopn" />
+                        android:textSize="@dimen/_10sdp"
+                        tools:text="Description" />
+
                 </LinearLayout>
                 <ImageButton
                     android:clickable="true"
@@ -72,6 +80,7 @@
                     android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_25sdp"
                     android:scaleX="1"
                     android:scaleY="1"
                     tools:src="@drawable/ic_arrow_forward"

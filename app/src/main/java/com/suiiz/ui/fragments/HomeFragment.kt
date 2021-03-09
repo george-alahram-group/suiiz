@@ -19,8 +19,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         homeAdapter = HomeAdapter()
-        homeAdapter.differ
-        homeAdapter.differ.submitList(DumyData._list1)
 
         setupRecyclerView(rv)
 
@@ -28,10 +26,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun setupRecyclerView(rv: RecyclerView){
         homeAdapter = HomeAdapter()
+        homeAdapter.differ.submitList(DumyData._list1)
         rv.apply {
             adapter = homeAdapter
             layoutManager = LinearLayoutManager(activity)
         }
     }
+
+
 
 }
