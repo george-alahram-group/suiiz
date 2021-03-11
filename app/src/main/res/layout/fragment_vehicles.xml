@@ -3,10 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:isScrollContainer="true"
-    android:id="@+id/homeContainer"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.HomeFragment">
+    tools:context=".ui.fragments.VehiclesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
@@ -19,7 +16,7 @@
         android:clipToPadding="false"
         android:paddingTop="?attr/actionBarSize"
         android:paddingBottom="?attr/actionBarSize"
-        tools:listitem="@layout/home_rv_item" />
+        tools:listitem="@layout/service_rv_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabService"
@@ -31,8 +28,5 @@
         android:layout_marginBottom="?attr/actionBarSize"
         style="@style/fabDesign"
         android:contentDescription="@string/app_name" />
-
-
-
 
 </RelativeLayout>

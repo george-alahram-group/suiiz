@@ -28,5 +28,22 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.suiiz.ui.fragments.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_servicesFragment"
+            app:destination="@id/servicesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.suiiz.ui.fragments.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/vehiclesFragment"
+        android:name="com.suiiz.ui.fragments.VehiclesFragment"
+        android:label="fragment_vehicles"
+        tools:layout="@layout/fragment_vehicles" />
 </navigation>

@@ -8,14 +8,12 @@ import androidx.navigation.fragment.findNavController
 import com.suiiz.R
 import kotlinx.android.synthetic.main.fragment_choose_language.*
 
-class ChooseLanguageFragment() : Fragment(R.layout.fragment_choose_language) {
+class ChooseLanguageFragment : Fragment(R.layout.fragment_choose_language) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val arr = resources.getStringArray(R.array.countries)
-        val adapter = ArrayAdapter(requireContext(),R.layout.spinner_item,arr)
-        spCountry.adapter = adapter
+        setupCountrySpinner()
 
         btnArabic.setOnClickListener {
             findNavController().navigate(R.id.action_chooseLanguageFragment_to_loginFragment)
@@ -24,10 +22,20 @@ class ChooseLanguageFragment() : Fragment(R.layout.fragment_choose_language) {
             findNavController().navigate(R.id.action_chooseLanguageFragment_to_loginFragment)
         }
 
-        spCountry.setPopupBackgroundResource(R.color.primaryColor)
+
+
 
     }
 
+    // Country Spinner Configuration
+    private fun setupCountrySpinner() {
+        // popup bg configuration
+        spCountry.setPopupBackgroundResource(R.color.primaryColor)
+        // data configuration
+        val arr = resources.getStringArray(R.array.countries)
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner_item, arr)
+        spCountry.adapter = adapter
+    }
 
 
 }

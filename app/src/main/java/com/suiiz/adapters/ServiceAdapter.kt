@@ -9,55 +9,43 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.suiiz.R
 import com.suiiz.model.Section
-import com.suiiz.util.DumyData
 import kotlinx.android.synthetic.main.home_rv_item.view.*
 
-class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class ServiceAdapter : RecyclerView.Adapter<ServiceAdapter.ServiceViewHolder>(){
 
-    inner class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class ServiceViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
 
-    private val differCallback = object : DiffUtil.ItemCallback<Section>() {
+    val diffUtil  = object : DiffUtil.ItemCallback<Section>() {
         override fun areItemsTheSame(oldItem: Section, newItem: Section): Boolean {
             return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: Section, newItem: Section): Boolean {
-            return oldItem.title == newItem.title
+            return oldItem.image == newItem.image
         }
     }
 
-    val differ = AsyncListDiffer(this,differCallback)
+    val differ = AsyncListDiffer(this,diffUtil)
+
+    override fun getItemCount() = differ.currentList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        HomeViewHolder(
+        ServiceViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.home_rv_item,
+                R.layout.service_rv_item,
                 parent,
                 false
             )
         )
 
-    override fun getItemCount() = differ.currentList.size
-
-    override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ServiceViewHolder, position: Int) {
         val currentItem = differ.currentList[position]
 
         holder.itemView.apply {
             Glide.with(this).load(currentItem.image).into(ivSectionImg)
             tvTitle.text = currentItem.title
             tvDescription.text = currentItem.description
-
-            view.setOnClickListener {
-                onItemClickListener?.let { it(currentItem) }
-            }
         }
-
-    }
-
-    private var onItemClickListener: ((Section) -> Unit)? = null
-
-    fun setOnItemClickListener(listener: (Section) -> Unit) {
-        onItemClickListener = listener
     }
 
 }
