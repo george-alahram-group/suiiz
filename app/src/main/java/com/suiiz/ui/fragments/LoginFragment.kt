@@ -23,6 +23,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         val email = sharedPref.getString(EMAIL,"")
         val password = sharedPref.getString(PASSWORD,"")
 
+        if (email!=""&&password!="") {
+            findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+        }
+
         requireActivity().onBackPressedDispatcher.addCallback {
             requireActivity().finishAffinity()
         }
