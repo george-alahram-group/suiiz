@@ -40,7 +40,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private fun setupRecyclerView(rv: RecyclerView){
         homeAdapter = HomeAdapter()
-        homeAdapter.differ.submitList(DumyData.mainCategoryList)
+        homeAdapter.differ.submitList(DumyData.mainCategoryList(resources))
         rv.apply {
             adapter = homeAdapter
             layoutManager = LinearLayoutManager(activity)

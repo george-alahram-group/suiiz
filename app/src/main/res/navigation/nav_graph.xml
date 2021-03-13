@@ -11,30 +11,49 @@
         tools:layout="@layout/fragment_password_recovery" >
         <action
             android:id="@+id/action_passwordRecoveryFragment_to_passwordRecoveryStep2Fragment"
-            app:destination="@id/passwordRecoveryStep2Fragment" />
+            app:destination="@id/passwordRecoveryStep2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/passwordRecoveryStep2Fragment"
         android:name="com.suiiz.ui.fragments.PasswordRecoveryStep2Fragment"
-        android:label="PasswordRecoveryStep2Fragment" >
+        android:label="PasswordRecoveryStep2Fragment"
+        tools:layout="@layout/fragment_password_recovery__setp_2">
         <action
             android:id="@+id/action_passwordRecoveryStep2Fragment_to_passwordRecoveryStep3Fragment"
-            app:destination="@id/passwordRecoveryStep3Fragment" />
+            app:destination="@id/passwordRecoveryStep3Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/passwordRecoveryStep3Fragment"
         android:name="com.suiiz.ui.fragments.PasswordRecoveryStep3Fragment"
-        android:label="PasswordRecoveryStep3Fragment" />
+        android:label="PasswordRecoveryStep3Fragment"
+        tools:layout="@layout/fragment_password_recovery__setp_3"/>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.suiiz.ui.fragments.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_servicesFragment"
-            app:destination="@id/servicesFragment" />
+            app:destination="@id/servicesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_homeFragment_to_vehiclesFragment"
-            app:destination="@id/vehiclesFragment" />
+            app:destination="@id/vehiclesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/servicesFragment"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     android:background="@color/background_color"
     tools:context=".ui.fragments.ChooseLanguageFragment">
 
@@ -13,8 +14,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_90sdp"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_150sdp"
             android:layout_marginTop="@dimen/_64sdp"
             android:layout_marginBottom="@dimen/_32sdp"
             android:contentDescription="@string/app_name"
@@ -71,14 +72,14 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnArabic"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_40sdp"
                 android:paddingStart="@dimen/_32sdp"
                 android:paddingEnd="@dimen/_32sdp"
                 android:text="@string/arabic"
                 android:textSize="@dimen/_15sdp"
                 android:textColor="@color/secondaryTextColor"
                 app:backgroundTint="@color/primaryColor"
-                app:cornerRadius="@dimen/_150sdp"
+                app:cornerRadius="@dimen/_20sdp"
                 app:layout_constraintEnd_toEndOf="@+id/textField"
                 app:layout_constraintStart_toStartOf="@+id/textField"
                 app:layout_constraintTop_toBottomOf="@+id/textField"
@@ -87,14 +88,14 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEnglish"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_16sdp"
                 android:paddingStart="@dimen/_32sdp"
                 android:paddingEnd="@dimen/_32sdp"
                 android:text="@string/english"
                 android:textColor="@color/secondaryTextColor"
                 app:backgroundTint="@color/primaryColor"
-                app:cornerRadius="@dimen/_15sdp"
+                app:cornerRadius="@dimen/_20sdp"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintEnd_toEndOf="@+id/textField"
                 app:layout_constraintStart_toStartOf="@+id/textField"
@@ -105,14 +106,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_margin="@dimen/_32sdp"
-            android:layout_marginBottom="@dimen/_16sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textField"
             app:layout_constraintStart_toStartOf="@+id/textField"
-            app:layout_constraintTop_toBottomOf="@+id/textField"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@+id/textField">
 
             <ImageView
                 android:layout_width="@dimen/_50sdp"
@@ -133,19 +131,7 @@
                 android:contextClickable="true"
                 android:textColor="@color/secondaryTextColor" />
 
-            <!--<EditText
-                android:id="@+id/etEmail"
-                android:layout_width="0dp"
-                android:layout_height="45dp"
-                android:layout_weight="12"
-                android:background="@drawable/inputs_normal_background_right"
-                android:hint="@string/country"
-                android:autofillHints="@array/countries"
-                android:importantForAutofill="yes"
-                android:inputType="textPersonName"
-                android:textColor="@color/secondaryTextColor"
-                android:textColorHint="#BFFFFFFF"
-                tools:ignore="TextFields" />-->
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

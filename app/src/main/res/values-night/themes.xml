@@ -6,6 +6,7 @@
         <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
         <item name="colorOnPrimary">@color/primaryLightColor</item>
         <item name="colorAccent">@color/primaryLightColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
 
         <!-- Status bar -->
         <item name="android:windowTranslucentStatus">false</item>

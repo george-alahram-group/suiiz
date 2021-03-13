@@ -29,4 +29,24 @@
     <string name="enter_new_password">ادخل كلمة السر الجديدة</string>
     <string name="re_enter_new_password">اعد ادخال كلمة السر</string>
     <string name="choose_your_section">اختر السكشن</string>
+    <string name="cars">سيارات</string>
+    <string name="motorcycle">دراجات هوائية</string>
+    <string name="micro_buses">ميكروباص</string>
+    <string name="buses">باص</string>
+    <string name="mini_trucks">سيارات نصف نقل</string>
+    <string name="trucks">سيارات نقل</string>
+    <string name="tructors">جرارات</string>
+    <string name="public_services">خدمات التوكيلات</string>
+    <string name="local_services">خدمات خاصة</string>
+    <string name="suiiz_services">خدمات سويز</string>
+    <string name="ads">اعلان</string>
+    <string name="home">الرئيسية</string>
+    <string name="account">حسابك</string>
+    <string name="favorite">المفضله</string>
+    <string name="chat">دردشة</string>
+    <string name="vehicle">السيارات</string>
+    <string name="oil_products">منتجات بترولية</string>
+    <string name="buildings">مبانى</string>
+    <string name="error_message_1">انت لم تدخل البريد الالكترونى او كلمة المرور برجاء المحاوله مرة اخرى</string>
+
 </resources>

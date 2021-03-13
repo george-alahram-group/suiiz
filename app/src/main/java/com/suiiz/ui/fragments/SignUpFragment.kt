@@ -40,7 +40,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                 position: Int,
                 id: Long
             ) {
-                tv.text = Countries.code[position + 1]
+                tv.text = Countries.code[position]
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}

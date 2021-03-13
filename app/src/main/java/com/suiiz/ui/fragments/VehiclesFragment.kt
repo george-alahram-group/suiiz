@@ -26,7 +26,7 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
 
     private fun setupRecyclerView(rv: RecyclerView){
         vehiclesAdapter = VehiclesAdapter()
-        vehiclesAdapter.differ.submitList(DumyData.vehicleList)
+        vehiclesAdapter.differ.submitList(DumyData.vehicleList(resources))
         rv.apply {
             adapter = vehiclesAdapter
             layoutManager = LinearLayoutManager(activity)

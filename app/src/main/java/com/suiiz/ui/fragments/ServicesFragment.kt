@@ -24,7 +24,7 @@ class ServicesFragment : Fragment(R.layout.fragment_services) {
 
     private fun setupRecyclerView(rv: RecyclerView){
         serviceAdapter = ServiceAdapter()
-        serviceAdapter.differ.submitList(DumyData.servicesList)
+        serviceAdapter.differ.submitList(DumyData.servicesList(resources))
         rv.apply {
             adapter = serviceAdapter
             layoutManager = LinearLayoutManager(activity)
