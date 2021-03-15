@@ -5,18 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.VehiclesFragment">
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:clipToPadding="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/vp2"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:clipToPadding="false"
-        android:paddingTop="?attr/actionBarSize"
         android:paddingBottom="?attr/actionBarSize"
-        tools:listitem="@layout/service_rv_item" />
+        tools:listitem="@layout/item_service_rv" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabService"

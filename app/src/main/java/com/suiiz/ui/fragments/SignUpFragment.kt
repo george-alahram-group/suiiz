@@ -19,7 +19,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         super.onViewCreated(view, savedInstanceState)
 
         val arr = resources.getStringArray(R.array.countries)
-        val adapter = ArrayAdapter(requireContext(), R.layout.spinner_item, arr)
+        val adapter = ArrayAdapter(requireContext(), R.layout.item_spinner, arr)
         spCountry.adapter = adapter
 
         getCountryCode(spCountry, tvCountryCode)

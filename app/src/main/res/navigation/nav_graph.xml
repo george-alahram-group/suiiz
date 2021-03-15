@@ -64,5 +64,31 @@
         android:id="@+id/vehiclesFragment"
         android:name="com.suiiz.ui.fragments.VehiclesFragment"
         android:label="fragment_vehicles"
-        tools:layout="@layout/fragment_vehicles" />
+        tools:layout="@layout/fragment_vehicles" >
+        <action
+            android:id="@+id/action_vehiclesFragment_to_vehicle_CarsBrandFragment"
+            app:destination="@id/vehicle_CarsBrandFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicle_CarsBrandFragment"
+        android:name="com.suiiz.ui.fragments.Vehicle_CarsBrandFragment"
+        android:label="fragment_vehicle_cars"
+        tools:layout="@layout/fragment_vehicle_cars_brand" >
+        <action
+            android:id="@+id/action_vehicle_CarsBrandFragment_to_vehicle_Cars_ModelFragment"
+            app:destination="@id/vehicle_Cars_ModelFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicle_Cars_ModelFragment"
+        android:name="com.suiiz.ui.fragments.Vehicle_Cars_ModelFragment"
+        android:label="fragment_vehicle__cars__model"
+        tools:layout="@layout/fragment_vehicle_cars_model" />
 </navigation>

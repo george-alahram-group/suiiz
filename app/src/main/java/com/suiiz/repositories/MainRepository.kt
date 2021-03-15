@@ -1,6 +1,11 @@
 package com.suiiz.repositories
 
-class MainRepository(
+import android.content.res.Resources
+import com.suiiz.util.DummyData
 
+class MainRepository(
+    /* val db : data base calss */
 ) {
+
+
 }

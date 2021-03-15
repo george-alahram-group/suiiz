@@ -1,4 +1,4 @@
-package com.suiiz.adapters
+package com.suiiz.adapters.vehicleFragmnetAdapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,20 +10,19 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.suiiz.R
-import com.suiiz.model.Section
-import kotlinx.android.synthetic.main.item_service_rv.view.*
+import kotlinx.android.synthetic.main.item_vehicles_vp2.view.*
 
-class ServiceAdapter : RecyclerView.Adapter<ServiceAdapter.ServiceViewHolder>(){
+class VehiclesVp2Adapter : RecyclerView.Adapter<VehiclesVp2Adapter.VehicleVp2ViewHolder>(){
 
-    inner class ServiceViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
+    inner class VehicleVp2ViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
 
-    val diffUtil  = object : DiffUtil.ItemCallback<Section>() {
-        override fun areItemsTheSame(oldItem: Section, newItem: Section): Boolean {
+    private val diffUtil  = object : DiffUtil.ItemCallback<String>() {
+        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: Section, newItem: Section): Boolean {
-            return oldItem.image == newItem.image
+        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
         }
     }
 
@@ -32,27 +31,25 @@ class ServiceAdapter : RecyclerView.Adapter<ServiceAdapter.ServiceViewHolder>(){
     override fun getItemCount() = differ.currentList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ServiceViewHolder(
+        VehicleVp2ViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_service_rv,
+                R.layout.item_vehicles_vp2,
                 parent,
                 false
             )
         )
 
-    override fun onBindViewHolder(holder: ServiceViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: VehicleVp2ViewHolder, position: Int) {
         val currentItem = differ.currentList[position]
 
         holder.itemView.apply {
             Glide.with(this)
-                .load(currentItem.image)
+                .load(currentItem)
                 .diskCacheStrategy(DiskCacheStrategy.DATA)
                 .error(R.drawable.ic_image_search)
                 .fallback(R.drawable.ic_image_search)
-                .transition(DrawableTransitionOptions.withCrossFade())
-                .into(ivSectionImg)
-            tvTitle.text = currentItem.title
-            tvDescription.text = currentItem.description
+                .transition(DrawableTransitionOptions.withCrossFade(1000))
+                .into(ivImg)
         }
     }
 

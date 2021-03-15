@@ -1,4 +1,4 @@
-package com.suiiz.adapters
+package com.suiiz.adapters.vehicleFragmnetAdapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.suiiz.R
 import com.suiiz.model.Section
-import kotlinx.android.synthetic.main.home_rv_item.view.*
+import kotlinx.android.synthetic.main.item_service_rv.view.*
 
-class VehiclesAdapter : RecyclerView.Adapter<VehiclesAdapter.VehicleViewHolder>(){
+class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.VehicleViewHolder>(){
 
     inner class VehicleViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
 
@@ -32,7 +34,7 @@ class VehiclesAdapter : RecyclerView.Adapter<VehiclesAdapter.VehicleViewHolder>(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         VehicleViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.service_rv_item,
+                R.layout.item_service_rv,
                 parent,
                 false
             )
@@ -42,10 +44,27 @@ class VehiclesAdapter : RecyclerView.Adapter<VehiclesAdapter.VehicleViewHolder>(
         val currentItem = differ.currentList[position]
 
         holder.itemView.apply {
-            Glide.with(this).load(currentItem.image).into(ivSectionImg)
+            Glide.with(this)
+                .load(currentItem.image)
+                .diskCacheStrategy(DiskCacheStrategy.DATA)
+                .error(R.drawable.ic_image_search)
+                .fallback(R.drawable.ic_image_search)
+                .transition(DrawableTransitionOptions.withCrossFade(1000))
+                .into(ivSectionImg)
             tvTitle.text = currentItem.title
             tvDescription.text = currentItem.description
+
+            view.setOnClickListener {
+                onItemClickListener?.let { it(currentItem) }
+            }
+
         }
+    }
+
+    private var onItemClickListener: ((Section) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (Section) -> Unit) {
+        onItemClickListener = listener
     }
 
 }

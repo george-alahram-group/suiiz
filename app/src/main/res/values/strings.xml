@@ -60,7 +60,6 @@
     <string name="buildings">BUILDINGS</string>
 
 
-
     <string name="ads">ADS</string>
     <string name="home">HOME</string>
     <string name="account">ACCOUNT</string>
@@ -68,7 +67,6 @@
     <string name="chat">CHAT</string>
 
     <string name="error_message_1">you didn`t entered the email or password please try again</string>
-
 
 
 </resources>

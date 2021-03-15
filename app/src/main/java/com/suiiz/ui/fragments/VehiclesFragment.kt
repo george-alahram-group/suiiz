@@ -3,34 +3,28 @@ package com.suiiz.ui.fragments
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.suiiz.R
-import com.suiiz.adapters.VehiclesAdapter
-import com.suiiz.util.DumyData
+import com.suiiz.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.fragment_vehicles.*
-
 
 class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
 
-    private lateinit var vehiclesAdapter: VehiclesAdapter
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        vehiclesAdapter = VehiclesAdapter()
+        viewModel.setupVehicleRv(rv, resources, requireActivity())
+        viewModel.setupVehicleVp2(vp2)
 
-        setupRecyclerView(rv)
-
-    }
-
-    private fun setupRecyclerView(rv: RecyclerView){
-        vehiclesAdapter = VehiclesAdapter()
-        vehiclesAdapter.differ.submitList(DumyData.vehicleList(resources))
-        rv.apply {
-            adapter = vehiclesAdapter
-            layoutManager = LinearLayoutManager(activity)
+        viewModel.vehiclesRecyclerAdapter.setOnItemClickListener {
+            when(it.id){
+                0 -> findNavController().navigate(R.id.action_vehiclesFragment_to_vehicle_CarsBrandFragment)
+            }
         }
+
     }
 
 }

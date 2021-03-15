@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.suiiz.R
 import com.suiiz.adapters.ServiceAdapter
-import com.suiiz.util.DumyData
+import com.suiiz.util.DummyData
 import kotlinx.android.synthetic.main.fragment_services.*
 
 class ServicesFragment : Fragment(R.layout.fragment_services) {
@@ -24,7 +24,7 @@ class ServicesFragment : Fragment(R.layout.fragment_services) {
 
     private fun setupRecyclerView(rv: RecyclerView){
         serviceAdapter = ServiceAdapter()
-        serviceAdapter.differ.submitList(DumyData.servicesList(resources))
+        serviceAdapter.differ.submitList(DummyData.servicesList(resources))
         rv.apply {
             adapter = serviceAdapter
             layoutManager = LinearLayoutManager(activity)
