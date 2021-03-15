@@ -11,18 +11,19 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.suiiz.R
 import com.suiiz.model.Section
+import com.suiiz.model.VehicleList
 import kotlinx.android.synthetic.main.item_service_rv.view.*
 
 class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.VehicleViewHolder>(){
 
     inner class VehicleViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
 
-    val diffUtil  = object : DiffUtil.ItemCallback<Section>() {
-        override fun areItemsTheSame(oldItem: Section, newItem: Section): Boolean {
+    private val diffUtil  = object : DiffUtil.ItemCallback<VehicleList>() {
+        override fun areItemsTheSame(oldItem: VehicleList, newItem: VehicleList): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: Section, newItem: Section): Boolean {
+        override fun areContentsTheSame(oldItem: VehicleList, newItem: VehicleList): Boolean {
             return oldItem.image == newItem.image
         }
     }
@@ -52,7 +53,7 @@ class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.Veh
                 .transition(DrawableTransitionOptions.withCrossFade(1000))
                 .into(ivSectionImg)
             tvTitle.text = currentItem.title
-            tvDescription.text = currentItem.description
+            tvDescription.text = currentItem.ads.toString()
 
             view.setOnClickListener {
                 onItemClickListener?.let { it(currentItem) }
@@ -61,9 +62,9 @@ class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.Veh
         }
     }
 
-    private var onItemClickListener: ((Section) -> Unit)? = null
+    private var onItemClickListener: ((VehicleList) -> Unit)? = null
 
-    fun setOnItemClickListener(listener: (Section) -> Unit) {
+    fun setOnItemClickListener(listener: (VehicleList) -> Unit) {
         onItemClickListener = listener
     }
 

@@ -1,35 +1,48 @@
 package com.suiiz.viewmodels
 
 import android.app.Activity
+import android.app.Application
 import android.content.Context
 import android.content.res.Resources
-import android.icu.lang.UCharacter
+import android.net.ConnectivityManager
+import android.net.ConnectivityManager.*
+import android.net.NetworkCapabilities.*
 import android.os.Build
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.suiiz.R
-import com.suiiz.adapters.carsBrandFragmentAdapters.CarsBrandRvAdapter
+import com.suiiz.SuiizApplication
 import com.suiiz.adapters.HomeAdapter
+import com.suiiz.adapters.carsBrandFragmentAdapters.CarsBrandRvAdapter
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesVp2Adapter
+import com.suiiz.model.VehiclesResponse
+import com.suiiz.repositories.MainRepository
 import com.suiiz.util.Constants
 import com.suiiz.util.DummyData
+import com.suiiz.util.Resource
+import kotlinx.coroutines.launch
+import retrofit2.Response
+import java.io.IOException
 import java.util.*
 
 class MainViewModel(
+    app: Application,
+    val repository: MainRepository
+) : AndroidViewModel(app) {
 
-) : ViewModel() {
-
-    //////////////////////////////////////////////////////////
-    //////////////////////////////// MAIN ACTIVITY - viewModel
-    //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////// MAIN ACTIVITY - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     fun getSharedPrefLocale(activity: Activity, context: Context, res: Resources) {
         val sharedPref =
             context.getSharedPreferences(Constants.SHARED_PREF, AppCompatActivity.MODE_PRIVATE)
@@ -50,9 +63,9 @@ class MainViewModel(
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 
-    //////////////////////////////////////////////////////////
-    ///////////////////// CHOOSE LANGUAGE fragment - viewModel
-    //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////// CHOOSE LANGUAGE fragment - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
 
     // Country Spinner Configuration
     fun setupCountrySpinner(sp: Spinner, context: Context, res: Resources) {
@@ -75,19 +88,19 @@ class MainViewModel(
         activity.recreate()
     }
 
-    //////////////////////////////////////////////////////////
-    /////////////////////////////// LOGIN fragment - viewModel
-    //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////// LOGIN fragment - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    //////////////////////////////////////////////////////////
-    ////////////////////////////// SIGNUP fragment - viewModel
-    //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////// SIGNUP fragment - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    //////////////////////////////////////////////////////////
-    //////////////////////////////// HOME fragment - viewModel
-    //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////// HOME fragment - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     var homeAdapter = HomeAdapter()
     fun setupHomeRv(rv: RecyclerView, res: Resources, activity: Activity) {
         homeAdapter.differ.submitList(DummyData.mainCategoryList(res))
@@ -98,19 +111,11 @@ class MainViewModel(
     }
 
 
-    //////////////////////////////////////////////////////////
-    //////////////////////////// Vehicles fragment - viewModel
-    //////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////// Vehicles fragment - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
     val vehiclesVp2Adapter = VehiclesVp2Adapter()
-
-    fun setupVehicleRv(rv: RecyclerView, res: Resources, activity: Activity) {
-        vehiclesRecyclerAdapter.differ.submitList(DummyData.vehicleList(res))
-        rv.apply {
-            adapter = vehiclesRecyclerAdapter
-            layoutManager = LinearLayoutManager(activity)
-        }
-    }
 
     fun setupVehicleVp2(vp2: ViewPager2) {
         vehiclesVp2Adapter.differ.submitList(DummyData.vp2List())
@@ -120,21 +125,93 @@ class MainViewModel(
     }
 
 
-    //////////////////////////////////////////////////////////
-    /////////////////////////////// Brand fragment - viewModel
-    //////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////// Brand fragment - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+
     val carsBrandRvAdapter = CarsBrandRvAdapter()
 
     fun setupCarsBrandRv(rv: RecyclerView, res: Resources, activity: Activity) {
         carsBrandRvAdapter.differ.submitList(DummyData.carsBrandList(res))
         rv.apply {
             adapter = carsBrandRvAdapter
-            layoutManager = GridLayoutManager(activity,2)
+            layoutManager = GridLayoutManager(activity, 2)
         }
     }
 
 
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////// API NETWORK - viewModel //////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    val vehicles: MutableLiveData<Resource<VehiclesResponse>> = MutableLiveData()
+    var vehiclesPage = 1
+    var vehiclesResponse: VehiclesResponse? = null
 
+    fun getVehicleList() = viewModelScope.launch {
+        safeVehicleListCall()
+    }
+
+    private suspend fun safeVehicleListCall() {
+        vehicles.postValue(Resource.Loading())
+        try {
+            if (hasInternetConnection()) {
+                val response = repository.getVehicleList(/*vehiclesPage*/)
+                vehicles.postValue(handleVehicleResponse(response))
+            } else {
+                vehicles.postValue(Resource.Error("No Internet Connection"))
+            }
+        } catch (t: Throwable) {
+            when(t) {
+                is IOException -> vehicles.postValue(Resource.Error("Network Failure"))
+                else -> vehicles.postValue(Resource.Error("Conversion Error"))
+            }
+        }
+    }
+
+    private fun handleVehicleResponse(response: Response<VehiclesResponse>): Resource<VehiclesResponse> {
+        if (response.isSuccessful) {
+            response.body()?.let { resultResponse ->
+                vehiclesPage++
+                if (vehiclesResponse == null) {
+                    vehiclesResponse = resultResponse
+                } else {
+                    val oldVehicles = vehiclesResponse?.list
+                    val newVehicles = resultResponse.list
+                    oldVehicles?.addAll(newVehicles)
+                }
+                return Resource.Success(vehiclesResponse ?: resultResponse)
+            }
+        }
+        return Resource.Error(response.message())
+    }
+
+    private fun hasInternetConnection(): Boolean {
+        val connectivityManager = getApplication<SuiizApplication>().getSystemService(
+            Context.CONNECTIVITY_SERVICE
+        ) as ConnectivityManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val activeNetwork = connectivityManager.activeNetwork ?: return false
+            val capabilitiesInfo =
+                connectivityManager.getNetworkCapabilities(activeNetwork) ?: return false
+            return when {
+                capabilitiesInfo.hasTransport(TRANSPORT_WIFI) -> true
+                capabilitiesInfo.hasTransport(TRANSPORT_CELLULAR) -> true
+                capabilitiesInfo.hasTransport(TRANSPORT_ETHERNET) -> true
+                else -> false
+            }
+        } else {
+            connectivityManager.activeNetworkInfo?.run {
+                return when (type) {
+                    TYPE_WIFI -> true
+                    TYPE_MOBILE -> true
+                    TYPE_ETHERNET -> true
+                    else -> false
+                }
+            }
+        }
+        return false
+    }
 
 
 }

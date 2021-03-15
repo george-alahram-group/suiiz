@@ -1,5 +1,6 @@
 package com.suiiz.api
 
+import com.suiiz.util.Constants.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -21,7 +22,7 @@ class RetrofitInstance {
 
             // TODO("get from constant and put it to gitignore")
             Retrofit.Builder()
-                .baseUrl("/**/")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(clint)
                 .build()
