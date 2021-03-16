@@ -48,5 +48,7 @@
     <string name="oil_products">منتجات بترولية</string>
     <string name="buildings">مبانى</string>
     <string name="error_message_1">انت لم تدخل البريد الالكترونى او كلمة المرور برجاء المحاوله مرة اخرى</string>
+    <string name="company">شركة</string>
+    <string name="personal">شخصى</string>
 
 </resources>

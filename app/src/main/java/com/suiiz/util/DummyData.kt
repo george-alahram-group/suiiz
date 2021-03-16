@@ -145,6 +145,11 @@ object DummyData {
         "https://drivetribe.imgix.net/Fn0CvExKT02WNCO_Rz51Tw?w=600&h=338&fm=jpe&auto=compress&fit=crop&crop=faces",
         "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/01/d3a0a38bf9212fa4e4bef1f40ead0e7f/duinmwixkaatair.jpg?itok=BLdGISce"
     )
+    fun loopVpList() = arrayListOf<String>(
+        "https://www.fia.com/sites/default/files/styles/content_details/public/news/main_image/2017_concept_1.jpg?itok=MJSFw833",
+        "https://drivetribe.imgix.net/Fn0CvExKT02WNCO_Rz51Tw?w=600&h=338&fm=jpe&auto=compress&fit=crop&crop=faces",
+        "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/01/d3a0a38bf9212fa4e4bef1f40ead0e7f/duinmwixkaatair.jpg?itok=BLdGISce"
+    )
 
     fun servicesList(res: Resources) = mutableListOf(
         Section(

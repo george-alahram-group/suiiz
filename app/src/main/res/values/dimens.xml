@@ -1,3 +1,4 @@
 <resources>
     <dimen name="text_margin">@dimen/_16sdp</dimen>
+    <dimen name="corner_radius">@dimen/_20sdp</dimen>
 </resources>

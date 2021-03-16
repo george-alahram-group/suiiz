@@ -54,12 +54,27 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_addAdFragment"
+            app:destination="@id/addAdFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/servicesFragment"
         android:name="com.suiiz.ui.fragments.ServicesFragment"
         android:label="fragment_services"
-        tools:layout="@layout/fragment_services" />
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/action_servicesFragment_to_addAdFragment"
+            app:destination="@id/addAdFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/vehiclesFragment"
         android:name="com.suiiz.ui.fragments.VehiclesFragment"
@@ -68,6 +83,13 @@
         <action
             android:id="@+id/action_vehiclesFragment_to_vehicle_CarsBrandFragment"
             app:destination="@id/vehicle_CarsBrandFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_vehiclesFragment_to_addAdFragment"
+            app:destination="@id/addAdFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -85,10 +107,30 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_vehicle_CarsBrandFragment_to_addAdFragment"
+            app:destination="@id/addAdFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/vehicle_Cars_ModelFragment"
         android:name="com.suiiz.ui.fragments.Vehicle_Cars_ModelFragment"
         android:label="fragment_vehicle__cars__model"
-        tools:layout="@layout/fragment_vehicle_cars_model" />
+        tools:layout="@layout/fragment_vehicle_cars_model" >
+        <action
+            android:id="@+id/action_vehicle_Cars_ModelFragment_to_addAdFragment"
+            app:destination="@id/addAdFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addAdFragment"
+        android:name="com.suiiz.ui.fragments.AddAdFragment"
+        android:label="fragment_add_ad"
+        tools:layout="@layout/fragment_add_ad" />
 </navigation>

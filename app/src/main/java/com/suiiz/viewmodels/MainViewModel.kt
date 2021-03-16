@@ -23,6 +23,7 @@ import com.suiiz.R
 import com.suiiz.SuiizApplication
 import com.suiiz.adapters.HomeAdapter
 import com.suiiz.adapters.carsBrandFragmentAdapters.CarsBrandRvAdapter
+import com.suiiz.adapters.AdsLoopViewPagerAdapter
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesVp2Adapter
 import com.suiiz.model.VehiclesResponse
@@ -34,6 +35,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainViewModel(
     app: Application,
@@ -114,6 +116,9 @@ class MainViewModel(
     /////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Vehicles fragment - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
+    fun vehicleLoopVpAdapter(context: Context, list: ArrayList<String>, isInfinity: Boolean) =
+        AdsLoopViewPagerAdapter(context, list, isInfinity)
+
     val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
     val vehiclesVp2Adapter = VehiclesVp2Adapter()
 
@@ -125,20 +130,12 @@ class MainViewModel(
     }
 
 
-
     /////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////// Brand fragment - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
-
     val carsBrandRvAdapter = CarsBrandRvAdapter()
 
-    fun setupCarsBrandRv(rv: RecyclerView, res: Resources, activity: Activity) {
-        carsBrandRvAdapter.differ.submitList(DummyData.carsBrandList(res))
-        rv.apply {
-            adapter = carsBrandRvAdapter
-            layoutManager = GridLayoutManager(activity, 2)
-        }
-    }
+
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -162,7 +159,7 @@ class MainViewModel(
                 vehicles.postValue(Resource.Error("No Internet Connection"))
             }
         } catch (t: Throwable) {
-            when(t) {
+            when (t) {
                 is IOException -> vehicles.postValue(Resource.Error("Network Failure"))
                 else -> vehicles.postValue(Resource.Error("Conversion Error"))
             }

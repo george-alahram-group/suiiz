@@ -12,6 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_110sdp"
         android:clipToPadding="false"
+        android:visibility="invisible"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <com.asksira.loopingviewpager.LoopingViewPager
+        android:id="@+id/loopingVP"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:clipToPadding="false"
+        app:isInfinite="true"
+        app:autoScroll="true"
+        app:scrollInterval="5000"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true" />

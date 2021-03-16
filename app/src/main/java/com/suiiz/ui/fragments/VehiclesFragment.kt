@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.asksira.loopingviewpager.LoopingViewPager
 import com.google.android.material.snackbar.Snackbar
 import com.suiiz.R
 import com.suiiz.util.Constants.QUERY_PAGE_SIZE
@@ -34,7 +35,8 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
         super.onViewCreated(view, savedInstanceState)
 
         setupVehicleRv(rv, requireActivity())
-        setupVehicleVp2(vp2)
+        // setupVehicleVp2(vp2)
+        setupLoopingVp(loopingVP)
 
         viewModel.vehiclesRecyclerAdapter.setOnItemClickListener {
             when(it.id){
@@ -121,11 +123,17 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
         }
     }
 
+    // never used
     private fun setupVehicleVp2(vp2: ViewPager2) {
         viewModel.vehiclesVp2Adapter.differ.submitList(DummyData.vp2List())
         vp2.apply {
             adapter = viewModel.vehiclesVp2Adapter
         }
+    }
+
+    private fun setupLoopingVp(loopingViewPager: LoopingViewPager) {
+        val adapter = viewModel.vehicleLoopVpAdapter(requireContext(),DummyData.loopVpList(),true)
+        loopingViewPager.adapter = adapter
     }
 
 }
