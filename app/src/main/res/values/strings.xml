@@ -69,6 +69,12 @@
     <string name="error_message_1">you didn`t entered the email or password please try again</string>
     <string name="company">COMPANY</string>
     <string name="personal">PERSONAL</string>
+    <string name="title">TITLE</string>
+    <string name="choose">CHOOSE :</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="company_name">COMPANY NAME</string>
+    <string name="status">STATUS :</string>
+    <string name="contact_me_by">CONTACT ME BY</string>
 
 
 </resources>

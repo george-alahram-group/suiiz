@@ -8,6 +8,7 @@
     tools:context=".ui.fragments.AddAdFragment">
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:paddingTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:background="@drawable/top_app_bar_bg"
@@ -30,6 +31,9 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

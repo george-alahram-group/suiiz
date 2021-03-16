@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_50sdp">
+
+            <!-- photos section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_1sdp"
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_dark_background"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add_photo"
+                                app:tint="@color/iconsColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primaryColor"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="add photo"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/secondaryTextColor" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_1sdp"
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_dark_background"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add_photo"
+                                app:tint="@color/iconsColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primaryColor"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="add photo"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/secondaryTextColor" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_1sdp"
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_dark_background"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add_photo"
+                                app:tint="@color/iconsColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primaryColor"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="add photo"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/secondaryTextColor" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_1sdp"
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_dark_background"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add_photo"
+                                app:tint="@color/iconsColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primaryColor"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="add photo"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/secondaryTextColor" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_1sdp"
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_dark_background"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add_photo"
+                                app:tint="@color/iconsColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primaryColor"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="add photo"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/secondaryTextColor" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/_1sdp"
+                        app:cardCornerRadius="@dimen/_15sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_dark_background"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_add_video"
+                                app:tint="@color/iconsColor" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primaryColor"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="add video"
+                                android:textAlignment="gravity"
+                                android:textColor="@color/secondaryTextColor" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- data section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Edit Text Title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_normal_bacground_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_dot"
+                        app:tint="@color/iconsColor" />
+
+                    <!-- TODO : change background to dark to match the theme -->
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:hint="@string/title"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                </LinearLayout>
+
+                <!-- Spinner Category -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_normal_bacground_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_dot"
+                        app:tint="@color/iconsColor" />
+
+                    <Spinner
+                        android:id="@+id/spCategory"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:autofillHints="@string/country"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:contextClickable="true"
+                        android:scrollbarAlwaysDrawHorizontalTrack="true"
+                        android:textColor="@color/secondaryTextColor" />
+
+                </LinearLayout>
+
+                <!-- Spinners Model / Brand -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/inputs_normal_bacground_left"
+                            android:contentDescription="@string/app_name"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_dot"
+                            app:tint="@color/iconsColor" />
+
+                        <!-- TODO : change background to dark to match the theme -->
+                        <Spinner
+                            android:id="@+id/spBrand"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="12"
+                            android:autofillHints="@string/country"
+                            android:background="@drawable/inputs_normal_background_right"
+                            android:contextClickable="true"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:textColor="@color/secondaryTextColor" />
+
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/inputs_normal_bacground_left"
+                            android:contentDescription="@string/app_name"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_dot"
+                            app:tint="@color/iconsColor" />
+
+                        <!-- TODO : change background to dark to match the theme -->
+                        <Spinner
+                            android:id="@+id/spModel"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="12"
+                            android:autofillHints="@string/country"
+                            android:background="@drawable/inputs_normal_background_right"
+                            android:contextClickable="true"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:textColor="@color/secondaryTextColor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Spinners Year -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/inputs_normal_bacground_left"
+                            android:contentDescription="@string/app_name"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_dot"
+                            app:tint="@color/iconsColor" />
+
+                        <!-- TODO : change background to dark to match the theme -->
+                        <Spinner
+                            android:id="@+id/spYearFrom"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="12"
+                            android:autofillHints="@string/country"
+                            android:background="@drawable/inputs_normal_background_right"
+                            android:contextClickable="true"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:textColor="@color/secondaryTextColor" />
+
+                    </LinearLayout>
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:background="@drawable/inputs_normal_bacground_left"
+                            android:contentDescription="@string/app_name"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_dot"
+                            app:tint="@color/iconsColor" />
+
+                        <!-- TODO : change background to dark to match the theme -->
+                        <Spinner
+                            android:id="@+id/spYearTo"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_weight="12"
+                            android:autofillHints="@string/country"
+                            android:background="@drawable/inputs_normal_background_right"
+                            android:contextClickable="true"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true"
+                            android:textColor="@color/secondaryTextColor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Radio Group NEW / USED -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/choose"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="NEW"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="USED"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Radio Group ORIGINAL / COPY -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/choose"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ORIGINAL"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="COPY"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Radio Group EGYPT / INTERNATIONAL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/choose"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="EGYPT"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="INTERNATIONAL"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Radio Group INTERNAL / EXTERNAL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/choose"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="INTERNAL"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="EXTERNAL"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Spinner Parts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_normal_bacground_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_dot"
+                        app:tint="@color/iconsColor" />
+
+                    <Spinner
+                        android:id="@+id/spParts"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:autofillHints="@string/country"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:contextClickable="true"
+                        android:scrollbarAlwaysDrawHorizontalTrack="true"
+                        android:textColor="@color/secondaryTextColor" />
+
+                </LinearLayout>
+
+                <!-- plus / minus -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/inputs_normal_bacground"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/btnMinus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:focusable="true"
+                        android:src="@drawable/ic_minus"
+                        app:tint="@color/primaryColor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:text="1"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <ImageView
+                        android:id="@+id/btnPlus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:focusable="true"
+                        android:src="@drawable/ic_plus"
+                        app:tint="@color/primaryColor" />
+
+                </LinearLayout>
+
+                <!-- Edit Text Description -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_normal_bacground_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_dot"
+                        app:tint="@color/iconsColor" />
+
+                    <EditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:hint="@string/description"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                </LinearLayout>
+
+                <!-- Edit Text Price -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_differ_background_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_money"
+                        app:tint="@color/iconsColor" />
+
+                    <!-- TODO : change background to dark to match the theme -->
+                    <EditText
+                        android:id="@+id/etPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:hint="00.00"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                </LinearLayout>
+
+                <!-- Spinner Location -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_differ_background_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_location"
+                        app:tint="@color/iconsColor" />
+
+                    <Spinner
+                        android:id="@+id/spLocation"
+                        style="@style/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:autofillHints="@string/country"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:contextClickable="true"
+                        android:scrollbarAlwaysDrawHorizontalTrack="true"
+                        android:textColor="@color/secondaryTextColor" />
+
+                </LinearLayout>
+
+                <!-- Edit Text Price -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_differ_background_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_user"
+                        app:tint="@color/iconsColor" />
+
+                    <!-- TODO : change background to dark to match the theme -->
+                    <EditText
+                        android:id="@+id/etCompanyName"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:hint="@string/company_name"
+                        android:inputType="text"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                </LinearLayout>
+
+                <!-- Radio Group COMPANY / PERSONAL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/status"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="COMPANY"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PERSONAL"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- TODO : Edit Text Commercial Record -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/inputs_normal_bacground"
+                    android:padding="0dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_commercial_record"
+                        app:tint="@color/iconsColor" />
+
+                    <EditText
+                        android:id="@+id/etCommercialRecord"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:hint="COMMERCIAL RECORD"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/primaryColor" />
+
+                </LinearLayout>
+
+                <!-- TODO : Edit Text Tax Card Number -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/inputs_normal_bacground"
+                    android:padding="0dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_credit_card"
+                        app:tint="@color/iconsColor" />
+
+                    <EditText
+                        android:id="@+id/etCardNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:hint="CARD NUMBER"
+                        android:inputType="number"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/primaryColor" />
+
+                </LinearLayout>
+
+                <!-- Edit Text Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_differ_background_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_email"
+                        app:tint="@color/iconsColor" />
+
+                    <!-- TODO : change background to dark to match the theme -->
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                </LinearLayout>
+
+                <!-- Edit Text Phone -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/inputs_differ_background_left"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_call"
+                        app:tint="@color/iconsColor" />
+
+                    <!-- TODO : change background to dark to match the theme -->
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight="12"
+                        android:background="@drawable/inputs_normal_background_right"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textColorHint="@color/iconsColor" />
+
+                </LinearLayout>
+
+                <!-- Radio Group CHAT / PHONE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/contact_me_by"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/primaryTextColor" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="CHAT"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PHONE"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Radio Receive Suiz News Letter -->
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_weight="1"
+                    android:text="I would like to recive suiz newsletter"
+                    android:textColor="@color/primaryTextColor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
