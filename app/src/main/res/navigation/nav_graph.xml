@@ -3,134 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/home_destination">
+
     <fragment
-        android:id="@+id/passwordRecoveryFragment"
-        android:name="com.suiiz.ui.fragments.PasswordRecoveryFragment"
-        android:label="fragment_password_recovery"
-        tools:layout="@layout/fragment_password_recovery" >
-        <action
-            android:id="@+id/action_passwordRecoveryFragment_to_passwordRecoveryStep2Fragment"
-            app:destination="@id/passwordRecoveryStep2Fragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/passwordRecoveryStep2Fragment"
-        android:name="com.suiiz.ui.fragments.PasswordRecoveryStep2Fragment"
-        android:label="PasswordRecoveryStep2Fragment"
-        tools:layout="@layout/fragment_password_recovery__setp_2">
-        <action
-            android:id="@+id/action_passwordRecoveryStep2Fragment_to_passwordRecoveryStep3Fragment"
-            app:destination="@id/passwordRecoveryStep3Fragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
-    <fragment
-        android:id="@+id/passwordRecoveryStep3Fragment"
-        android:name="com.suiiz.ui.fragments.PasswordRecoveryStep3Fragment"
-        android:label="PasswordRecoveryStep3Fragment"
-        tools:layout="@layout/fragment_password_recovery__setp_3"/>
-    <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/home_destination"
         android:name="com.suiiz.ui.fragments.HomeFragment"
-        android:label="HomeFragment"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_servicesFragment"
-            app:destination="@id/servicesFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/to_next_destination"
+            app:destination="@id/vehicles_destination" />
         <action
-            android:id="@+id/action_homeFragment_to_vehiclesFragment"
-            app:destination="@id/vehiclesFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_homeFragment_to_addAdFragment"
-            app:destination="@id/addAdFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/to_services_destination"
+            app:destination="@id/services_destination" />
     </fragment>
+
     <fragment
-        android:id="@+id/servicesFragment"
-        android:name="com.suiiz.ui.fragments.ServicesFragment"
-        android:label="fragment_services"
-        tools:layout="@layout/fragment_services" >
-        <action
-            android:id="@+id/action_servicesFragment_to_addAdFragment"
-            app:destination="@id/addAdFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+        android:id="@+id/addAd_destination"
+        android:name="com.suiiz.ui.fragments.AddAdFragment"
+        android:label="fragment_add_ad"
+        tools:layout="@layout/fragment_add_ad" />
+
     <fragment
-        android:id="@+id/vehiclesFragment"
+        android:id="@+id/chat_destination"
+        android:name="com.suiiz.ui.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/favorite_destination"
+        android:name="com.suiiz.ui.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/profile_destination"
+        android:name="com.suiiz.ui.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/vehicles_destination"
         android:name="com.suiiz.ui.fragments.VehiclesFragment"
         android:label="fragment_vehicles"
         tools:layout="@layout/fragment_vehicles" >
         <action
-            android:id="@+id/action_vehiclesFragment_to_vehicle_CarsBrandFragment"
-            app:destination="@id/vehicle_CarsBrandFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_vehiclesFragment_to_addAdFragment"
-            app:destination="@id/addAdFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/to_next_destination"
+            app:destination="@id/vehicle_CarsBrand_destination" />
     </fragment>
     <fragment
-        android:id="@+id/vehicle_CarsBrandFragment"
+        android:id="@+id/vehicle_CarsBrand_destination"
         android:name="com.suiiz.ui.fragments.Vehicle_CarsBrandFragment"
-        android:label="fragment_vehicle_cars"
+        android:label="fragment_vehicle_cars_brand"
         tools:layout="@layout/fragment_vehicle_cars_brand" >
         <action
-            android:id="@+id/action_vehicle_CarsBrandFragment_to_vehicle_Cars_ModelFragment"
-            app:destination="@id/vehicle_Cars_ModelFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_vehicle_CarsBrandFragment_to_addAdFragment"
-            app:destination="@id/addAdFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            android:id="@+id/to_next_destination"
+            app:destination="@id/vehicle_Cars_Model_destination" />
     </fragment>
     <fragment
-        android:id="@+id/vehicle_Cars_ModelFragment"
+        android:id="@+id/vehicle_Cars_Model_destination"
         android:name="com.suiiz.ui.fragments.Vehicle_Cars_ModelFragment"
-        android:label="fragment_vehicle__cars__model"
-        tools:layout="@layout/fragment_vehicle_cars_model" >
-        <action
-            android:id="@+id/action_vehicle_Cars_ModelFragment_to_addAdFragment"
-            app:destination="@id/addAdFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
-    </fragment>
+        android:label="fragment_vehicle_cars_model"
+        tools:layout="@layout/fragment_vehicle_cars_model" />
     <fragment
-        android:id="@+id/addAdFragment"
-        android:name="com.suiiz.ui.fragments.AddAdFragment"
-        android:label="fragment_add_ad"
-        tools:layout="@layout/fragment_add_ad" />
+        android:id="@+id/services_destination"
+        android:name="com.suiiz.ui.fragments.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" />
+
 </navigation>

@@ -59,7 +59,7 @@
                                 android:background="@color/primaryColor"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="add photo"
+                                android:text="@string/add_photo"
                                 android:textAlignment="gravity"
                                 android:textColor="@color/secondaryTextColor" />
 
@@ -95,7 +95,7 @@
                                 android:background="@color/primaryColor"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="add photo"
+                                android:text="@string/add_photo"
                                 android:textAlignment="gravity"
                                 android:textColor="@color/secondaryTextColor" />
 
@@ -132,7 +132,7 @@
                                 android:background="@color/primaryColor"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="add photo"
+                                android:text="@string/add_photo"
                                 android:textAlignment="gravity"
                                 android:textColor="@color/secondaryTextColor" />
 
@@ -177,7 +177,7 @@
                                 android:background="@color/primaryColor"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="add photo"
+                                android:text="@string/add_photo"
                                 android:textAlignment="gravity"
                                 android:textColor="@color/secondaryTextColor" />
 
@@ -213,7 +213,7 @@
                                 android:background="@color/primaryColor"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="add photo"
+                                android:text="@string/add_photo"
                                 android:textAlignment="gravity"
                                 android:textColor="@color/secondaryTextColor" />
 
@@ -250,7 +250,7 @@
                                 android:background="@color/primaryColor"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="add video"
+                                android:text="@string/add_photo"
                                 android:textAlignment="gravity"
                                 android:textColor="@color/secondaryTextColor" />
 
@@ -506,14 +506,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="NEW"
+                            android:text="@string/_new"
                             android:textColor="@color/primaryTextColor" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="USED"
+                            android:text="@string/used"
                             android:textColor="@color/primaryTextColor" />
 
                     </RadioGroup>
@@ -547,14 +547,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="ORIGINAL"
+                            android:text="@string/original"
                             android:textColor="@color/primaryTextColor" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="COPY"
+                            android:text="@string/copy"
                             android:textColor="@color/primaryTextColor" />
 
                     </RadioGroup>
@@ -588,14 +588,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="EGYPT"
+                            android:text="@string/egypt"
                             android:textColor="@color/primaryTextColor" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="INTERNATIONAL"
+                            android:text="@string/international"
                             android:textColor="@color/primaryTextColor" />
 
                     </RadioGroup>
@@ -629,14 +629,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="INTERNAL"
+                            android:text="@string/internal"
                             android:textColor="@color/primaryTextColor" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="EXTERNAL"
+                            android:text="@string/external"
                             android:textColor="@color/primaryTextColor" />
 
                     </RadioGroup>
@@ -841,48 +841,6 @@
 
                 </LinearLayout>
 
-                <!-- Radio Group COMPANY / PERSONAL -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_15sdp"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:layout_marginEnd="@dimen/_15sdp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:paddingEnd="@dimen/_15sdp"
-                        android:text="@string/status"
-                        android:textAlignment="gravity"
-                        android:textColor="@color/primaryTextColor" />
-
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="COMPANY"
-                            android:textColor="@color/primaryTextColor" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="PERSONAL"
-                            android:textColor="@color/primaryTextColor" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
                 <!-- TODO : Edit Text Commercial Record -->
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -906,7 +864,7 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_35sdp"
                         android:layout_weight="12"
-                        android:hint="COMMERCIAL RECORD"
+                        android:hint="@string/commercial_record"
                         android:inputType="textPersonName"
                         android:textColor="@color/secondaryTextColor"
                         android:textColorHint="@color/iconsColor" />
@@ -944,7 +902,7 @@
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_35sdp"
                         android:layout_weight="12"
-                        android:hint="CARD NUMBER"
+                        android:hint="@string/card_number"
                         android:inputType="number"
                         android:textColor="@color/secondaryTextColor"
                         android:textColorHint="@color/iconsColor" />
@@ -1049,14 +1007,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="CHAT"
+                            android:text="@string/chat"
                             android:textColor="@color/primaryTextColor" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="PHONE"
+                            android:text="@string/phone"
                             android:textColor="@color/primaryTextColor" />
 
                     </RadioGroup>
@@ -1066,13 +1024,47 @@
                 <!-- Radio Receive Suiz News Letter -->
                 <RadioButton
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginStart="@dimen/_15sdp"
                     android:layout_marginEnd="@dimen/_15sdp"
                     android:layout_marginBottom="@dimen/_15sdp"
                     android:layout_weight="1"
-                    android:text="I would like to recive suiz newsletter"
+                    android:text="@string/i_would_like_to_recive_suiz_newsletter"
                     android:textColor="@color/primaryTextColor" />
+
+                <!-- Review and SUBMIT -->
+                <LinearLayout
+                    android:layout_marginBottom="?actionBarSize"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCreate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_32sdp"
+                        android:paddingEnd="@dimen/_32sdp"
+                        android:text="@string/submit"
+                        android:textColor="@color/secondaryTextColor"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/primaryColor"
+                        app:cornerRadius="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/textField"
+                        app:layout_constraintStart_toStartOf="@+id/textField"
+                        app:layout_constraintTop_toBottomOf="@+id/textField"
+                        app:rippleColor="@color/primaryLightColor" />
+                </LinearLayout>
 
             </LinearLayout>
 

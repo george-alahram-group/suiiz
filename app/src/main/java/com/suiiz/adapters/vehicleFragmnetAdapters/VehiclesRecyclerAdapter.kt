@@ -18,12 +18,12 @@ class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.Veh
 
     inner class VehicleViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
 
-    private val diffUtil  = object : DiffUtil.ItemCallback<VehicleList>() {
-        override fun areItemsTheSame(oldItem: VehicleList, newItem: VehicleList): Boolean {
+    private val diffUtil  = object : DiffUtil.ItemCallback<Section>() {
+        override fun areItemsTheSame(oldItem: Section, newItem: Section): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: VehicleList, newItem: VehicleList): Boolean {
+        override fun areContentsTheSame(oldItem: Section, newItem: Section): Boolean {
             return oldItem.image == newItem.image
         }
     }
@@ -53,7 +53,7 @@ class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.Veh
                 .transition(DrawableTransitionOptions.withCrossFade(1000))
                 .into(ivSectionImg)
             tvTitle.text = currentItem.title
-            tvDescription.text = currentItem.ads.toString()
+            tvDescription.text = currentItem.description.toString()
 
             view.setOnClickListener {
                 onItemClickListener?.let { it(currentItem) }
@@ -62,9 +62,9 @@ class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.Veh
         }
     }
 
-    private var onItemClickListener: ((VehicleList) -> Unit)? = null
+    private var onItemClickListener: ((Section) -> Unit)? = null
 
-    fun setOnItemClickListener(listener: (VehicleList) -> Unit) {
+    fun setOnItemClickListener(listener: (Section) -> Unit) {
         onItemClickListener = listener
     }
 

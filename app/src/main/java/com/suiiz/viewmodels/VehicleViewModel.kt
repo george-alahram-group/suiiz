@@ -1,13 +1,19 @@
 package com.suiiz.viewmodels
 
 import android.app.Application
+import android.content.Context
+import android.content.res.Resources
 import androidx.lifecycle.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
 import com.suiiz.repositories.MainRepository
+import com.suiiz.util.DummyData
 
 @Suppress("UNCHECKED_CAST")
 class VehicleViewModelProviderFactory(
     val app: Application,
-    val repository: MainRepository
+    private val repository: MainRepository
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return VehicleViewModel(app, repository) as T
@@ -21,28 +27,24 @@ class VehicleViewModel(
 
     // TODO : Logic here
 
-
     /*init {
         getPhotos()
-    }
+    }*/
 
     /////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Vehicles fragment - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
-    private fun vehicleLoopVpAdapter(
-        context: Context,
-        list: ArrayList<String>,
-        isInfinity: Boolean
-    ) = AdsLoopViewPagerAdapter(context, list, isInfinity)
+    private val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
 
-    fun setupLoopingVp(loopingViewPager: LoopingViewPager, context: Context) {
-        val adapter = vehicleLoopVpAdapter(context, DummyData.loopVpList(), true)
-        loopingViewPager.adapter = adapter
+    fun setupRv(rv:RecyclerView,res:Resources,context: Context) {
+        vehiclesRecyclerAdapter.differ.submitList(DummyData.vehicleList(res))
+        rv.apply {
+            adapter = vehiclesRecyclerAdapter
+            layoutManager = LinearLayoutManager(context)
+        }
     }
 
-    val photosAdapter = PhotosAdapter()
-
-
+/*
     /////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////// API NETWORK - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////

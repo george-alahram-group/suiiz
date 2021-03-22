@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingTop="?attr/actionBarSize"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.fragments.ProfileFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -52,7 +53,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="HI !"
+                        android:text="@string/hi"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="@dimen/_18sdp"
                         android:textStyle="bold" />
@@ -74,375 +75,535 @@
             <!-- TODO : edit this layout -->
 
             <GridLayout
-                android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:columnCount="3"
                 android:rowCount="3">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
+                    android:layout_gravity="fill"
                     android:clipChildren="false"
                     android:clipToPadding="false"
-                    android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:clipToPadding="false"
                         android:clipChildren="false"
+                        android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_add_shopping_cart"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
                     </androidx.cardview.widget.CardView>
 
+
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_purchases"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_money"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_sales"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_shopping_cart"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_cart"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_services"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_services"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_services"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_parts"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_search"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/accessories"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_car"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_vehicle"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_settings"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/my_setting"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/_90sdp"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:gravity="center"
-                    android:clipToPadding="false"
                     android:layout_gravity="fill"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:clipChildren="false"
                         android:clipToPadding="false"
+                        app:cardBackgroundColor="@color/primaryColor"
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_5sdp">
+                        app:cardElevation="@dimen/_3sdp">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="@dimen/_5sdp">
+                            android:layout_margin="1dip"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardElevation="@dimen/_3sdp">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/primaryColor"
-                                android:padding="@dimen/_15sdp"
-                                android:src="@drawable/ic_add_shopping_cart" />
-                        </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:padding="@dimen/_15sdp"
+                                    android:src="@drawable/ic_log_out"
+                                    app:tint="@color/primaryColor" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:paddingVertical="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MY PURCHASES" />
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/log_out"
+                        android:textColor="@color/primaryColor" />
                 </LinearLayout>
 
             </GridLayout>

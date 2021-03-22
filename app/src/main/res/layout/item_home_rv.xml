@@ -14,7 +14,7 @@
         android:layout_marginBottom="@dimen/_8sdp"
         android:clipToPadding="false"
         app:cardCornerRadius="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp">
+        app:cardElevation="@dimen/_3sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

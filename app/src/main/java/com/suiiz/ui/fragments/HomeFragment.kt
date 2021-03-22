@@ -21,11 +21,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         homeAdapter = viewModel.homeAdapter
         viewModel.setupHomeRv(rv, resources, requireActivity())
 
-        fabService.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_servicesFragment) }
+        fabService.setOnClickListener { findNavController().navigate(R.id.to_services_destination) }
 
         homeAdapter.setOnItemClickListener {
             when (it.id) {
-                0 -> findNavController().navigate(R.id.action_homeFragment_to_vehiclesFragment)
+                0 -> findNavController().navigate(R.id.to_next_destination)
                 1 -> { }
                 2 -> { }
                 3 -> { }
@@ -33,7 +33,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 5 -> { }
             }
         }
-
 
 
     }

@@ -75,6 +75,31 @@
     <string name="company_name">COMPANY NAME</string>
     <string name="status">STATUS :</string>
     <string name="contact_me_by">CONTACT ME BY</string>
+    <string name="review">Review</string>
+    <string name="submit">SUBMIT</string>
+    <string name="add_photo">add photo</string>
+    <string name="_new">NEW</string>
+    <string name="used">USED</string>
+    <string name="original">ORIGINAL</string>
+    <string name="copy">COPY</string>
+    <string name="egypt">EGYPT</string>
+    <string name="international">INTERNATIONAL</string>
+    <string name="internal">INTERNAL</string>
+    <string name="external">EXTERNAL</string>
+    <string name="commercial_record">COMMERCIAL RECORD</string>
+    <string name="card_number">CARD NUMBER</string>
+    <string name="phone">PHONE</string>
+    <string name="i_would_like_to_recive_suiz_newsletter">I would like to recive suiz newsletter</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="my_setting">MY SETTING</string>
+    <string name="my_vehicle">MY VEHICLE</string>
+    <string name="accessories">ACCESSORIES</string>
+    <string name="my_parts">MY PARTS</string>
+    <string name="my_services">MY SERVICES</string>
+    <string name="my_cart">MY CART</string>
+    <string name="my_sales">MY SALES</string>
+    <string name="my_purchases">MY PURCHASES</string>
+    <string name="hi">HI !</string>
 
 
 </resources>

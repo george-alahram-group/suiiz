@@ -129,9 +129,6 @@ class MainViewModel(
         loopingViewPager.adapter = adapter
     }
 
-    val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
-
-
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////

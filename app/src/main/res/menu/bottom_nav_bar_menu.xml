@@ -5,11 +5,10 @@
 
 
     <item
-        android:id="@+id/mainFragment"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
         android:title="@string/home"
         android:tooltipText="@string/home"
-        app:showAsAction="always"
         tools:targetApi="o" />
 
     <item
@@ -17,23 +16,20 @@
         android:icon="@drawable/ic_person"
         android:title="@string/account"
         android:tooltipText="@string/account"
-        app:showAsAction="always"
         tools:targetApi="o" />
 
     <item
         android:id="@+id/addAdFragment"
         android:icon="@drawable/ic_plus"
-        android:tooltipText="@string/home"
-        app:showAsAction="always"
+        android:tooltipText="@string/ads"
         tools:targetApi="o"
-        android:title="" />
+        android:title="@string/ads" />
 
     <item
         android:id="@+id/favoriteFragment"
         android:icon="@drawable/ic_favorite"
         android:title="@string/favorite"
         android:tooltipText="@string/favorite"
-        app:showAsAction="always"
         tools:targetApi="o" />
 
     <item
@@ -41,6 +37,5 @@
         android:icon="@drawable/ic_chat"
         android:title="@string/chat"
         android:tooltipText="@string/chat"
-        app:showAsAction="always"
         tools:targetApi="o" />
 </menu>

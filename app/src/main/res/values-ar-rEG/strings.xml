@@ -50,5 +50,26 @@
     <string name="error_message_1">انت لم تدخل البريد الالكترونى او كلمة المرور برجاء المحاوله مرة اخرى</string>
     <string name="company">شركة</string>
     <string name="personal">شخصى</string>
+    <string name="title">العنوان</string>
+    <string name="choose">اختر :</string>
+    <string name="description">الوصف</string>
+    <string name="company_name">اسم الشركة</string>
+    <string name="status">الحالة :</string>
+    <string name="contact_me_by">اتصل بى بواسطة</string>
+    <string name="review">عرض</string>
+    <string name="submit">ارسل</string>
+    <string name="add_photo">اضف صورة</string>
+    <string name="_new">جديد</string>
+    <string name="used">مستعمل</string>
+    <string name="original">اصلى</string>
+    <string name="copy">تقليد</string>
+    <string name="egypt">مصر</string>
+    <string name="international">عالمى</string>
+    <string name="internal">داخلى</string>
+    <string name="external">خارجى</string>
+    <string name="commercial_record">السجل التجاري</string>
+    <string name="card_number">رقم البطاقة</string>
+    <string name="phone">رقم الموبايل</string>
+    <string name="i_would_like_to_recive_suiz_newsletter">اريد استقبال اخبار Suiiz</string>
 
 </resources>

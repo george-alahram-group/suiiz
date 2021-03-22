@@ -7,52 +7,60 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.suiiz.R
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
+import com.suiiz.ui.MainActivity
 import com.suiiz.viewmodels.MainViewModel
+import com.suiiz.viewmodels.VehicleViewModel
 import kotlinx.android.synthetic.main.fragment_vehicles.*
+import kotlinx.android.synthetic.main.upper_cart.*
 
 class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
 
     private val viewModel: MainViewModel by activityViewModels()
-    private lateinit var rvAdapter : VehiclesRecyclerAdapter
+    private lateinit var vehicleViewModel: VehicleViewModel
+    private lateinit var rvAdapter: VehiclesRecyclerAdapter
 
-    var isLoading = false
-    var isLastPage = false
-    var isScrolling = false
+    private var isLoading = false
+    private var isLastPage = false
+    private var isScrolling = false
 
     @SuppressLint("ShowToast")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        vehicleViewModel = (activity as MainActivity).vehicleViewModel
+
+        vehicleViewModel.setupRv(rv,resources,requireContext())
 
         rvAdapter = VehiclesRecyclerAdapter()
         // setupPhotosRv(rv, requireActivity())
         viewModel.setupLoopingVp(loopingVP, requireContext())
 
-       /* viewModel.photos.observe(viewLifecycleOwner, Observer { response ->
-            when (response) {
-                is Resource.Success -> {
-                    hideProgressView()
-                    response.data?.let {
-                        viewModel.photosAdapter.differ.submitList(it.list.toList())
-                        val totalPages = it.list.size / QUERY_PAGE_SIZE + 2
-                        isLastPage = viewModel.photosPage == totalPages
-                        if (isLastPage) {
-                            rv.setPadding(0,0,0,0)
-                        }
-                    }
-                }
-                is Resource.Error -> {
-                    hideProgressView()
-                    response.message?.let { message ->
-                        Snackbar.make(view, "An Error Occurred: $message", Snackbar.LENGTH_LONG)
-                            .setAnchorView(fabService)
-                            .show()
-                    }
-                }
-                is Resource.Loading -> {
-                    showProgressView()
-                }
-            }
-        })*/
+
+        /* viewModel.photos.observe(viewLifecycleOwner, Observer { response ->
+             when (response) {
+                 is Resource.Success -> {
+                     hideProgressView()
+                     response.data?.let {
+                         viewModel.photosAdapter.differ.submitList(it.list.toList())
+                         val totalPages = it.list.size / QUERY_PAGE_SIZE + 2
+                         isLastPage = viewModel.photosPage == totalPages
+                         if (isLastPage) {
+                             rv.setPadding(0,0,0,0)
+                         }
+                     }
+                 }
+                 is Resource.Error -> {
+                     hideProgressView()
+                     response.message?.let { message ->
+                         Snackbar.make(view, "An Error Occurred: $message", Snackbar.LENGTH_LONG)
+                             .setAnchorView(fabService)
+                             .show()
+                     }
+                 }
+                 is Resource.Loading -> {
+                     showProgressView()
+                 }
+             }
+         })*/
 
     }
 

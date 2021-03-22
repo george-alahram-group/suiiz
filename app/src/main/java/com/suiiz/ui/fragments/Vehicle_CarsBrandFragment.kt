@@ -28,12 +28,7 @@ class Vehicle_CarsBrandFragment : Fragment(R.layout.fragment_vehicle_cars_brand)
         viewModel.setupLoopingVp(loopingVP, requireContext())
 
         viewModel.carsBrandRvAdapter.setOnItemClickListener {
-            /* here we need to :
-            *  TODO : get the {{brand name}} and save in {{bundle}}
-            *  TODO : then retrieve this bundle from {{Model fragment}}
-            *  thus make a {{Get Request}} from the back end to get all the related models of this car
-            *  */
-            findNavController().navigate(R.id.action_vehicle_CarsBrandFragment_to_vehicle_Cars_ModelFragment)
+
         }
 
     }
@@ -45,6 +40,5 @@ class Vehicle_CarsBrandFragment : Fragment(R.layout.fragment_vehicle_cars_brand)
             layoutManager = GridLayoutManager(activity, 2)
         }
     }
-
 
 }
