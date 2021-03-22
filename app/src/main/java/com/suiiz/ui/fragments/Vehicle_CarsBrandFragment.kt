@@ -25,7 +25,7 @@ class Vehicle_CarsBrandFragment : Fragment(R.layout.fragment_vehicle_cars_brand)
 
         setupCarsBrandRv(rv, resources, requireActivity())
         // viewModel.setupVehicleVp2(vp2)
-        setupLoopingVp(loopingVP)
+        viewModel.setupLoopingVp(loopingVP, requireContext())
 
         viewModel.carsBrandRvAdapter.setOnItemClickListener {
             /* here we need to :
@@ -46,9 +46,5 @@ class Vehicle_CarsBrandFragment : Fragment(R.layout.fragment_vehicle_cars_brand)
         }
     }
 
-    private fun setupLoopingVp(loopingViewPager: LoopingViewPager) {
-        val adapter = viewModel.vehicleLoopVpAdapter(requireContext(),DummyData.loopVpList(),true)
-        loopingViewPager.adapter = adapter
-    }
 
 }

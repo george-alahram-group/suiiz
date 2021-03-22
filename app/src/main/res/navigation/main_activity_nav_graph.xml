@@ -76,4 +76,24 @@
         android:name="com.suiiz.ui.fragments.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.suiiz.ui.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.suiiz.ui.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.suiiz.ui.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/addAdFragment"
+        android:name="com.suiiz.ui.fragments.AddAdFragment"
+        android:label="fragment_add_ad"
+        tools:layout="@layout/fragment_add_ad" />
 </navigation>

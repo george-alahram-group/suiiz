@@ -6,36 +6,38 @@ import android.content.Context
 import android.content.res.Resources
 import android.net.ConnectivityManager
 import android.net.ConnectivityManager.*
+import android.net.NetworkCapabilities
 import android.net.NetworkCapabilities.*
 import android.os.Build
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
+import com.asksira.loopingviewpager.LoopingViewPager
 import com.suiiz.R
 import com.suiiz.SuiizApplication
 import com.suiiz.adapters.HomeAdapter
 import com.suiiz.adapters.carsBrandFragmentAdapters.CarsBrandRvAdapter
 import com.suiiz.adapters.AdsLoopViewPagerAdapter
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
-import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesVp2Adapter
-import com.suiiz.model.VehiclesResponse
 import com.suiiz.repositories.MainRepository
 import com.suiiz.util.Constants
 import com.suiiz.util.DummyData
-import com.suiiz.util.Resource
-import kotlinx.coroutines.launch
-import retrofit2.Response
-import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
+
+class MainViewModelProviderFactory(
+    val app: Application,
+    val repository: MainRepository
+) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        return MainViewModel(app, repository) as T
+    }
+}
 
 class MainViewModel(
     app: Application,
@@ -116,18 +118,20 @@ class MainViewModel(
     /////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Vehicles fragment - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
-    fun vehicleLoopVpAdapter(context: Context, list: ArrayList<String>, isInfinity: Boolean) =
-        AdsLoopViewPagerAdapter(context, list, isInfinity)
+    private fun vehicleLoopVpAdapter(
+        context: Context,
+        list: ArrayList<String>,
+        isInfinity: Boolean
+    ) = AdsLoopViewPagerAdapter(context, list, isInfinity)
+
+    fun setupLoopingVp(loopingViewPager: LoopingViewPager, context: Context) {
+        val adapter = vehicleLoopVpAdapter(context, DummyData.loopVpList(), true)
+        loopingViewPager.adapter = adapter
+    }
 
     val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
-    val vehiclesVp2Adapter = VehiclesVp2Adapter()
 
-    fun setupVehicleVp2(vp2: ViewPager2) {
-        vehiclesVp2Adapter.differ.submitList(DummyData.vp2List())
-        vp2.apply {
-            adapter = vehiclesVp2Adapter
-        }
-    }
+
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -137,52 +141,58 @@ class MainViewModel(
 
 
 
-
     /////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////// API NETWORK - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
-    val vehicles: MutableLiveData<Resource<VehiclesResponse>> = MutableLiveData()
-    var vehiclesPage = 1
-    var vehiclesResponse: VehiclesResponse? = null
+    /*val photos: MutableLiveData<Resource<PhotosResponse>> = MutableLiveData()
+    var photosPage = 1
+    var photosResponse: PhotosResponse? = null
 
-    fun getVehicleList() = viewModelScope.launch {
-        safeVehicleListCall()
+    fun getPhotos() = viewModelScope.launch {
+        Log.d(Constants.TAG, " getPhotos() called from VehicleViewModel::class.java ")
+        safePhotosListCall()
     }
 
-    private suspend fun safeVehicleListCall() {
-        vehicles.postValue(Resource.Loading())
-        try {
-            if (hasInternetConnection()) {
-                val response = repository.getVehicleList(/*vehiclesPage*/)
-                vehicles.postValue(handleVehicleResponse(response))
-            } else {
-                vehicles.postValue(Resource.Error("No Internet Connection"))
-            }
-        } catch (t: Throwable) {
-            when (t) {
-                is IOException -> vehicles.postValue(Resource.Error("Network Failure"))
-                else -> vehicles.postValue(Resource.Error("Conversion Error"))
-            }
-        }
-    }
-
-    private fun handleVehicleResponse(response: Response<VehiclesResponse>): Resource<VehiclesResponse> {
+    private fun handlePhotosResponse(response: Response<PhotosResponse>): Resource<PhotosResponse> {
+        Log.d(Constants.TAG, " handle() called from VehicleViewModel::class.java ")
         if (response.isSuccessful) {
             response.body()?.let { resultResponse ->
-                vehiclesPage++
-                if (vehiclesResponse == null) {
-                    vehiclesResponse = resultResponse
+                photosPage++
+                Log.d(Constants.TAG, " $photosPage ")
+                if (photosResponse == null) {
+                    photosResponse = resultResponse
                 } else {
-                    val oldVehicles = vehiclesResponse?.list
-                    val newVehicles = resultResponse.list
-                    oldVehicles?.addAll(newVehicles)
+                    val oldPhotos = photosResponse?.list
+                    val newPhotos = resultResponse.list
+                    oldPhotos?.addAll(newPhotos)
                 }
-                return Resource.Success(vehiclesResponse ?: resultResponse)
+                return Resource.Success(photosResponse ?: resultResponse)
             }
         }
         return Resource.Error(response.message())
     }
 
+    private suspend fun safePhotosListCall() {
+        Log.d(Constants.TAG, " safePhotosListCall() called from VehicleViewModel::class.java ")
+        Log.d(Constants.TAG, " hasInternetConnection() : ${hasInternetConnection()} ")
+        photos.postValue(Resource.Loading())
+        try {
+            if (hasInternetConnection()) {
+                val response = repository.getPhotos(photosPage)
+                photos.postValue(handlePhotosResponse(response))
+            } else {
+                photos.postValue(Resource.Error("No Internet Connection"))
+            }
+        } catch (t: Throwable) {
+            when (t) {
+                is IOException -> photos.postValue(Resource.Error("Network Failure"))
+                else -> photos.postValue(Resource.Error("Conversion Error"))
+            }
+        }
+    }*/
+
+
+    // return the internet state :: Boolean
     private fun hasInternetConnection(): Boolean {
         val connectivityManager = getApplication<SuiizApplication>().getSystemService(
             Context.CONNECTIVITY_SERVICE
@@ -192,23 +202,42 @@ class MainViewModel(
             val capabilitiesInfo =
                 connectivityManager.getNetworkCapabilities(activeNetwork) ?: return false
             return when {
-                capabilitiesInfo.hasTransport(TRANSPORT_WIFI) -> true
-                capabilitiesInfo.hasTransport(TRANSPORT_CELLULAR) -> true
-                capabilitiesInfo.hasTransport(TRANSPORT_ETHERNET) -> true
+                capabilitiesInfo.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                capabilitiesInfo.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                capabilitiesInfo.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
                 else -> false
             }
         } else {
             connectivityManager.activeNetworkInfo?.run {
                 return when (type) {
-                    TYPE_WIFI -> true
-                    TYPE_MOBILE -> true
-                    TYPE_ETHERNET -> true
+                    ConnectivityManager.TYPE_WIFI -> true
+                    ConnectivityManager.TYPE_MOBILE -> true
+                    ConnectivityManager.TYPE_ETHERNET -> true
                     else -> false
                 }
             }
         }
         return false
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

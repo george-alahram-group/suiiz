@@ -20,20 +20,40 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/company" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabPersonal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/personal" />
 
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp2"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                android:id="@+id/includeCompany"
+                android:visibility="visible"
+                layout="@layout/fragment_add_ads_company"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+            <include
+                android:id="@+id/includePersonal"
+                android:visibility="gone"
+                layout="@layout/fragment_add_ads_personal"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

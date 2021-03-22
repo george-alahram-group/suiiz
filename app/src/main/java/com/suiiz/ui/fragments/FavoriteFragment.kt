@@ -1,15 +1,19 @@
 package com.suiiz.ui.fragments
 
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.suiiz.R
 
-class AddAdsCompany:Fragment(R.layout.fragment_add_ads_company) {
+
+class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
     }
+
 }

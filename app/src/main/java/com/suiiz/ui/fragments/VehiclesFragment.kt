@@ -1,30 +1,19 @@
 package com.suiiz.ui.fragments
 
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.content.res.Resources
 import android.os.Bundle
 import android.view.View
-import android.widget.AbsListView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
-import com.asksira.loopingviewpager.LoopingViewPager
-import com.google.android.material.snackbar.Snackbar
 import com.suiiz.R
-import com.suiiz.util.Constants.QUERY_PAGE_SIZE
-import com.suiiz.util.DummyData
-import com.suiiz.util.Resource
+import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
 import com.suiiz.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.fragment_vehicles.*
 
 class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
 
     private val viewModel: MainViewModel by activityViewModels()
+    private lateinit var rvAdapter : VehiclesRecyclerAdapter
 
     var isLoading = false
     var isLastPage = false
@@ -34,33 +23,27 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupVehicleRv(rv, requireActivity())
-        // setupVehicleVp2(vp2)
-        setupLoopingVp(loopingVP)
+        rvAdapter = VehiclesRecyclerAdapter()
+        // setupPhotosRv(rv, requireActivity())
+        viewModel.setupLoopingVp(loopingVP, requireContext())
 
-        viewModel.vehiclesRecyclerAdapter.setOnItemClickListener {
-            when(it.id){
-                0 -> findNavController().navigate(R.id.action_vehiclesFragment_to_vehicle_CarsBrandFragment)
-            }
-        }
-
-        viewModel.vehicles.observe(viewLifecycleOwner, Observer { response ->
-            when(response) {
+       /* viewModel.photos.observe(viewLifecycleOwner, Observer { response ->
+            when (response) {
                 is Resource.Success -> {
                     hideProgressView()
                     response.data?.let {
-                        viewModel.vehiclesRecyclerAdapter.differ.submitList(it.list.toList())
-                        val totalPages = it.result / QUERY_PAGE_SIZE + 2
-                        isLastPage = viewModel.vehiclesPage == totalPages
+                        viewModel.photosAdapter.differ.submitList(it.list.toList())
+                        val totalPages = it.list.size / QUERY_PAGE_SIZE + 2
+                        isLastPage = viewModel.photosPage == totalPages
                         if (isLastPage) {
-                            // rv.setPadding(0,0,0,0)
+                            rv.setPadding(0,0,0,0)
                         }
                     }
                 }
                 is Resource.Error -> {
                     hideProgressView()
                     response.message?.let { message ->
-                        Snackbar.make(view,"An Error Occurred: $message",Snackbar.LENGTH_LONG)
+                        Snackbar.make(view, "An Error Occurred: $message", Snackbar.LENGTH_LONG)
                             .setAnchorView(fabService)
                             .show()
                     }
@@ -69,7 +52,7 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
                     showProgressView()
                 }
             }
-        })
+        })*/
 
     }
 
@@ -83,6 +66,7 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
         isLastPage = true
     }
 
+/*
     private val scrollListener = object : RecyclerView.OnScrollListener() {
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
@@ -95,12 +79,13 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
             val isNotLoadingAndNotLastPage = !isLoading && !isLastPage
             val isAtLastItem = firstVisibleItemPosition + visibleItemCount >= totalItemCount
             val isNotAtTheBeginning = firstVisibleItemPosition >= 0
-            val isTotalMoreThanVisible = totalItemCount>= QUERY_PAGE_SIZE
-
-            val shouldPaginate = isNotLoadingAndNotLastPage && isAtLastItem && isNotAtTheBeginning && isTotalMoreThanVisible && isScrolling
+            val isTotalMoreThanVisible = totalItemCount >= QUERY_PAGE_SIZE
+            val shouldPaginate = isNotLoadingAndNotLastPage && isAtLastItem && isNotAtTheBeginning &&
+                    isTotalMoreThanVisible && isScrolling
 
             if (shouldPaginate) {
-                viewModel.getVehicleList()
+                Log.d(Constants.TAG," shouldPaginate ")
+                viewModel.getPhotos()
                 isScrolling = false
             }
 
@@ -109,31 +94,22 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
         override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
             super.onScrollStateChanged(recyclerView, newState)
             if (newState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
+                Log.d(Constants.TAG," scrolling now ")
                 isScrolling = true
             }
         }
     }
+*/
 
-    private fun setupVehicleRv(rv: RecyclerView, activity: Activity) {
-        // vehiclesRecyclerAdapter.differ.submitList(DummyData.vehicleList(res))
+/*
+    private fun setupPhotosRv(rv: RecyclerView, activity: Activity) {
         rv.apply {
-            adapter = viewModel.vehiclesRecyclerAdapter
+            adapter = rvAdapter
             layoutManager = LinearLayoutManager(activity)
             addOnScrollListener(scrollListener)
         }
     }
+*/
 
-    // never used
-    private fun setupVehicleVp2(vp2: ViewPager2) {
-        viewModel.vehiclesVp2Adapter.differ.submitList(DummyData.vp2List())
-        vp2.apply {
-            adapter = viewModel.vehiclesVp2Adapter
-        }
-    }
-
-    private fun setupLoopingVp(loopingViewPager: LoopingViewPager) {
-        val adapter = viewModel.vehicleLoopVpAdapter(requireContext(),DummyData.loopVpList(),true)
-        loopingViewPager.adapter = adapter
-    }
 
 }

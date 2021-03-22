@@ -16,8 +16,28 @@ class AddAdFragment : Fragment(R.layout.fragment_add_ad) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                when(tab?.position) {
+                    0 -> {
+                        includePersonal.visibility = View.GONE
+                        includeCompany.visibility = View.VISIBLE
+                    }
+                    1 -> {
+                        includeCompany.visibility = View.GONE
+                        includePersonal.visibility = View.VISIBLE
+                    }
+                }
+            }
 
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
 
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+
+            }
+        })
 
     }
 
