@@ -4,37 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.Vehicle_CarsBrandFragment">
+    tools:context=".ui.fragments.Vehicle_Cars_BrandFragment">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp2"
-        android:visibility="invisible"
+    <com.asksira.loopingviewpager.LoopingViewPager
+        android:id="@+id/loopingVP"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_110sdp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="?attr/actionBarSize"
-        android:clipToPadding="false" />
-
-    <com.asksira.loopingviewpager.LoopingViewPager
-        android:id="@+id/loopingVP"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_110sdp"
         android:clipToPadding="false"
-        app:isInfinite="true"
         app:autoScroll="true"
+        app:isInfinite="true"
         app:scrollInterval="5000"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/vp2"
+        android:layout_below="@+id/loopingVP"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -42,7 +32,7 @@
         android:paddingBottom="?attr/actionBarSize"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:listitem="@layout/item_vehicles_brand_rv" />
+        tools:listitem="@layout/item_vehicles_brand" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabService"
@@ -53,6 +43,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="?attr/actionBarSize"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_work" />
+        android:src="@drawable/ic_work"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 </RelativeLayout>

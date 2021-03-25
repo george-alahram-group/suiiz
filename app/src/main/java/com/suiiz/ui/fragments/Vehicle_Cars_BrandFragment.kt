@@ -16,7 +16,7 @@ import com.suiiz.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.fragment_vehicle_cars_brand.*
 
 @Suppress("ClassName")
-class Vehicle_CarsBrandFragment : Fragment(R.layout.fragment_vehicle_cars_brand) {
+class Vehicle_Cars_BrandFragment : Fragment(R.layout.fragment_vehicle_cars_brand) {
 
     private val viewModel: MainViewModel by activityViewModels()
 

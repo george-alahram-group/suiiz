@@ -12,12 +12,16 @@
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/ic_logo.xml" value="0.2483108108108108" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/ic_named_logo.xml" value="0.3111111111111111" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/ic_plus.xml" value="0.24177631578947367" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/ic_work.xml" value="0.310126582278481" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/inputs_differ_bacground_right.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/inputs_differ_background_left.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/inputs_normal_bacground.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/inputs_normal_background_right.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/item_layout_add_ads_company.xml" value="0.2483108108108108" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/line.xml" value="0.3111111111111111" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/splash_screen.xml" value="0.3111111111111111" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/top_app_bar_bg.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/top_app_bar_bg_bottom.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/drawable/top_app_bar_bg_top.xml" value="0.24027777777777778" />
@@ -30,7 +34,7 @@
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_add_ads_personal.xml" value="0.19027777777777777" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_cars.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_chat.xml" value="0.22269736842105264" />
-        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_favorite.xml" value="0.23157894736842105" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_favorite.xml" value="0.33" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_home.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_login.xml" value="0.23157894736842105" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_main.xml" value="0.23157894736842105" />
@@ -38,27 +42,52 @@
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_password_recovery.xml" value="0.23157894736842105" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_password_recovery__setp_3.xml" value="0.1" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_services.xml" value="0.19722222222222222" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_sign_up.xml" value="0.23157894736842105" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle__cars__model.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle_cars.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle_cars_brand.xml" value="0.23783783783783785" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle_cars_model.xml" value="0.22" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle_cars_parts.xml" value="0.33" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle_cars_sub_parts.xml" value="0.22" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicle_cars_sub_parts_details.xml" value="0.29662447257383967" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/fragment_vehicles.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/home_rv_item.xml" value="0.16020066889632106" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_add_ads.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_add_ads_vp2.xml" value="0.1061801446416831" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_ads_loop_vp.xml" value="0.23157894736842105" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_home.xml" value="0.30085470085470084" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_home_rv.xml" value="0.23157894736842105" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_layout_add_ads_company.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_layout_add_ads_personal.xml" value="0.23783783783783785" />
-        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_my_cart.xml" value="0.23125" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_my_cart.xml" value="0.24722222222222223" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_my_favorite.xml" value="0.33" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_search_history.xml" value="0.25" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_service.xml" value="0.19786324786324785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_service_rv.xml" value="0.23783783783783785" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_spinner.xml" value="0.23157894736842105" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicle_part_snb_items.xml" value="0.2796296296296296" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_brand.xml" value="0.19786324786324785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_brand_rv.xml" value="0.23783783783783785" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_model.xml" value="0.30085470085470084" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_model_rv.xml" value="0.33" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_part.xml" value="0.22" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_part_best_seller.xml" value="0.22" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_part_rv.xml" value="0.22" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_part_sub_items.xml" value="0.25" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_part_wanted_stores.xml" value="0.25" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/item_vehicles_vp2.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/spinner_item.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/top_app_bar.xml" value="0.20833333333333334" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/upper_cart.xml" value="0.23157894736842105" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/vehicles_brand_rv_item.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/layout/vehicles_vp2_item.xml" value="0.23783783783783785" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/menu/bottom_nav_bar_menu.xml" value="0.23157894736842105" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/menu/new_used_menu.xml" value="0.3004273504273504" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/menu/orignal_copy_menu.xml" value="0.3004273504273504" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/menu/parts_menu.xml" value="0.23125" />
+        <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/menu/sub_parts_1_menu.xml" value="0.23125" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2483108108108108" />
         <entry key="..\:/G/suiiz android project/project-folder/suiiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2483108108108108" />
       </map>

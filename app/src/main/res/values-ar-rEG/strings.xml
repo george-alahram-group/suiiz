@@ -71,5 +71,16 @@
     <string name="card_number">رقم البطاقة</string>
     <string name="phone">رقم الموبايل</string>
     <string name="i_would_like_to_recive_suiz_newsletter">اريد استقبال اخبار Suiiz</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="my_setting">الضبط</string>
+    <string name="my_vehicle">سيارتى</string>
+    <string name="accessories">اكسسوارات</string>
+    <string name="my_parts">أجزائى</string>
+    <string name="my_services">خدماتى</string>
+    <string name="my_cart">صدوق المشتروات</string>
+    <string name="my_sales">مبيعاتى</string>
+    <string name="my_purchases">مشترواتى</string>
+    <string name="hi">اهلا !</string>
+    <string name="search">البحث</string>
 
 </resources>

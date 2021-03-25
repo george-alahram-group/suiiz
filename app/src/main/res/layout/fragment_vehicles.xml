@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.VehiclesFragment">
 
     <com.asksira.loopingviewpager.LoopingViewPager
         android:id="@+id/loopingVP"
-        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_110sdp"
-        android:clipToPadding="false"
-        app:isInfinite="true"
-        app:autoScroll="true"
-        app:scrollInterval="5000"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" />
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="false"
+        app:autoScroll="true"
+        app:isInfinite="true"
+        app:scrollInterval="5000" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,8 +29,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:clipToPadding="false"
-        android:paddingBottom="?attr/actionBarSize"
-        tools:listitem="@layout/item_service_rv" />
+        android:paddingBottom="?actionBarSize"
+        tools:listitem="@layout/item_service" />
+    <!-- android:paddingTop="@dimen/_18sdp" -->
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
@@ -40,23 +41,54 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_35sdp"
         android:clipToPadding="false"
-        app:lottie_loop="true"
         android:visibility="gone"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/searching"
-        android:layout_margin="@dimen/_35sdp"/>
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/searching" />
 
+    <!--<com.google.android.material.tabs.TabLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_below="@+id/loopingVP"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="center"
+        app:tabIndicator="@android:color/transparent"
+        app:tabIndicatorAnimationDuration="600"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabIndicatorGravity="center"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/primaryColor">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_dot" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_dot" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_dot" />
+    </com.google.android.material.tabs.TabLayout>-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabService"
+        style="@style/fabDesign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_work"
         android:layout_marginBottom="?attr/actionBarSize"
-        style="@style/fabDesign"
-        android:contentDescription="@string/app_name" />
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_work" />
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.suiiz.R
 import com.suiiz.model.Section
-import kotlinx.android.synthetic.main.item_home_rv.view.*
+import kotlinx.android.synthetic.main.item_home.view.*
 
 class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
@@ -32,7 +32,7 @@ class HomeAdapter() : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         HomeViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_home_rv,
+                R.layout.item_home,
                 parent,
                 false
             )

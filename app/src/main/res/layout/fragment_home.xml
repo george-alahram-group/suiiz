@@ -19,7 +19,7 @@
         android:clipToPadding="false"
         android:paddingTop="?attr/actionBarSize"
         android:paddingBottom="?attr/actionBarSize"
-        tools:listitem="@layout/item_home_rv" />
+        tools:listitem="@layout/item_home" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabService"

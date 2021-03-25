@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.asksira.loopingviewpager.LoopingPagerAdapter
 import com.bumptech.glide.Glide
 import com.suiiz.R
-import kotlinx.android.synthetic.main.item_ads_loop_vp.view.*
+import kotlinx.android.synthetic.main.item_ads_loop.view.*
 
 class AdsLoopViewPagerAdapter(
     context: Context,
@@ -16,7 +16,7 @@ class AdsLoopViewPagerAdapter(
 ) : LoopingPagerAdapter<String>(context, itemList, isInfinite) {
 
     override fun inflateView(viewType: Int, container: ViewGroup, listPosition: Int) =
-        LayoutInflater.from(context).inflate(R.layout.item_ads_loop_vp, container, false)!!
+        LayoutInflater.from(context).inflate(R.layout.item_ads_loop, container, false)!!
 
     override fun bindView(convertView: View, listPosition: Int, viewType: Int) {
         Glide.with(context).load(itemList?.get(listPosition)).into(convertView.ivImg)

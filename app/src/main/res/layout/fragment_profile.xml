@@ -38,6 +38,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:alpha=".75"
+                        android:contentDescription="@string/app_name"
                         android:src="@drawable/ic_camera"
                         app:layout_anchor="@id/imageView2"
                         app:layout_anchorGravity="bottom|center_horizontal"
@@ -230,6 +232,7 @@
                             app:cardElevation="@dimen/_3sdp">
 
                             <LinearLayout
+                                android:id="@+id/cvMyCart"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="?android:attr/selectableItemBackground"

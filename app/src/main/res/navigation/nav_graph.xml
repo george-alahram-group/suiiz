@@ -40,7 +40,11 @@
         android:id="@+id/profile_destination"
         android:name="com.suiiz.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/to_next_destination"
+            app:destination="@id/myCartFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vehicles_destination"
         android:name="com.suiiz.ui.fragments.VehiclesFragment"
@@ -52,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/vehicle_CarsBrand_destination"
-        android:name="com.suiiz.ui.fragments.Vehicle_CarsBrandFragment"
+        android:name="com.suiiz.ui.fragments.Vehicle_Cars_BrandFragment"
         android:label="fragment_vehicle_cars_brand"
         tools:layout="@layout/fragment_vehicle_cars_brand" >
         <action
@@ -63,11 +67,40 @@
         android:id="@+id/vehicle_Cars_Model_destination"
         android:name="com.suiiz.ui.fragments.Vehicle_Cars_ModelFragment"
         android:label="fragment_vehicle_cars_model"
-        tools:layout="@layout/fragment_vehicle_cars_model" />
+        tools:layout="@layout/fragment_vehicle_cars_model" >
+        <action
+            android:id="@+id/to_next_destination"
+            app:destination="@id/vehicle_Cars_Parts_destination" />
+    </fragment>
     <fragment
         android:id="@+id/services_destination"
         android:name="com.suiiz.ui.fragments.ServicesFragment"
         android:label="fragment_services"
         tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/search_destination"
+        android:name="com.suiiz.ui.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.suiiz.ui.fragments.MyCartFragment"
+        android:label="fragment_my_cart"
+        tools:layout="@layout/fragment_my_cart" />
+    <fragment
+        android:id="@+id/vehicle_Cars_Parts_destination"
+        android:name="com.suiiz.ui.fragments.Vehicle_Cars_PartsFragment"
+        android:label="Vehicle_Cars_PartsFragment"
+        tools:layout="@layout/fragment_vehicle_cars_parts" >
+        <action
+            android:id="@+id/to_next_destination"
+            app:destination="@id/vehicle_Cars_Sub_Parts_destination" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vehicle_Cars_Sub_Parts_destination"
+        android:name="com.suiiz.ui.fragments.Vehicle_Cars_SubPartsFragment"
+        android:label="Vehicle_Cars_SubPartsFragment"
+        tools:layout="@layout/fragment_vehicle_cars_sub_parts" />
 
 </navigation>

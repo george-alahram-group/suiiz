@@ -34,7 +34,7 @@ class VehicleViewModel(
     /////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Vehicles fragment - viewModel //////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////
-    private val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
+    val vehiclesRecyclerAdapter = VehiclesRecyclerAdapter()
 
     fun setupRv(rv:RecyclerView,res:Resources,context: Context) {
         vehiclesRecyclerAdapter.differ.submitList(DummyData.vehicleList(res))

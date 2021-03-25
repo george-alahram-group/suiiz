@@ -10,6 +10,7 @@ import com.suiiz.util.Constants.SHARED_PREF
 import eightbitlab.com.blurview.BlurView
 import eightbitlab.com.blurview.RenderScriptBlur
 import kotlinx.android.synthetic.main.fragment_main.*
+import kotlinx.android.synthetic.main.top_app_bar.view.*
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -56,7 +57,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 }
             }
         })
-
+        upperBar.ivSearch.setOnClickListener {
+            navHostFragment.findNavController().navigate(R.id.search_destination)
+        }
     }
 
 

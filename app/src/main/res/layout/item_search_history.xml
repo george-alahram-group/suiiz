@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_15sdp">
+
+
+    <ImageView
+        android:alpha=".75"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:src="@drawable/ic_history"
+        app:tint="@color/secondaryTextColor"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvSearchHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/_11sdp"
+        tools:text="BMW X6 - High Line" />
+
+</LinearLayout>

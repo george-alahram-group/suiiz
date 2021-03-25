@@ -100,6 +100,17 @@
     <string name="my_sales">MY SALES</string>
     <string name="my_purchases">MY PURCHASES</string>
     <string name="hi">HI !</string>
+    <string name="search">SEARCH</string>
+    <string name="engine">ENGINE</string>
+    <string name="accessorise">ACCESSORISE</string>
+    <string name="services">SERVICES</string>
+    <string name="best_seller">BEST SELLER</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="most_wanted_store">MOST WANTED STORE</string>
+    <string name="delete_all">DELETE ALL</string>
+    <string name="previous_searches">PREVIOUS SEARCHES</string>
+    <string name="total">TOTAL</string>
+    <string name="parts">PARTS</string>
 
 
 </resources>

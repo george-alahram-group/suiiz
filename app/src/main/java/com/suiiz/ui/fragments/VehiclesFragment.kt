@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.suiiz.R
 import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
 import com.suiiz.ui.MainActivity
@@ -17,7 +18,6 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
 
     private val viewModel: MainViewModel by activityViewModels()
     private lateinit var vehicleViewModel: VehicleViewModel
-    private lateinit var rvAdapter: VehiclesRecyclerAdapter
 
     private var isLoading = false
     private var isLastPage = false
@@ -28,11 +28,7 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
         super.onViewCreated(view, savedInstanceState)
         vehicleViewModel = (activity as MainActivity).vehicleViewModel
 
-        vehicleViewModel.setupRv(rv,resources,requireContext())
-
-        rvAdapter = VehiclesRecyclerAdapter()
-        // setupPhotosRv(rv, requireActivity())
-        viewModel.setupLoopingVp(loopingVP, requireContext())
+        setListener()
 
 
         /* viewModel.photos.observe(viewLifecycleOwner, Observer { response ->
@@ -72,6 +68,16 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
     private fun showProgressView() {
         animationView.visibility = View.VISIBLE
         isLastPage = true
+    }
+
+    private fun setListener() {
+        vehicleViewModel.setupRv(rv,resources,requireContext())
+        viewModel.setupLoopingVp(loopingVP, requireContext())
+        vehicleViewModel.vehiclesRecyclerAdapter.setOnItemClickListener {
+            when(it.id) {
+                0 -> findNavController().navigate(R.id.to_next_destination)
+            }
+        }
     }
 
 /*

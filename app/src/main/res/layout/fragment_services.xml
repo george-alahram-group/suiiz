@@ -17,6 +17,6 @@
         android:paddingTop="?attr/actionBarSize"
         android:paddingBottom="?attr/actionBarSize"
         tools:itemCount="3"
-        tools:listitem="@layout/item_service_rv" />
+        tools:listitem="@layout/item_service" />
 
 </RelativeLayout>

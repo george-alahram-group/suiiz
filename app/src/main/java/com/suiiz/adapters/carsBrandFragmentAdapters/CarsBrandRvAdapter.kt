@@ -11,9 +11,9 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.suiiz.R
 import com.suiiz.model.Section
-import kotlinx.android.synthetic.main.item_vehicles_brand_rv.view.*
+import kotlinx.android.synthetic.main.item_vehicles_brand.view.*
 
-class CarsBrandRvAdapter() : RecyclerView.Adapter<CarsBrandRvAdapter.CardsBrandViewHolder>() {
+class CarsBrandRvAdapter : RecyclerView.Adapter<CarsBrandRvAdapter.CardsBrandViewHolder>() {
 
     inner class CardsBrandViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -32,9 +32,9 @@ class CarsBrandRvAdapter() : RecyclerView.Adapter<CarsBrandRvAdapter.CardsBrandV
     override fun getItemCount() = differ.currentList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        CardsBrandViewHolder (
+        CardsBrandViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_vehicles_brand_rv,
+                R.layout.item_vehicles_brand,
                 parent,
                 false
             )
