@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/_110sdp"
     android:layout_height="@dimen/_165sdp"
-    android:maxHeight="@dimen/_165sdp"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="@dimen/_5sdp"
+    android:maxHeight="@dimen/_165sdp"
     app:cardCornerRadius="@dimen/_10sdp">
 
     <LinearLayout
@@ -14,15 +14,16 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:background="@color/primaryTextColor"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/primaryTextColor"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/ivBestSeller"
@@ -33,61 +34,71 @@
 
                 <ProgressBar
                     android:id="@+id/progressBarBestSeller"
-                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true" />
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
 
                 <ImageView
                     android:layout_width="@dimen/_15sdp"
                     android:layout_height="@dimen/_15sdp"
-                    android:src="@drawable/ic_favorite_off"
-                    app:tint="@color/primaryColor"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:layout_margin="@dimen/_5sdp"/>
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_favorite_off"
+                    app:tint="@color/primaryColor" />
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dicount_background"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="-35%"
+                    android:textColor="@color/primaryTextColor" />
 
             </RelativeLayout>
 
             <RatingBar
-                tools:rating="3"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:progressTint="@color/primaryLightColor"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:progressTint="@color/primaryLightColor"
+                tools:rating="3" />
 
             <TextView
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginHorizontal="@dimen/_5sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="best Seller title"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:maxLines="1"
+                android:text="best Seller title"
                 android:textAllCaps="true"
-                android:textSize="@dimen/_9sdp"
-                android:textColor="@color/secondaryTextColor"/>
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/_9sdp" />
 
             <LinearLayout
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
 
                 <TextView
-                    android:layout_marginHorizontal="@dimen/_5sdp"
-                    android:textAllCaps="true"
-                    android:textSize="@dimen/_9sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
                     android:text="15 SAR"
+                    android:textAllCaps="true"
                     android:textColor="@color/primaryColor"
+                    android:textSize="@dimen/_9sdp"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -118,11 +129,11 @@
                                 android:layout_marginHorizontal="@dimen/_5sdp"
                                 android:background="?android:attr/selectableItemBackground"
                                 android:clickable="true"
-                                android:textColor="@color/primaryColor"
-                                android:padding="@dimen/_3sdp"
-                                android:textSize="@dimen/_7sdp"
                                 android:focusable="true"
-                                android:text="@string/view_all" />
+                                android:padding="@dimen/_3sdp"
+                                android:text="@string/view_all"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="@dimen/_7sdp" />
 
                         </RelativeLayout>
 
@@ -142,10 +153,10 @@
             android:padding="@dimen/_3sdp">
 
             <ImageView
-                android:alpha="0.75"
-                android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_width="@dimen/_14sdp"
                 android:layout_height="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:alpha="0.75"
                 android:src="@drawable/ic_shopping_cart"
                 app:tint="@color/primaryTextColor" />
 

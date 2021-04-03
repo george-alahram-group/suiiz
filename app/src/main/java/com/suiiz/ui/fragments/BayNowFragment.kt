@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.suiiz.R
 
-@Suppress("ClassName")
-class Vehicle_Cars_SubPartsDetailsFragment : Fragment(R.layout.fragment_vehicle_cars_sub_parts_details) {
+class BayNowFragment : Fragment(R.layout.fragment_bay_now) {
 
 }

@@ -36,10 +36,14 @@
                         app:riv_corner_radius="@dimen/_85sdp" />
 
                     <ImageView
+                        android:layout_margin="@dimen/_5sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:alpha=".75"
+                        android:alpha="0.75"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
                         android:contentDescription="@string/app_name"
+                        android:focusable="true"
                         android:src="@drawable/ic_camera"
                         app:layout_anchor="@id/imageView2"
                         app:layout_anchorGravity="bottom|center_horizontal"

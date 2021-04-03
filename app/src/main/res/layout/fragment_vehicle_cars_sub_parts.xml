@@ -111,13 +111,17 @@
                     android:layout_height="match_parent"
                     android:gravity="center">
 
-                    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-                        android:layout_width="wrap_content"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@android:color/transparent"
-                        app:cnb_iconSize="0dp"
-                        app:cnb_menuResource="@menu/new_used_menu"
-                        app:cnb_radius="@dimen/_50sdp" />
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="@dimen/_15sdp"/>
+
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -146,13 +150,16 @@
                     android:layout_height="match_parent"
                     android:gravity="center">
 
-                    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-                        android:layout_width="wrap_content"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@android:color/transparent"
-                        app:cnb_iconSize="0dp"
-                        app:cnb_menuResource="@menu/orignal_copy_menu"
-                        app:cnb_radius="@dimen/_50sdp" />
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="@dimen/_15sdp"/>
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
