@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/top_app_bar_bg_bottom"
@@ -11,10 +10,11 @@
     <com.google.android.material.appbar.CollapsingToolbarLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
         android:overScrollMode="ifContentScrolls"
         app:contentInsetEnd="0dp"
-        android:background="@android:color/transparent"
         app:contentInsetStart="0dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,11 +40,46 @@
                     android:contentDescription="@string/app_name"
                     android:focusable="true"
                     android:src="@drawable/ic_logo"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:tint="@color/primaryTextColor" />
 
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="true"
+                    android:src="@drawable/ic_arrow_left"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primaryTextColor" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@drawable/inputs_normal_bacground"
+                    android:backgroundTint="@color/primaryColor"
+                    android:hint="@string/search"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textColorHint="#9EFFFFFF"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivSearch"
+                    app:layout_constraintEnd_toStartOf="@+id/ivSearch"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="@+id/ivSearch" />
 
                 <ImageView
                     android:id="@+id/ivSearch"
@@ -52,28 +87,28 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_toStartOf="@+id/cart"
+                    android:layout_toStartOf="@+id/ivCall"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
                     android:contentDescription="@string/app_name"
                     android:focusable="true"
                     android:src="@drawable/ic_search"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/cart"
+                    app:layout_constraintEnd_toStartOf="@+id/ivCall"
                     app:layout_constraintTop_toTopOf="parent"
                     app:tint="@color/primaryTextColor" />
 
                 <LinearLayout
-                    android:id="@+id/cart"
+                    android:id="@+id/ivCall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_toStartOf="@+id/carts"
+                    android:layout_toStartOf="@+id/includeCarts"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/carts"
+                    app:layout_constraintEnd_toStartOf="@+id/includeCarts"
                     app:layout_constraintTop_toTopOf="parent">
                     <!-- android:layout_toStartOf="@+id/carts" -->
 
@@ -89,31 +124,20 @@
                 </LinearLayout>
 
                 <include
-                    android:id="@+id/carts"
+                    android:id="@+id/includeCarts"
                     layout="@layout/upper_cart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:visibility="gone"
-                android:id="@+id/tvTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="@string/choose_your_section"
-                android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
     </com.google.android.material.appbar.CollapsingToolbarLayout>
 

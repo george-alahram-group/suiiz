@@ -79,64 +79,6 @@ object DummyData {
         Section(
             0, "BMW", "250",
             "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-2.png"
-        ),Section(
-            0, "NISSAN", "250",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Nissan-logo.svg/1189px-Nissan-logo.svg.png"
-        ),
-        Section(
-            0, "HYUNDAI", "250",
-            "https://w7.pngwing.com/pngs/646/703/png-transparent-hyundai-logo-hyundai-motor-company-car-kia-motors-logo-hyundai-emblem-car-material.png"
-        ),
-        Section(
-            0, "RENAULT", "250",
-            "https://www.vhv.rs/dpng/d/353-3532922_renault-logo-png-renault-logo-transparent-png.png"
-        ),
-        Section(
-            0, "PEUGEOT", "250",
-            "https://c0.klipartz.com/pngpicture/500/331/gratis-png-peugeot-bicicleta-logo-herramienta-peugeot.png"
-        ),
-        Section(
-            0, "FIAT", "250",
-            "https://lh3.googleusercontent.com/proxy/aTCDSHyK7cJjwFvV0XWbnSDuG0SH2KtoW3C-MnKO_AMCGUBsIVvqk9gmVLRe4r07adZJ66pQ6rgobkQ0ui7rONzqeymH1t63vET_BTaS34MvgM4KiEpMvp7JP40"
-        ),
-        Section(
-            0, "LAND ROVER", "250",
-            "https://www.carlogos.org/car-logos/land-rover-logo.png"
-        ),
-        Section(
-            0, "BMW", "250",
-            "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-2.png"
-        ),Section(
-            0, "NISSAN", "250",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Nissan-logo.svg/1189px-Nissan-logo.svg.png"
-        ),
-        Section(
-            0, "HYUNDAI", "250",
-            "https://w7.pngwing.com/pngs/646/703/png-transparent-hyundai-logo-hyundai-motor-company-car-kia-motors-logo-hyundai-emblem-car-material.png"
-        ),
-        Section(
-            0, "RENAULT", "250",
-            "https://www.vhv.rs/dpng/d/353-3532922_renault-logo-png-renault-logo-transparent-png.png"
-        ),
-        Section(
-            0, "PEUGEOT", "250",
-            "https://c0.klipartz.com/pngpicture/500/331/gratis-png-peugeot-bicicleta-logo-herramienta-peugeot.png"
-        ),
-        Section(
-            0, "FIAT", "250",
-            "https://lh3.googleusercontent.com/proxy/aTCDSHyK7cJjwFvV0XWbnSDuG0SH2KtoW3C-MnKO_AMCGUBsIVvqk9gmVLRe4r07adZJ66pQ6rgobkQ0ui7rONzqeymH1t63vET_BTaS34MvgM4KiEpMvp7JP40"
-        ),
-        Section(
-            0, "LAND ROVER", "250",
-            "https://www.carlogos.org/car-logos/land-rover-logo.png"
-        ),
-        Section(
-            0, "BMW", "250",
-            "https://logodownload.org/wp-content/uploads/2014/04/bmw-logo-2.png"
-        ),
-        Section(
-            0, "NISSAN", "250",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Nissan-logo.svg/1189px-Nissan-logo.svg.png"
         )
     )
 
