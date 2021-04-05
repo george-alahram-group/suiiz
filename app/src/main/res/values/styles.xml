@@ -12,4 +12,7 @@
         <item name="useCompatPadding">true</item>
     </style>
 
+    <style parent="@android:style/Widget.Spinner" name="SpinnerWithNoArrow">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>

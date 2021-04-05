@@ -2,19 +2,37 @@ package com.suiiz.ui.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.suiiz.R
-import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
+import com.suiiz.databinding.FragmentVehiclesTypeBinding
 import com.suiiz.ui.MainActivity
 import com.suiiz.viewmodels.MainViewModel
 import com.suiiz.viewmodels.VehicleViewModel
-import kotlinx.android.synthetic.main.fragment_vehicles.*
-import kotlinx.android.synthetic.main.upper_cart.*
 
-class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
+class VehiclesTypesFragment : Fragment(R.layout.fragment_vehicles_type) {
+
+    private var _binding : FragmentVehiclesTypeBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentVehiclesTypeBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 
     private val viewModel: MainViewModel by activityViewModels()
     private lateinit var vehicleViewModel: VehicleViewModel
@@ -61,18 +79,18 @@ class VehiclesFragment : Fragment(R.layout.fragment_vehicles) {
     }
 
     private fun hideProgressView() {
-        animationView.visibility = View.INVISIBLE
+        binding.animationView.visibility = View.INVISIBLE
         isLoading = false
     }
 
     private fun showProgressView() {
-        animationView.visibility = View.VISIBLE
+        binding.animationView.visibility = View.VISIBLE
         isLastPage = true
     }
 
     private fun setListener() {
-        vehicleViewModel.setupRv(rv,resources,requireContext())
-        viewModel.setupLoopingVp(loopingVP, requireContext())
+        vehicleViewModel.setupRv(binding.rv,resources,requireContext())
+        viewModel.setupLoopingVp(binding.loopingVP, requireContext())
         vehicleViewModel.vehiclesRecyclerAdapter.setOnItemClickListener {
             when(it.id) {
                 0 -> findNavController().navigate(R.id.to_next_destination)

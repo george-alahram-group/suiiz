@@ -660,7 +660,7 @@
 
         <include
             android:id="@+id/includeFooter"
-            layout="@layout/include_vehicle_cars_parts_footer"/>
+            layout="@layout/include_vehicle_model_parts_footer"/>
 
     </LinearLayout>
 

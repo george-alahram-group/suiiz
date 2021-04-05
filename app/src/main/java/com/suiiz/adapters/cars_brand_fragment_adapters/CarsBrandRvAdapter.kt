@@ -1,4 +1,4 @@
-package com.suiiz.adapters.vehicleFragmnetAdapters
+package com.suiiz.adapters.cars_brand_fragment_adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -11,36 +11,36 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.suiiz.R
 import com.suiiz.model.Section
-import kotlinx.android.synthetic.main.item_home.view.*
+import kotlinx.android.synthetic.main.item_vehicles_brand.view.*
 
-class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.VehicleViewHolder>(){
+class CarsBrandRvAdapter : RecyclerView.Adapter<CarsBrandRvAdapter.CardsBrandViewHolder>() {
 
-    inner class VehicleViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView)
+    inner class CardsBrandViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    private val diffUtil  = object : DiffUtil.ItemCallback<Section>() {
+    private val diffUtil = object : DiffUtil.ItemCallback<Section>() {
         override fun areItemsTheSame(oldItem: Section, newItem: Section): Boolean {
             return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: Section, newItem: Section): Boolean {
-            return oldItem.image == newItem.image
+            return oldItem.id == newItem.id
         }
     }
 
-    val differ = AsyncListDiffer(this,diffUtil)
+    val differ = AsyncListDiffer(this, diffUtil)
 
     override fun getItemCount() = differ.currentList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        VehicleViewHolder(
+        CardsBrandViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.item_service,
+                R.layout.item_vehicles_brand,
                 parent,
                 false
             )
         )
 
-    override fun onBindViewHolder(holder: VehicleViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CardsBrandViewHolder, position: Int) {
         val currentItem = differ.currentList[position]
 
         holder.itemView.apply {
@@ -50,15 +50,16 @@ class VehiclesRecyclerAdapter : RecyclerView.Adapter<VehiclesRecyclerAdapter.Veh
                 .error(R.drawable.ic_image_search)
                 .fallback(R.drawable.ic_image_search)
                 .transition(DrawableTransitionOptions.withCrossFade(1000))
-                .into(ivSectionImg)
+                .into(ivBrandImg)
             tvTitle.text = currentItem.title
-            tvDescription.text = currentItem.description.toString()
+            tvAdsCount.text = currentItem.description
 
             view.setOnClickListener {
                 onItemClickListener?.let { it(currentItem) }
             }
 
         }
+
     }
 
     private var onItemClickListener: ((Section) -> Unit)? = null

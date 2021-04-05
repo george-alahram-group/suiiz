@@ -1,25 +1,14 @@
 package com.suiiz.ui
 
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.findFragment
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
 import com.suiiz.R
 import com.suiiz.repositories.MainRepository
-import com.suiiz.ui.fragments.LoginFragment
-import com.suiiz.util.Constants
-import com.suiiz.util.Constants.LANG
-import com.suiiz.util.Constants.SHARED_PREF
 import com.suiiz.viewmodels.MainViewModel
 import com.suiiz.viewmodels.MainViewModelProviderFactory
 import com.suiiz.viewmodels.VehicleViewModel
 import com.suiiz.viewmodels.VehicleViewModelProviderFactory
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainActivity : AppCompatActivity() {
 

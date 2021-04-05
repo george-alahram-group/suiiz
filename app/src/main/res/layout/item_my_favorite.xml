@@ -9,7 +9,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
         android:clipToPadding="false"
         app:cardBackgroundColor="@color/primaryTextColor"
         app:cardCornerRadius="@dimen/_5sdp"
@@ -18,7 +19,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_1sdp"
+            android:layout_margin="1dip"
             android:clipToPadding="false"
             app:cardBackgroundColor="@color/cards_bg_color"
             app:cardCornerRadius="@dimen/_5sdp"
@@ -55,20 +56,24 @@
                                 <ImageView
                                     android:id="@+id/ivPart"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:padding="@dimen/_10sdp"
-                                    android:src="@drawable/bmw"
+                                    android:layout_height="match_parent"
                                     android:scaleType="centerCrop"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintHorizontal_bias="0.5"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:src="@drawable/bmw" />
 
                                 <ImageView
+                                    android:id="@+id/isFavorite"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/_10sdp"
+                                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:clickable="true"
+                                    android:focusable="true"
                                     android:src="@drawable/ic_favorite"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintTop_toTopOf="@+id/ivPart"
@@ -100,14 +105,15 @@
                                     android:padding="@dimen/_3sdp">
 
                                     <ImageView
-                                        android:alpha=".75"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginEnd="@dimen/_5sdp"
+                                        android:alpha=".75"
                                         android:src="@drawable/ic_location"
                                         app:tint="@color/primaryTextColor" />
 
                                     <TextView
+                                        android:id="@+id/tvLocation"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:gravity="center_vertical"
@@ -127,8 +133,8 @@
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:paddingTop="@dimen/_10sdp"
-                        android:paddingBottom="@dimen/_10sdp"
                         android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
                         tools:ignore="NestedWeights">
 
                         <TextView
@@ -156,10 +162,11 @@
                             android:gravity="center_vertical">
 
                             <ImageView
-                                android:alpha=".75"
+                                android:id="@+id/ivVideoURL"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="@dimen/_5sdp"
+                                android:alpha=".75"
                                 android:background="?android:attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:focusable="true"
@@ -172,6 +179,7 @@
                                 android:layout_weight="1" />
 
                             <RatingBar
+                                android:id="@+id/rate"
                                 style="?android:attr/ratingBarStyleSmall"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -204,6 +212,7 @@
                                     android:padding="@dimen/_3sdp">
 
                                     <TextView
+                                        android:id="@+id/tvPrice"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginEnd="@dimen/_5sdp"
@@ -214,6 +223,7 @@
                                         android:textSize="@dimen/_10sdp" />
 
                                     <TextView
+                                        android:id="@+id/tvPriceBefore"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:foreground="@drawable/line"
@@ -250,6 +260,7 @@
                                     android:padding="@dimen/_3sdp">
 
                                     <TextView
+                                        android:id="@+id/tvAdOwner"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:gravity="center"
@@ -271,9 +282,9 @@
                     android:id="@+id/tvFavoriteDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:paddingHorizontal="@dimen/_10sdp"
                     android:text="YESTERDAY 8 PM"
-                    android:layout_marginBottom="@dimen/_5sdp"
                     android:textColor="@color/primaryColor" />
 
                 <LinearLayout
@@ -294,10 +305,10 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:alpha=".75"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/_5sdp"
+                            android:alpha=".75"
                             android:src="@drawable/ic_shopping_cart"
                             app:tint="@color/primaryTextColor" />
 
@@ -312,9 +323,9 @@
 
                     <View
                         android:layout_width="@dimen/_1sdp"
-                        android:alpha=".5"
                         android:layout_height="match_parent"
                         android:layout_marginVertical="@dimen/_5sdp"
+                        android:alpha=".5"
                         android:background="@color/primaryTextColor" />
 
                     <LinearLayout
@@ -329,10 +340,10 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:alpha=".75"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/_5sdp"
+                            android:alpha=".75"
                             android:src="@drawable/ic_call"
                             app:tint="@color/primaryTextColor" />
 

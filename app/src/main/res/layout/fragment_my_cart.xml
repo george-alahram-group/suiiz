@@ -14,11 +14,14 @@
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_my_cart"
+            android:orientation="vertical"
+            android:paddingTop="?attr/actionBarSize"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="2"
-            android:paddingTop="?attr/actionBarSize" />
+            tools:listitem="@layout/item_my_cart" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -207,11 +210,11 @@
         <ImageView
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
-            app:tint="@color/primaryTextColor"
-            android:alpha="0.65"
-            android:src="@drawable/ic_services"
             android:layout_marginHorizontal="@dimen/_15sdp"
-            android:contentDescription="@string/app_name" />
+            android:alpha="0.65"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_services"
+            app:tint="@color/primaryTextColor" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -228,10 +231,10 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/primaryColor"
+                    android:gravity="center"
                     android:orientation="horizontal"
                     android:paddingHorizontal="@dimen/_15sdp"
                     android:paddingVertical="@dimen/_10sdp">
@@ -239,12 +242,12 @@
                     <!-- Image Button -->
 
                     <ImageView
-                        app:tint="@color/primaryTextColor"
-                        android:alpha="0.75"
                         android:layout_width="@dimen/_15sdp"
                         android:layout_height="@dimen/_15sdp"
                         android:layout_marginEnd="@dimen/_5sdp"
-                        android:src="@drawable/ic_services" />
+                        android:alpha="0.75"
+                        android:src="@drawable/ic_services"
+                        app:tint="@color/primaryTextColor" />
 
                     <TextView
                         android:layout_width="wrap_content"

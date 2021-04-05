@@ -5,9 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.content.res.Resources
 import android.net.ConnectivityManager
-import android.net.ConnectivityManager.*
 import android.net.NetworkCapabilities
-import android.net.NetworkCapabilities.*
 import android.os.Build
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -20,9 +18,8 @@ import com.asksira.loopingviewpager.LoopingViewPager
 import com.suiiz.R
 import com.suiiz.SuiizApplication
 import com.suiiz.adapters.HomeAdapter
-import com.suiiz.adapters.carsBrandFragmentAdapters.CarsBrandRvAdapter
+import com.suiiz.adapters.cars_brand_fragment_adapters.CarsBrandRvAdapter
 import com.suiiz.adapters.AdsLoopViewPagerAdapter
-import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
 import com.suiiz.repositories.MainRepository
 import com.suiiz.util.Constants
 import com.suiiz.util.DummyData

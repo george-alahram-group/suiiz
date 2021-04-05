@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.Vehicle_Cars_ModelFragment">
+    tools:context=".ui.fragments.Vehicle_Brand_ModelsFragment">
 
     <com.asksira.loopingviewpager.LoopingViewPager
         android:id="@+id/loopingVP"
@@ -29,7 +29,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:clipToPadding="false"
+        android:orientation="vertical"
         android:paddingBottom="?attr/actionBarSize"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_vehicles_model" />
 
 </RelativeLayout>

@@ -13,7 +13,7 @@ object Constants {
     // NETWORK
     const val API_KEY: String = "KEY" // if we need it here // waiting for backend to implement this feature
     const val TOKEN: String = "TOKEN" // not implemented yet // waiting for backend to implement this feature
-    const val BASE_URL: String = "http://127.0.0.1:3000/"
+    const val BASE_URL: String = "https://suiiz.com/api/"
     const val QUERY_PAGE_SIZE: Int = 10
 
     const val TAG = "Debugger"

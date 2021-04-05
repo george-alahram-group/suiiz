@@ -19,6 +19,7 @@
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ivModel"
+                android:layout_centerInParent="true"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
                 android:scaleType="centerCrop"
@@ -55,13 +56,12 @@
                 tools:text="4"/>
 
             <TextView
-                android:id="@+id/tvSeriesName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
                 android:textSize="@dimen/_12sdp"
-                tools:text="Series"/>
+                android:text="Series"/>
 
             <View
                 android:layout_weight="1"
@@ -94,6 +94,8 @@
                         <!-- TODO :  Spinner entries will get from api response from the backend -->
                         <Spinner
                             android:id="@+id/spModel"
+                            style="@style/SpinnerWithNoArrow"
+                            tools:listitem="@android:layout/simple_spinner_item"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
@@ -129,6 +131,8 @@
                         <!-- TODO :  Spinner entries will get from api response from the backend -->
                         <Spinner
                             android:id="@+id/spYear"
+                            style="@style/SpinnerWithNoArrow"
+                            tools:listitem="@android:layout/simple_spinner_item"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 

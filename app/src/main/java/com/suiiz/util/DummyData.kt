@@ -1,10 +1,66 @@
 package com.suiiz.util
 
+import android.content.Context
 import android.content.res.Resources
 import com.suiiz.R
+import com.suiiz.model.BrandModel
+import com.suiiz.model.Cart
+import com.suiiz.model.Favorite
 import com.suiiz.model.Section
 
 object DummyData {
+
+
+    fun mainCategoryList(res: Resources) = mutableListOf(
+        Section(
+            0,
+            res.getString(R.string.vehicle),
+            "250",
+            "https://www.freeiconspng.com/thumbs/car-icon-png/car-icon-png-25.png"
+        ),
+        Section(
+            1,
+            res.getString(R.string.oil_products),
+            "250",
+            "https://img.icons8.com/ios/452/oil-industry.png"
+        ),
+        Section(
+            2,
+            res.getString(R.string.buildings),
+            "250",
+            "https://img.pngio.com/building-icon-svg-png-icon-free-download-384110-building-icon-png-980_908.png"
+        ), Section(
+            3,
+            res.getString(R.string.buildings),
+            "250",
+            "https://www.freeiconspng.com/thumbs/car-icon-png/car-icon-png-25.png"
+        ), Section(
+            4,
+            res.getString(R.string.buildings),
+            "250",
+            "https://img.icons8.com/ios/452/oil-industry.png"
+        ), Section(
+            5,
+            res.getString(R.string.buildings),
+            "250",
+            "https://img.pngio.com/building-icon-svg-png-icon-free-download-384110-building-icon-png-980_908.png"
+        ), Section(
+            6,
+            res.getString(R.string.buildings),
+            "250",
+            "https://www.freeiconspng.com/thumbs/car-icon-png/car-icon-png-25.png"
+        ), Section(
+            7,
+            res.getString(R.string.buildings),
+            "250",
+            "https://img.icons8.com/ios/452/oil-industry.png"
+        ), Section(
+            8,
+            res.getString(R.string.buildings),
+            "250",
+            "https://img.pngio.com/building-icon-svg-png-icon-free-download-384110-building-icon-png-980_908.png"
+        )
+    )
 
     fun vehicleList(res: Resources) = mutableListOf(
         Section(
@@ -82,11 +138,6 @@ object DummyData {
         )
     )
 
-    fun vp2List() = mutableListOf(
-        "https://www.fia.com/sites/default/files/styles/content_details/public/news/main_image/2017_concept_1.jpg?itok=MJSFw833",
-        "https://drivetribe.imgix.net/Fn0CvExKT02WNCO_Rz51Tw?w=600&h=338&fm=jpe&auto=compress&fit=crop&crop=faces",
-        "https://www.topgear.com/sites/default/files/styles/16x9_1280w/public/images/news-article/2018/01/d3a0a38bf9212fa4e4bef1f40ead0e7f/duinmwixkaatair.jpg?itok=BLdGISce"
-    )
     fun loopVpList() = arrayListOf<String>(
         "https://www.fia.com/sites/default/files/styles/content_details/public/news/main_image/2017_concept_1.jpg?itok=MJSFw833",
         "https://drivetribe.imgix.net/Fn0CvExKT02WNCO_Rz51Tw?w=600&h=338&fm=jpe&auto=compress&fit=crop&crop=faces",
@@ -114,55 +165,127 @@ object DummyData {
         )
     )
 
-    fun mainCategoryList(res: Resources) = mutableListOf(
-        Section(
+
+    fun favoriteList(res: Resources) = mutableListOf(
+        Favorite(
             0,
-            res.getString(R.string.vehicle),
-            "250",
-            "https://www.freeiconspng.com/thumbs/car-icon-png/car-icon-png-25.png"
+            "Title_A",
+            "this content is provided by a dumy data an this is not real",
+            3.6f,
+            "2000",
+            "2500",
+            true,
+            "https://www.wautom.com/wp-content/uploads/2013/01/motor.jpg",
+            "",
+            "Cairo - Egypt",
+            "Al_Ahram Group",
+            "12-12-2020"
         ),
-        Section(
+        Favorite(
             1,
-            res.getString(R.string.oil_products),
-            "250",
-            "https://img.icons8.com/ios/452/oil-industry.png"
+            "Title_B",
+            "this content is provided by a dumy data an this is not real",
+            4.5f,
+            "7000",
+            "8500",
+            true,
+            "https://spectrum.ieee.org/image/MzM5ODEzNg.jpeg",
+            "",
+            "Alexandria - Egypt",
+            "Al_Ahram Group",
+            "12-12-2020"
         ),
-        Section(
-            2,
-            res.getString(R.string.buildings),
-            "250",
-            "https://img.pngio.com/building-icon-svg-png-icon-free-download-384110-building-icon-png-980_908.png"
-        ), Section(
-            3,
-            res.getString(R.string.buildings),
-            "250",
-            "https://www.freeiconspng.com/thumbs/car-icon-png/car-icon-png-25.png"
-        ), Section(
-            4,
-            res.getString(R.string.buildings),
-            "250",
-            "https://img.icons8.com/ios/452/oil-industry.png"
-        ), Section(
-            5,
-            res.getString(R.string.buildings),
-            "250",
-            "https://img.pngio.com/building-icon-svg-png-icon-free-download-384110-building-icon-png-980_908.png"
-        ), Section(
-            6,
-            res.getString(R.string.buildings),
-            "250",
-            "https://www.freeiconspng.com/thumbs/car-icon-png/car-icon-png-25.png"
-        ), Section(
-            7,
-            res.getString(R.string.buildings),
-            "250",
-            "https://img.icons8.com/ios/452/oil-industry.png"
-        ), Section(
-            8,
-            res.getString(R.string.buildings),
-            "250",
-            "https://img.pngio.com/building-icon-svg-png-icon-free-download-384110-building-icon-png-980_908.png"
+        Favorite(
+            0,
+            "Title_A",
+            "this content is provided by a dumy data an this is not real",
+            3.6f,
+            "2000",
+            "2500",
+            true,
+            "https://www.wautom.com/wp-content/uploads/2013/01/motor.jpg",
+            "",
+            "Cairo - Egypt",
+            "Al_Ahram Group",
+            "12-12-2020"
+        ),
+        Favorite(
+            1,
+            "Title_B",
+            "this content is provided by a dumy data an this is not real",
+            4.5f,
+            "7000",
+            "8500",
+            true,
+            "https://spectrum.ieee.org/image/MzM5ODEzNg.jpeg",
+            "",
+            "Alexandria - Egypt",
+            "Al_Ahram Group",
+            "12-12-2020"
+        ),
+        Favorite(
+            0,
+            "Title_A",
+            "this content is provided by a dumy data an this is not real",
+            3.6f,
+            "2000",
+            "2500",
+            true,
+            "https://www.wautom.com/wp-content/uploads/2013/01/motor.jpg",
+            "",
+            "Cairo - Egypt",
+            "Al_Ahram Group",
+            "12-12-2020"
+        ),
+        Favorite(
+            1,
+            "Title_B",
+            "this content is provided by a dumy data an this is not real",
+            4.5f,
+            "7000",
+            "8500",
+            true,
+            "https://spectrum.ieee.org/image/MzM5ODEzNg.jpeg",
+            "",
+            "Alexandria - Egypt",
+            "Al_Ahram Group",
+            "12-12-2020"
         )
+
     )
+
+    fun cartList(res: Resources): MutableList<Cart> {
+        val list = mutableListOf<Cart>()
+        for (i in 0..10) {
+            list.add(
+                Cart(
+                    0,
+                    "Item A",
+                    "https://spectrum.ieee.org/image/MzM5ODEzNg.jpeg",
+                    "Motors",
+                    500,
+                    "Al_Ahram Group",
+                    1
+                )
+            )
+        }
+        return list
+    }
+
+    fun modelsList(res: Resources): MutableList<BrandModel> {
+        val list = mutableListOf<BrandModel>()
+        for (i in 0..10) {
+            list.add(
+                BrandModel(
+                    0,
+                    "https://ymimg1.b8cdn.com/resized/car_version/21540/pictures/6193914/mobile_listing_main_13800_st1280_089.jpg",
+                    4,
+                    listOf("sDrive35i", "xDrive35i", "xDrive50i", "M"),
+                    listOf("2017", "2018", "2019", "2020", "2021")
+                )
+            )
+        }
+        return list
+    }
 
 }

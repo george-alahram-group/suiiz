@@ -6,7 +6,7 @@ import android.content.res.Resources
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.suiiz.adapters.vehicleFragmnetAdapters.VehiclesRecyclerAdapter
+import com.suiiz.adapters.vehicle_fragment_adapters.VehiclesRecyclerAdapter
 import com.suiiz.repositories.MainRepository
 import com.suiiz.util.DummyData
 

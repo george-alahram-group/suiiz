@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginHorizontal="@dimen/_15sdp"
     android:layout_marginVertical="@dimen/_5sdp">
 
@@ -36,6 +36,7 @@
                         android:orientation="horizontal">
 
                         <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/ivImage"
                             android:layout_width="@dimen/_85sdp"
                             android:layout_height="@dimen/_85sdp"
                             android:scaleType="centerCrop"
@@ -43,106 +44,119 @@
                             app:riv_corner_radius="@dimen/_10sdp" />
 
                         <LinearLayout
-                            android:layout_marginStart="@dimen/_10sdp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tvTitle"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="CYLINDER HEAD 2012"
-                                android:textStyle="bold"
-                                android:textColor="@color/primaryColor" />
+                                android:textColor="@color/primaryColor"
+                                android:textStyle="bold" />
 
                             <LinearLayout
-                                android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:gravity="center"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
+                                    android:gravity="center"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/tvPartType"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/_30sdp"
-                                        app:elevation="0dp"
+                                        android:clickable="false"
                                         android:text="parts"
-                                        android:textSize="@dimen/_8sdp"
-                                        app:strokeWidth="1dip"
                                         android:textColor="@color/primaryTextColor"
-                                        app:strokeColor="@color/primaryTextColor"
+                                        android:textSize="@dimen/_8sdp"
                                         app:backgroundTint="@color/cards_bg_color"
-                                        app:cornerRadius="@dimen/_50sdp"/>
+                                        app:cornerRadius="@dimen/_50sdp"
+                                        app:elevation="0dp"
+                                        app:strokeColor="@color/primaryTextColor"
+                                        app:strokeWidth="1dip" />
 
                                     <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/tvPrice"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/_30sdp"
-                                        app:elevation="0dp"
-                                        tools:text="250 LE"
-                                        android:textSize="@dimen/_8sdp"
-                                        app:strokeWidth="1dip"
+                                        android:clickable="false"
                                         android:textColor="@color/primaryTextColor"
-                                        app:strokeColor="@color/primaryTextColor"
+                                        android:textSize="@dimen/_8sdp"
                                         app:backgroundTint="@color/cards_bg_color"
-                                        app:cornerRadius="@dimen/_50sdp"/>
+                                        app:cornerRadius="@dimen/_50sdp"
+                                        app:elevation="0dp"
+                                        app:strokeColor="@color/primaryTextColor"
+                                        app:strokeWidth="1dip"
+                                        tools:text="250 LE" />
 
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:gravity="center"
-                                    android:layout_weight="1"
-                                    android:layout_marginStart="@dimen/_10sdp"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
                                     android:orientation="vertical">
 
                                     <LinearLayout
-                                        android:gravity="center"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:gravity="center"
                                         android:orientation="horizontal">
 
                                         <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/btnMinus"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                                            android:clickable="true"
+                                            android:focusable="true"
                                             android:src="@drawable/ic_minus"
                                             app:tint="@color/primaryColor" />
 
                                         <TextView
+                                            android:id="@+id/tvCount"
                                             android:layout_width="0dp"
                                             android:layout_height="match_parent"
-                                            android:text="1"
-                                            android:gravity="center"
-                                            android:textAlignment="gravity"
                                             android:layout_weight="1"
-                                            android:textStyle="bold"
+                                            android:gravity="center"
+                                            android:text="1"
+                                            android:textAlignment="gravity"
+                                            android:textColor="@color/primaryTextColor"
                                             android:textSize="@dimen/_10sdp"
-                                            android:textColor="@color/primaryTextColor" />
+                                            android:textStyle="bold" />
 
                                         <com.google.android.material.imageview.ShapeableImageView
+                                            android:id="@+id/btnPlus"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
+                                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                                            android:clickable="true"
+                                            android:focusable="true"
                                             android:src="@drawable/ic_plus"
-                                            android:layout_marginEnd="@dimen/_5sdp"
                                             app:tint="@color/primaryColor" />
 
                                     </LinearLayout>
 
                                     <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/tvAdOwner"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/_30sdp"
-                                        app:elevation="0dp"
-                                        tools:text="MANSOUR PLUS"
-                                        android:textSize="@dimen/_6sdp"
                                         android:textColor="@color/primaryTextColor"
+                                        android:textSize="@dimen/_6sdp"
                                         app:backgroundTint="@color/primaryColor"
-                                        app:cornerRadius="@dimen/_50sdp"/>
+                                        app:cornerRadius="@dimen/_50sdp"
+                                        app:elevation="0dp"
+                                        tools:text="MANSOUR PLUS" />
 
                                 </LinearLayout>
 

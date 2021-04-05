@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.Vehicle_Cars_PartsFragment">
+    tools:context=".ui.fragments.Vehicle_Model_PartsFragment">
 
     <com.asksira.loopingviewpager.LoopingViewPager
         android:id="@+id/loopingVP"
@@ -55,6 +55,7 @@
                         android:gravity="center">
 
                         <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFilter1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -92,6 +93,7 @@
                         android:gravity="center">
 
                         <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFilter2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -120,7 +122,7 @@
 
             <include
                 android:id="@+id/includeFooter"
-                layout="@layout/include_vehicle_cars_parts_footer"/>
+                layout="@layout/include_vehicle_model_parts_footer"/>
 
             <View
                 android:layout_width="match_parent"

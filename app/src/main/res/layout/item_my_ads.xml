@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:background="@color/primaryTextColor"
+    android:orientation="vertical"
+    android:paddingVertical="1dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cards_bg_color_lighter"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="EDIT AD"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/primaryTextColor" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="DELETE AD"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/primaryTextColor" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="SHARE AD"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/primaryTextColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cards_bg_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_15sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="FROM TODAY TO 23 JUN"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bmw" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/primaryColor"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_5sdp"
+                            android:text="Cylinder head 2012"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_15sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="2500 LE"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/secondaryTextColor"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_3sdp">
+
+                        <!-- TODO :  Spinner entries will get from api response from the backend -->
+                        <Spinner
+                            android:id="@+id/spVehicleType"
+                            style="@style/SpinnerWithNoArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@android:layout/simple_spinner_item" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_3sdp">
+
+                        <!-- TODO :  Spinner entries will get from api response from the backend -->
+                        <Spinner
+                            android:id="@+id/spBrand"
+                            style="@style/SpinnerWithNoArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@android:layout/simple_spinner_item" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_3sdp">
+
+                        <!-- TODO :  Spinner entries will get from api response from the backend -->
+                        <Spinner
+                            android:id="@+id/spSeries"
+                            style="@style/SpinnerWithNoArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@android:layout/simple_spinner_item" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_3sdp">
+
+                        <!-- TODO :  Spinner entries will get from api response from the backend -->
+                        <Spinner
+                            android:id="@+id/spYear"
+                            style="@style/SpinnerWithNoArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@android:layout/simple_spinner_item" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Cylinder head 2012"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="google's free service instalyteanslates words, phrases and web pages between english"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/primaryTextColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="VIEWS"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvViewsCount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp"
+                tools:text="8" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/primaryTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="PHONE"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp"
+                tools:text="01100000000" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/primaryTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="FAVORITED"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvFavoriteCount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp"
+                tools:text="3" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/primaryTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/chat"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvChatCount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_11sdp"
+                tools:text="5" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/primaryTextColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cards_bg_color_lighter"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="PROMOTE"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@color/primaryTextColor" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_more_horiz"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/_12sdp"
+            app:tint="@color/primaryTextColor" />
+
+    </LinearLayout>
+
+</LinearLayout>
