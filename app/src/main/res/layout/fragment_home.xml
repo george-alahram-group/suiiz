@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:isScrollContainer="true"
     android:id="@+id/homeContainer"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/_5sdp"
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -61,6 +61,7 @@
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             tools:itemCount="4"
+                            tools:listitem="@layout/item_selectable"
                             android:paddingVertical="@dimen/_5sdp"
                             android:clipToPadding="false"
                             android:paddingHorizontal="@dimen/_15sdp"/>
@@ -99,6 +100,7 @@
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             tools:itemCount="2"
+                            tools:listitem="@layout/item_selectable"
                             android:paddingVertical="@dimen/_5sdp"
                             android:clipToPadding="false"
                             android:paddingHorizontal="@dimen/_15sdp"/>

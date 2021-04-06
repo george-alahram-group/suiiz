@@ -29,6 +29,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:clipToPadding="false"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
         android:paddingBottom="?attr/actionBarSize"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"

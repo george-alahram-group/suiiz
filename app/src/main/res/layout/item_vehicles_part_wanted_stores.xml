@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/_80sdp"
     android:layout_height="@dimen/_80sdp"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_10sdp">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/ivWantedStore"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        tools:src="@drawable/bmw" />
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivWantedStore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/bmw" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

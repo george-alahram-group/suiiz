@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_10sdp"
     android:orientation="vertical">
 
     <!-- horizontal line -->
@@ -69,12 +70,13 @@
                                 android:id="@+id/btnViewAllBestSeller"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="@dimen/_10sdp"
                                 android:alpha="0.5"
-                                android:background="?android:attr/selectableItemBackground"
+                                android:background="?android:attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:focusable="true"
-                                android:padding="@dimen/_3sdp"
+                                android:layout_centerInParent="true"
+                                android:paddingVertical="@dimen/_3sdp"
+                                android:paddingHorizontal="@dimen/_15sdp"
                                 android:text="@string/view_all"
                                 android:textColor="@color/primaryTextColor" />
 
@@ -164,12 +166,13 @@
                                 android:id="@+id/btnViewAllStores"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="@dimen/_10sdp"
                                 android:alpha="0.5"
-                                android:background="?android:attr/selectableItemBackground"
+                                android:background="?android:attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:focusable="true"
-                                android:padding="@dimen/_3sdp"
+                                android:layout_centerInParent="true"
+                                android:paddingVertical="@dimen/_3sdp"
+                                android:paddingHorizontal="@dimen/_15sdp"
                                 android:text="@string/view_all"
                                 android:textColor="@color/primaryTextColor" />
 

@@ -40,6 +40,7 @@
                     android:visibility="gone" />
 
                 <ImageView
+                    android:id="@+id/btnFavorite"
                     android:layout_width="@dimen/_15sdp"
                     android:layout_height="@dimen/_15sdp"
                     android:layout_alignParentTop="true"
@@ -61,6 +62,7 @@
             </RelativeLayout>
 
             <RatingBar
+                android:id="@+id/rateBar"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,6 +72,7 @@
                 tools:rating="3" />
 
             <TextView
+                android:id="@+id/tvBestSellerName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
@@ -86,6 +89,7 @@
                 android:gravity="center_vertical">
 
                 <TextView
+                    android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_5sdp"
@@ -123,14 +127,12 @@
                             android:gravity="center">
 
                             <TextView
-                                android:id="@+id/btnCategory"
+                                android:id="@+id/tvCategory"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginHorizontal="@dimen/_5sdp"
-                                android:background="?android:attr/selectableItemBackground"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:padding="@dimen/_3sdp"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:layout_centerInParent="true"
+                                android:paddingVertical="@dimen/_3sdp"
                                 android:text="@string/view_all"
                                 android:textColor="@color/primaryColor"
                                 android:textSize="@dimen/_7sdp" />
@@ -161,6 +163,7 @@
                 app:tint="@color/primaryTextColor" />
 
             <TextView
+                android:id="@+id/tvPartName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"

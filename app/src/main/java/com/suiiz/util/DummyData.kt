@@ -3,10 +3,7 @@ package com.suiiz.util
 import android.content.Context
 import android.content.res.Resources
 import com.suiiz.R
-import com.suiiz.model.BrandModel
-import com.suiiz.model.Cart
-import com.suiiz.model.Favorite
-import com.suiiz.model.Section
+import com.suiiz.model.*
 
 object DummyData {
 
@@ -285,6 +282,46 @@ object DummyData {
                 )
             )
         }
+        return list
+    }
+
+    fun partsList(res: Resources): MutableList<Part> {
+        val list = mutableListOf<Part>()
+        for (i in 0..10) {
+            list.add(
+                Part(
+                    0,
+                    "PART ${i + 1}",
+                    "https://ymimg1.b8cdn.com/resized/car_version/21540/pictures/6193914/mobile_listing_main_13800_st1280_089.jpg",
+                )
+            )
+        }
+        return list
+    }
+
+    fun bestSellerList(res: Resources): MutableList<BestSeller> {
+        val list = mutableListOf<BestSeller>()
+        for (i in 0..4) {
+            list.add(
+                BestSeller(
+                    i,
+                    "Seller ${i + 1}",
+                    "Engine",
+                    "https://spectrum.ieee.org/image/MzM5ODEzNg.jpeg",
+                    "PARTS",
+                    199.99f * (i+1),
+                    2.8f,
+                    35 - i
+                )
+            )
+        }
+        return list
+    }
+
+    fun wantedStoresList(): MutableList<String> {
+        val list = mutableListOf<String>()
+        for (i in 0..4)
+            list.add("https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2018/01/19151152/FORMULA-1%C2%AE-UNLEASHES-NEW-BRAND-IDENTITY-INSPIRED-BY-ITS-FANS-OPTION-2.jpg")
         return list
     }
 

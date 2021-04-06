@@ -2,19 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
         android:clipToPadding="false"
-        app:cardCornerRadius="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp">
+        app:cardCornerRadius="@dimen/_15sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
