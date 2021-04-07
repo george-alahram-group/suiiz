@@ -104,7 +104,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -128,8 +128,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_add_shopping_cart"
@@ -144,6 +144,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_purchases"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -164,7 +165,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -188,8 +189,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_money"
@@ -202,6 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_sales"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -222,7 +224,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -247,8 +249,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_shopping_cart"
@@ -261,6 +263,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_cart"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -281,7 +284,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -305,8 +308,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_services"
@@ -319,6 +322,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_services"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -339,7 +343,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -363,8 +367,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_services"
@@ -377,6 +381,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_parts"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -397,7 +402,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -421,8 +426,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_search"
@@ -435,6 +440,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/accessories"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -455,7 +461,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -479,8 +485,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_car"
@@ -493,6 +499,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_vehicle"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -513,7 +520,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -537,8 +544,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_settings"
@@ -551,6 +558,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/my_setting"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>
@@ -571,7 +579,7 @@
                         android:layout_height="match_parent"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        app:cardBackgroundColor="@color/primaryColor"
+                        app:cardBackgroundColor="@color/primaryColor_alpha"
                         app:cardCornerRadius="@dimen/_10sdp"
                         app:cardElevation="@dimen/_3sdp">
 
@@ -595,8 +603,8 @@
                                 android:padding="@dimen/_5sdp">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:backgroundTint="@color/primaryColor"
                                     android:padding="@dimen/_15sdp"
                                     android:src="@drawable/ic_log_out"
@@ -609,6 +617,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
+                        android:textSize="@dimen/_11sdp"
                         android:text="@string/log_out"
                         android:textColor="@color/primaryColor" />
                 </LinearLayout>

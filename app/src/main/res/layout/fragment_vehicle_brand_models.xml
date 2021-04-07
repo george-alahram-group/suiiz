@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".ui.fragments.Vehicle_Brand_ModelsFragment">
 
-    <com.asksira.loopingviewpager.LoopingViewPager
-        android:id="@+id/loopingVP"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_110sdp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:clipToPadding="false"
-        app:autoScroll="true"
-        app:isInfinite="true"
-        app:scrollInterval="5000"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_height="wrap_content">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/loopingVP"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:paddingBottom="?attr/actionBarSize"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_vehicles_model" />
+        <com.asksira.loopingviewpager.LoopingViewPager
+            android:id="@+id/loopingVP"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:clipToPadding="false"
+            app:autoScroll="true"
+            app:isInfinite="true"
+            app:scrollInterval="5000"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-</RelativeLayout>
+        <com.factor.bouncy.BouncyRecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/loopingVP"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="?attr/actionBarSize"
+            app:allow_drag_reorder="true"
+            app:allow_item_swipe="true"
+            app:recyclerview_damping_ratio="DAMPING_RATIO_LOW_BOUNCY"
+            app:recyclerview_fling_animation_size="1"
+            app:recyclerview_overscroll_animation_size="1"
+            app:recyclerview_stiffness="STIFFNESS_LOW" />
+
+    </RelativeLayout>
+
+</ScrollView>

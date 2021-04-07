@@ -18,26 +18,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="@dimen/_10sdp">
+            android:gravity="center">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
                 android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
                 android:paddingVertical="@dimen/_5sdp">
 
                 <ImageView
-                    app:tint="@color/primaryTextColor"
-                    android:alpha="0.75"
                     android:layout_width="@dimen/_14sdp"
                     android:layout_height="@dimen/_14sdp"
-                    android:src="@drawable/ic_sort" />
+                    android:alpha="0.75"
+                    android:src="@drawable/ic_sort"
+                    app:tint="@color/primaryTextColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -48,28 +48,29 @@
             </LinearLayout>
 
             <View
-                android:alpha="0.75"
                 android:layout_width="@dimen/_1sdp"
                 android:layout_height="@dimen/_10sdp"
+                android:alpha="0.75"
                 android:background="@color/primaryTextColor" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
                 android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
                 android:paddingVertical="@dimen/_5sdp">
 
                 <ImageView
-                    app:tint="@color/primaryTextColor"
-                    android:alpha="0.75"
                     android:layout_width="@dimen/_14sdp"
                     android:layout_height="@dimen/_14sdp"
-                    android:src="@drawable/ic_sort" />
+                    android:alpha="0.75"
+                    android:src="@drawable/ic_sort"
+                    app:tint="@color/primaryTextColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -84,15 +85,16 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight="3"
             android:visibility="visible"
             app:cardBackgroundColor="@color/primaryColor"
             app:cardCornerRadius="@dimen/_50sdp"
@@ -112,14 +114,14 @@
                     android:gravity="center">
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFilter1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clipToPadding="false"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:itemCount="4"
-                        android:paddingVertical="@dimen/_5sdp"
-                        android:clipToPadding="false"
-                        android:paddingHorizontal="@dimen/_15sdp"/>
+                        tools:itemCount="2"
+                        tools:listitem="@layout/item_selectable" />
 
 
                 </LinearLayout>
@@ -128,10 +130,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight="2"
             android:visibility="visible"
             app:cardBackgroundColor="@color/primaryColor"
             app:cardCornerRadius="@dimen/_50sdp"
@@ -151,14 +153,14 @@
                     android:gravity="center">
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFilter2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clipToPadding="false"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:itemCount="2"
-                        android:paddingVertical="@dimen/_5sdp"
-                        android:clipToPadding="false"
-                        android:paddingHorizontal="@dimen/_15sdp"/>
+                        tools:listitem="@layout/item_selectable" />
 
                 </LinearLayout>
 
@@ -168,11 +170,15 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:itemCount="5"
+        android:layout_marginTop="@dimen/_10sdp"
         android:clipToPadding="false"
+        android:orientation="vertical"
         android:paddingBottom="?actionBarSize"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
         tools:listitem="@layout/item_vehicles_part_sub_items" />
 
 </LinearLayout>

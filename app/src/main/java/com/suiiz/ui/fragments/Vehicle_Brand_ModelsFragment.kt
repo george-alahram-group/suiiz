@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSmoothScroller
+import androidx.recyclerview.widget.RecyclerView
 import com.suiiz.R
 import com.suiiz.adapters.cars_model_adapters.BrandModelsAdapter
 import com.suiiz.databinding.FragmentVehicleBrandModelsBinding
@@ -53,11 +56,21 @@ class Vehicle_Brand_ModelsFragment : Fragment(R.layout.fragment_vehicle_brand_mo
 
         viewModel.setupLoopingVp(binding.loopingVP, requireContext())
 
+        val smoothScroller = object : LinearSmoothScroller(context) {
+            override fun getVerticalSnapPreference(): Int {
+                return SNAP_TO_START
+            }
+        }
+        smoothScroller.targetPosition = 0
+
         brandModelAdapter.differ.submitList(DummyData.modelsList(resources))
         binding.rv.adapter =  brandModelAdapter
+        binding.rv.layoutManager = LinearLayoutManager(context)
         brandModelAdapter.setOnItemClickListener {
             findNavController().navigate(R.id.to_next_destination)
         }
+
+
     }
 
 

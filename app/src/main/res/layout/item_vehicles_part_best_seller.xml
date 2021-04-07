@@ -28,6 +28,7 @@
                 <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/ivBestSeller"
                     android:layout_width="match_parent"
+                    android:layout_centerInParent="true"
                     android:layout_height="@dimen/_85sdp"
                     android:scaleType="centerCrop"
                     tools:src="@drawable/bmw" />
@@ -45,9 +46,12 @@
                     android:layout_height="@dimen/_15sdp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:src="@drawable/ic_favorite_off"
-                    app:tint="@color/primaryColor" />
+                    app:tint="@color/red" />
 
                 <TextView
                     android:id="@+id/tvDiscount"
@@ -57,6 +61,7 @@
                     android:paddingHorizontal="@dimen/_10sdp"
                     android:paddingVertical="@dimen/_2sdp"
                     android:text="-35%"
+                    android:textSize="@dimen/_9sdp"
                     android:textColor="@color/primaryTextColor" />
 
             </RelativeLayout>
@@ -154,23 +159,20 @@
             android:gravity="center"
             android:padding="@dimen/_3sdp">
 
-            <ImageView
-                android:layout_width="@dimen/_14sdp"
-                android:layout_height="@dimen/_14sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:alpha="0.75"
-                android:src="@drawable/ic_shopping_cart"
-                app:tint="@color/primaryTextColor" />
-
             <TextView
                 android:id="@+id/tvPartName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="part name"
+                android:drawablePadding="@dimen/_5sdp"
                 android:textAlignment="gravity"
+                android:ellipsize="marquee"
                 android:textColor="@color/primaryTextColor"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="@dimen/_10sdp"
+                app:drawableTint="@color/primaryTextColor"
+                app:drawableStartCompat="@drawable/ic_shopping_cart" />
+
         </LinearLayout>
     </LinearLayout>
 

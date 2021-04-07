@@ -15,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/primaryTextColor">
+            android:background="@color/primaryTextColor_alpha">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                                         app:backgroundTint="@color/cards_bg_color"
                                         app:cornerRadius="@dimen/_50sdp"
                                         app:elevation="0dp"
-                                        app:strokeColor="@color/primaryTextColor"
+                                        app:strokeColor="@color/primaryTextColor_alpha"
                                         app:strokeWidth="1dip" />
 
                                     <com.google.android.material.button.MaterialButton
@@ -93,7 +93,7 @@
                                         app:backgroundTint="@color/cards_bg_color"
                                         app:cornerRadius="@dimen/_50sdp"
                                         app:elevation="0dp"
-                                        app:strokeColor="@color/primaryTextColor"
+                                        app:strokeColor="@color/primaryTextColor_alpha"
                                         app:strokeWidth="1dip"
                                         tools:text="250 LE" />
 
@@ -149,6 +149,7 @@
 
                                     <com.google.android.material.button.MaterialButton
                                         android:id="@+id/tvAdOwner"
+                                        android:clickable="false"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/_30sdp"
                                         android:textColor="@color/primaryTextColor"

@@ -6,45 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.Vehicle_Model_PartsFragment">
 
-    <com.asksira.loopingviewpager.LoopingViewPager
-        android:id="@+id/loopingVP"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_110sdp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:clipToPadding="false"
-        app:autoScroll="true"
-        app:isInfinite="true"
-        app:scrollInterval="5000"
-        tools:ignore="SpeakableTextPresentCheck" />
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/loopingVP"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <com.asksira.loopingviewpager.LoopingViewPager
+                android:id="@+id/loopingVP"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:clipToPadding="false"
+                app:autoScroll="true"
+                app:isInfinite="true"
+                app:scrollInterval="5000"
+                tools:ignore="SpeakableTextPresentCheck" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                app:cardBackgroundColor="@color/primaryColor"
+                app:cardBackgroundColor="@color/primaryColor_alpha"
                 app:cardCornerRadius="@dimen/_50sdp"
                 app:cardElevation="0dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_1sdp"
+                    android:layout_margin="1dip"
                     app:cardBackgroundColor="@color/secondaryTextColor"
                     app:cardCornerRadius="@dimen/_50sdp"
                     app:cardElevation="0dp">
@@ -58,13 +58,11 @@
                             android:id="@+id/rvFilter1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:clipToPadding="false"
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             tools:itemCount="4"
-                            tools:listitem="@layout/item_selectable"
-                            android:paddingVertical="@dimen/_5sdp"
-                            android:clipToPadding="false"
-                            android:paddingHorizontal="@dimen/_15sdp"/>
+                            tools:listitem="@layout/item_selectable" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -76,14 +74,14 @@
                 android:layout_marginHorizontal="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:visibility="visible"
-                app:cardBackgroundColor="@color/primaryColor"
+                app:cardBackgroundColor="@color/primaryColor_alpha"
                 app:cardCornerRadius="@dimen/_50sdp"
                 app:cardElevation="0dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_1sdp"
+                    android:layout_margin="1dip"
                     app:cardBackgroundColor="@color/secondaryTextColor"
                     app:cardCornerRadius="@dimen/_50sdp"
                     app:cardElevation="0dp">
@@ -97,13 +95,11 @@
                             android:id="@+id/rvFilter2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:clipToPadding="false"
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             tools:itemCount="2"
-                            tools:listitem="@layout/item_selectable"
-                            android:paddingVertical="@dimen/_5sdp"
-                            android:clipToPadding="false"
-                            android:paddingHorizontal="@dimen/_15sdp"/>
+                            tools:listitem="@layout/item_selectable" />
 
                     </LinearLayout>
 
@@ -124,7 +120,7 @@
 
             <include
                 android:id="@+id/includeFooter"
-                layout="@layout/include_vehicle_model_parts_footer"/>
+                layout="@layout/include_vehicle_model_parts_footer" />
 
             <View
                 android:layout_width="match_parent"

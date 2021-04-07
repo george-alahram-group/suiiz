@@ -38,7 +38,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         _binding = null
     }
 
-    private var num = 1
+    var num = 1
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

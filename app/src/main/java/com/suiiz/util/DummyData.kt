@@ -1,6 +1,5 @@
 package com.suiiz.util
 
-import android.content.Context
 import android.content.res.Resources
 import com.suiiz.R
 import com.suiiz.model.*
@@ -292,7 +291,7 @@ object DummyData {
                 Part(
                     0,
                     "PART ${i + 1}",
-                    "https://ymimg1.b8cdn.com/resized/car_version/21540/pictures/6193914/mobile_listing_main_13800_st1280_089.jpg",
+                    "https://www.nicepng.com/png/detail/334-3342222_car-auto-parts-png.png",
                 )
             )
         }
@@ -324,5 +323,31 @@ object DummyData {
             list.add("https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2018/01/19151152/FORMULA-1%C2%AE-UNLEASHES-NEW-BRAND-IDENTITY-INSPIRED-BY-ITS-FANS-OPTION-2.jpg")
         return list
     }
+
+    fun partsDetailedList(): MutableList<SubPart> {
+        val list = mutableListOf<SubPart>()
+        for (i in 0..9)
+            list.add(SubPart(
+                i+1,
+                "Part ${i+1}",
+                "https://www.nicepng.com/png/detail/334-3342222_car-auto-parts-png.png",
+                "Publisher",
+                2000f,
+                if (i%2 == 0) (i+2)*2500.99f else (i*200)/2500.99f,
+                "Cairo - Egypt",
+                "https://www.jacksonimmuno.com/img/static-pages/flag-egypt.png",
+                "30-12-2020",
+                2.5f,
+                "",
+                i%2 != 0
+            ))
+        return list
+    }
+
+    fun productDetailsImagesList () = mutableListOf(
+        "https://purepng.com/public/uploads/large/purepng.com-engine-motorsenginemotorcar-enginemechanical-energyburnfuel-1701527503050fde0n.png",
+        "https://img2.pngio.com/car-engine-png-hd-transparent-car-engine-hdpng-images-pluspng-engines-png-1004_893.png",
+        "https://freepikpsd.com/wp-content/uploads/2020/11/car-motor-png-5.png"
+    )
 
 }

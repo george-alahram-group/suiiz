@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.suiiz.R
 import com.suiiz.adapters.BestSellerAdapter
 import com.suiiz.adapters.SelectableBarAdapter
 import com.suiiz.adapters.WantedStoreAdapter
 import com.suiiz.adapters.model_parts.ModelPartsAdapter
 import com.suiiz.databinding.FragmentVehicleModelPartsBinding
+import com.suiiz.model.SelectableItem
 import com.suiiz.util.DummyData
 import com.suiiz.viewmodels.MainViewModel
 
@@ -49,19 +51,31 @@ class Vehicle_Model_PartsFragment:Fragment(R.layout.fragment_vehicle_model_parts
 
         binding.apply {
             val filter1Adapter = SelectableBarAdapter()
-            filter1Adapter.differ.submitList(mutableListOf("ENGINE","ACCESSORIES","SERVICE","Engine","ACCESSORIES"))
+            filter1Adapter.differ.submitList(mutableListOf(
+                    SelectableItem("ENGINE",false),
+                    SelectableItem("ACCESSORIES",true),
+                    SelectableItem("SERVICE",false),
+                    SelectableItem("ENGINE",false),
+                    SelectableItem("ACCESSORIES",false),
+                ))
             rvFilter1.adapter = filter1Adapter
             filter1Adapter.setOnItemClickListener {
-                Log.d(TAG, it)
+                Log.d(TAG, it.title)
             }
         }
 
         binding.apply {
             val filter2Adapter = SelectableBarAdapter()
-            filter2Adapter.differ.submitList(mutableListOf("INTERNAL","EXTERNAL"))
+            filter2Adapter.differ.submitList(mutableListOf(
+                    SelectableItem("ENGINE",false),
+                    SelectableItem("ACCESSORIES",true),
+                    SelectableItem("SERVICE",false),
+                    SelectableItem("ENGINE",false),
+                    SelectableItem("ACCESSORIES",false),
+                ))
             rvFilter2.adapter = filter2Adapter
             filter2Adapter.setOnItemClickListener {
-                Log.d(TAG, it)
+                Log.d(TAG, it.title)
             }
         }
 
@@ -71,6 +85,7 @@ class Vehicle_Model_PartsFragment:Fragment(R.layout.fragment_vehicle_model_parts
             rvParts.adapter = partsAdapter
             partsAdapter.setOnItemClickListener {
                 Log.d(TAG, it.title)
+                findNavController().navigate(R.id.to_next_destination)
             }
         }
 

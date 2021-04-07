@@ -119,6 +119,7 @@ dependencies {
 
     // AnimatedBottomBar
     implementation 'nl.joery.animatedbottombar:library:1.0.9'
+    implementation 'com.factor:bouncy:1.8'
 
     // FlipTabs
     // implementation 'com.github.Chrisvin:FlipTabs:v1.5'

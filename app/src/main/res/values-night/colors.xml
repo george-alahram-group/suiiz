@@ -2,21 +2,24 @@
 <resources>
 
     <color name="primaryColor">#d99713</color>
+    <color name="primaryColor_alpha">#99d99713</color>
     <color name="primaryLightColor">#ffc74c</color>
     <color name="primaryDarkColor">#a26900</color>
 
-    <color name="primaryTextColor">#ffffff</color>
-    <color name="secondaryTextColor">#000000</color>
-    <color name="cards_bg_color">#3E3E3E</color>
-    <color name="cards_bg_color_lighter">#BF3E3E3E</color>
+    <color name="primaryTextColor">#FFF</color>
+    <color name="primaryTextColor_alpha">#99FFFFFF</color>
+    <color name="secondaryTextColor">#000</color>
+    <color name="cards_bg_color">#333</color>
+    <color name="cards_bg_color_lighter">#99333333</color>
 
     <color name="foreground_color">#000</color>
     <color name="background_color">#1a1a1a</color>
 
-    <color name="iconsColor">#BF000000</color>
+    <color name="iconsColor">#99000000</color>
     <color name="elevationColor">#50ffffff</color>
 
     <color name="facebook_color">#1877F2</color>
 
+    <color name="red">#f8462e</color>
 
 </resources>

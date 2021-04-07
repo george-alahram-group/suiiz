@@ -134,6 +134,19 @@
         android:id="@+id/vehicle_Cars_Sub_Parts_destination"
         android:name="com.suiiz.ui.fragments.Vehicle_Cars_SubPartsFragment"
         android:label="Vehicle_Cars_SubPartsFragment"
-        tools:layout="@layout/fragment_vehicle_cars_sub_parts" />
+        tools:layout="@layout/fragment_vehicle_cars_sub_parts" >
+        <action
+            android:id="@+id/to_next_destination"
+            app:destination="@id/vehicle_SubPartDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicle_SubPartDetailsFragment"
+        android:name="com.suiiz.ui.fragments.Vehicle_SubPartDetailsFragment"
+        android:label="fragment_vehicle_sub_part_details"
+        tools:layout="@layout/fragment_vehicle_sub_part_details" />
 
 </navigation>

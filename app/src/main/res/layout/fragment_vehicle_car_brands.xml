@@ -9,7 +9,7 @@
     <com.asksira.loopingviewpager.LoopingViewPager
         android:id="@+id/loopingVP"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_110sdp"
+        android:layout_height="@dimen/_90sdp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"

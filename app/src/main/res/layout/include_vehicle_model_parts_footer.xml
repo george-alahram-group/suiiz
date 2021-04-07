@@ -13,14 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        app:cardBackgroundColor="@color/primaryTextColor"
+        app:cardBackgroundColor="@color/primaryTextColor_alpha"
         app:cardCornerRadius="@dimen/_50sdp"
         app:cardElevation="0dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_1sdp"
+            android:layout_margin="1dip"
             app:cardBackgroundColor="@color/cards_bg_color"
             app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="0dp">
@@ -49,14 +49,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/_2sdp"
                     android:layout_marginEnd="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardBackgroundColor="@color/primaryTextColor_alpha"
                     app:cardCornerRadius="@dimen/_50sdp"
                     app:cardElevation="0dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_1sdp"
+                        android:layout_margin="1dip"
                         app:cardBackgroundColor="@color/cards_bg_color"
                         app:cardCornerRadius="@dimen/_50sdp"
                         app:cardElevation="0dp">
@@ -70,15 +70,16 @@
                                 android:id="@+id/btnViewAllBestSeller"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
                                 android:alpha="0.5"
                                 android:background="?android:attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:focusable="true"
-                                android:layout_centerInParent="true"
-                                android:paddingVertical="@dimen/_3sdp"
                                 android:paddingHorizontal="@dimen/_15sdp"
+                                android:paddingVertical="@dimen/_3sdp"
                                 android:text="@string/view_all"
-                                android:textColor="@color/primaryTextColor" />
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="@dimen/_9sdp" />
 
                         </RelativeLayout>
 
@@ -109,14 +110,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        app:cardBackgroundColor="@color/primaryTextColor"
+        app:cardBackgroundColor="@color/primaryTextColor_alpha"
         app:cardCornerRadius="@dimen/_50sdp"
         app:cardElevation="0dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_1sdp"
+            android:layout_margin="1dip"
             app:cardBackgroundColor="@color/cards_bg_color"
             app:cardCornerRadius="@dimen/_50sdp"
             app:cardElevation="0dp">
@@ -145,14 +146,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/_2sdp"
                     android:layout_marginEnd="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/primaryTextColor"
+                    app:cardBackgroundColor="@color/primaryTextColor_alpha"
                     app:cardCornerRadius="@dimen/_50sdp"
                     app:cardElevation="0dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_1sdp"
+                        android:layout_margin="1dip"
                         app:cardBackgroundColor="@color/cards_bg_color"
                         app:cardCornerRadius="@dimen/_50sdp"
                         app:cardElevation="0dp">
@@ -166,15 +167,16 @@
                                 android:id="@+id/btnViewAllStores"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
                                 android:alpha="0.5"
                                 android:background="?android:attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:focusable="true"
-                                android:layout_centerInParent="true"
-                                android:paddingVertical="@dimen/_3sdp"
                                 android:paddingHorizontal="@dimen/_15sdp"
+                                android:paddingVertical="@dimen/_3sdp"
                                 android:text="@string/view_all"
-                                android:textColor="@color/primaryTextColor" />
+                                android:textColor="@color/primaryTextColor"
+                                android:textSize="@dimen/_9sdp" />
 
                         </RelativeLayout>
 

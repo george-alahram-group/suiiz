@@ -8,7 +8,6 @@
     tools:context=".ui.fragments.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="@dimen/_5sdp"
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_5sdp"
         android:clipToPadding="false"
         android:paddingTop="?attr/actionBarSize"
         android:paddingBottom="?attr/actionBarSize"
@@ -23,14 +23,14 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabService"
+        style="@style/fabDesign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_work"
         android:layout_marginBottom="?attr/actionBarSize"
-        style="@style/fabDesign"
-        android:contentDescription="@string/app_name" />
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_work" />
 
 
 

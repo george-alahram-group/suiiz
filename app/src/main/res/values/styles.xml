@@ -5,7 +5,7 @@
         <item name="android:backgroundTint">@color/primaryColor</item>
         <item name="android:background">@color/primaryTextColor</item>
         <item name="tint">@color/primaryTextColor</item>
-        <item name="borderWidth">@dimen/_1sdp</item>
+        <item name="borderWidth">1dip</item>
         <item name="backgroundTint">@color/primaryTextColor</item>
         <item name="elevationOverlayColor">@color/elevationColor</item>
         <item name="rippleColor">@color/primaryLightColor</item>

@@ -12,7 +12,7 @@
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginVertical="@dimen/_5sdp"
         android:clipToPadding="false"
-        app:cardBackgroundColor="@color/primaryTextColor"
+        app:cardBackgroundColor="@color/primaryTextColor_alpha"
         app:cardCornerRadius="@dimen/_5sdp"
         app:cardElevation="@dimen/_3sdp">
 
@@ -75,9 +75,9 @@
                                     android:clickable="true"
                                     android:focusable="true"
                                     android:src="@drawable/ic_favorite"
-                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="@+id/ivPart"
-                                    app:tint="@color/primaryColor" />
+                                    app:tint="@color/red" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                         </androidx.cardview.widget.CardView>
@@ -86,14 +86,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_10sdp"
-                            app:cardBackgroundColor="@color/primaryTextColor"
+                            app:cardBackgroundColor="@color/primaryTextColor_alpha"
                             app:cardCornerRadius="@dimen/_50sdp"
                             app:cardElevation="0dp">
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_margin="@dimen/_1sdp"
+                                android:layout_margin="1dip"
                                 app:cardBackgroundColor="@color/cards_bg_color"
                                 app:cardCornerRadius="@dimen/_50sdp"
                                 app:cardElevation="0dp">
@@ -192,14 +192,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            app:cardBackgroundColor="@color/primaryTextColor"
+                            app:cardBackgroundColor="@color/primaryTextColor_alpha"
                             app:cardCornerRadius="@dimen/_50sdp"
                             app:cardElevation="0dp">
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_margin="@dimen/_1sdp"
+                                android:layout_margin="1dip"
                                 app:cardBackgroundColor="@color/cards_bg_color"
                                 app:cardCornerRadius="@dimen/_50sdp"
                                 app:cardElevation="0dp">
@@ -218,9 +218,10 @@
                                         android:layout_marginEnd="@dimen/_5sdp"
                                         android:gravity="center_vertical"
                                         android:text="2000LE"
+                                        android:textStyle="bold"
                                         android:textAlignment="gravity"
                                         android:textColor="@color/primaryTextColor"
-                                        android:textSize="@dimen/_10sdp" />
+                                        android:textSize="@dimen/_11sdp" />
 
                                     <TextView
                                         android:id="@+id/tvPriceBefore"
@@ -241,14 +242,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            app:cardBackgroundColor="@color/primaryTextColor"
+                            app:cardBackgroundColor="@color/primaryTextColor_alpha"
                             app:cardCornerRadius="@dimen/_50sdp"
                             app:cardElevation="0dp">
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_margin="@dimen/_1sdp"
+                                android:layout_margin="1dip"
                                 app:cardBackgroundColor="@color/cards_bg_color"
                                 app:cardCornerRadius="@dimen/_50sdp"
                                 app:cardElevation="0dp">
@@ -267,7 +268,7 @@
                                         android:text="AD BY MANSOUR PLUS"
                                         android:textAlignment="gravity"
                                         android:textColor="@color/primaryTextColor"
-                                        android:textSize="@dimen/_10sdp" />
+                                        android:textSize="@dimen/_9sdp" />
                                 </LinearLayout>
 
                             </androidx.cardview.widget.CardView>
@@ -285,6 +286,7 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:paddingHorizontal="@dimen/_10sdp"
                     android:text="YESTERDAY 8 PM"
+                    android:textSize="@dimen/_9sdp"
                     android:textColor="@color/primaryColor" />
 
                 <LinearLayout
@@ -322,7 +324,7 @@
                     </LinearLayout>
 
                     <View
-                        android:layout_width="@dimen/_1sdp"
+                        android:layout_width="1dip"
                         android:layout_height="match_parent"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:alpha=".5"

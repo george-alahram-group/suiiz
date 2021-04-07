@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="@dimen/_5sdp"
     android:layout_width="wrap_content"
@@ -12,6 +13,6 @@
         android:layout_height="@dimen/_35sdp"
         app:riv_corner_radius="@dimen/_50sdp"
         android:scaleType="centerCrop"
-        android:src="@drawable/bmw"/>
+        tools:src="@drawable/bmw"/>
 
 </LinearLayout>

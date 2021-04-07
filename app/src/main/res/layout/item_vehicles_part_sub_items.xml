@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
     android:clipToPadding="false"
-    app:cardBackgroundColor="@color/primaryTextColor"
+    app:cardBackgroundColor="@color/primaryTextColor_alpha"
     app:cardCornerRadius="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/_1sdp"
+        android:layout_marginVertical="1dip"
         android:background="@color/cards_bg_color"
         android:baselineAligned="false"
         android:orientation="horizontal">
@@ -22,33 +22,27 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:paddingVertical="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
             android:paddingStart="@dimen/_15sdp"
-            android:paddingEnd="@dimen/_10sdp"
             tools:ignore="NestedWeights">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_90sdp"
                 app:cardCornerRadius="@dimen/_15sdp"
                 app:cardElevation="0dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/ivPart"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
                         android:contentDescription="@string/app_name"
-                        android:padding="@dimen/_10sdp"
                         android:scaleType="centerCrop"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         tools:src="@drawable/bmw" />
 
                     <ProgressBar
@@ -57,28 +51,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:progressTint="@color/primaryColor"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_centerInParent="true" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_10sdp"
+                        android:id="@+id/ivIsFavorited"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
                         android:contentDescription="@string/app_name"
+                        android:focusable="true"
                         android:src="@drawable/ic_favorite_off"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/ivPart"
-                        app:tint="@color/primaryColor" />
+                        app:tint="@color/red" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <RatingBar
+                android:visibility="gone"
+                android:id="@+id/rateBar"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,9 +91,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical"
-            android:paddingVertical="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
             android:paddingEnd="@dimen/_15sdp"
+            android:paddingStart="@dimen/_5sdp"
             tools:ignore="NestedWeights,RtlSymmetry">
 
             <TextView
@@ -103,19 +103,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:text="CELINDER HEAD 2012"
+                android:text="CELINDER"
                 android:textColor="@color/primaryColor"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center_vertical">
 
                 <ImageView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_5sdp"
@@ -128,6 +130,7 @@
                     app:tint="@color/primaryTextColor" />
 
                 <TextView
+                    android:id="@+id/tvPublisher"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -141,16 +144,16 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/primaryTextColor"
+                app:cardBackgroundColor="@color/primaryTextColor_alpha"
                 app:cardCornerRadius="@dimen/_50sdp"
                 app:cardElevation="0dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_1sdp"
+                    android:layout_margin="1dip"
                     app:cardBackgroundColor="@color/cards_bg_color"
                     app:cardCornerRadius="@dimen/_50sdp"
                     app:cardElevation="0dp">
@@ -160,15 +163,17 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:padding="@dimen/_3sdp">
+                        android:paddingHorizontal="@dimen/_3sdp">
 
                         <TextView
+                            android:id="@+id/tvPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:text="2000LE"
+                            tools:text="40 LE"
+                            android:textStyle="bold"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/_10sdp" />
+                            android:textSize="@dimen/_11sdp" />
 
                         <View
                             android:layout_width="0dp"
@@ -176,6 +181,7 @@
                             android:layout_weight="1" />
 
                         <TextView
+                            android:id="@+id/tvPriceBefore"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="@dimen/_5sdp"
@@ -190,16 +196,16 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/primaryTextColor"
+                app:cardBackgroundColor="@color/primaryTextColor_alpha"
                 app:cardCornerRadius="@dimen/_50sdp"
                 app:cardElevation="0dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/_1sdp"
+                    android:layout_margin="1dip"
                     app:cardBackgroundColor="@color/cards_bg_color"
                     app:cardCornerRadius="@dimen/_50sdp"
                     app:cardElevation="0dp">
@@ -209,11 +215,11 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:padding="@dimen/_3sdp">
+                        android:paddingHorizontal="@dimen/_3sdp">
 
                         <com.makeramen.roundedimageview.RoundedImageView
-                            android:layout_width="@dimen/_16sdp"
-                            android:layout_height="@dimen/_16sdp"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
                             android:layout_marginEnd="@dimen/_5sdp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/egypt"
@@ -227,13 +233,14 @@
                             android:lines="1"
                             android:text="CAIOR _ EGYPT"
                             android:textColor="@color/primaryTextColor"
-                            android:textSize="@dimen/_10sdp" />
+                            android:textSize="@dimen/_9sdp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_5sdp"
                             android:alpha="0.75"
+                            android:paddingVertical="@dimen/_2sdp"
                             android:src="@drawable/ic_location"
                             app:tint="@color/primaryTextColor" />
 
@@ -243,11 +250,12 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/tvFavoriteDate"
+                android:id="@+id/tvPublishedAt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="end"
+                android:textSize="@dimen/_8sdp"
                 android:text="YESTERDAY 8 PM"
                 android:textAlignment="gravity"
                 android:textColor="@color/primaryColor" />
